@@ -84,6 +84,18 @@
     <Compile Include="chuc_nang\hinh_anh_phong.Designer.cs">
       <DependentUpon>hinh_anh_phong.cs</DependentUpon>
     </Compile>
+    <Compile Include="chuc_nang\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chuc_nang\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chuc_nang\TinhTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chuc_nang\TinhTien.Designer.cs">
+      <DependentUpon>TinhTien.cs</DependentUpon>
+    </Compile>
     <Compile Include="chuc_nang\trang_thai_thue_.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -116,7 +128,13 @@
     <EmbeddedResource Include="chuc_nang\hinh_anh_phong.resx">
       <DependentUpon>hinh_anh_phong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="chuc_nang\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="chuc_nang\thong_ke.rdlc" />
+    <EmbeddedResource Include="chuc_nang\TinhTien.resx">
+      <DependentUpon>TinhTien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="chuc_nang\trang_thai_thue_.resx">
       <DependentUpon>trang_thai_thue_.cs</DependentUpon>
     </EmbeddedResource>

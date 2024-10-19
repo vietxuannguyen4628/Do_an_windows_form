@@ -83,6 +83,7 @@
             this.txtID_Phong = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PhongTro)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -259,7 +260,6 @@
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSearch.ImageKey = "(none)";
             this.btnSearch.Location = new System.Drawing.Point(384, 27);
@@ -566,6 +566,7 @@
             this.groupBox1.Controls.Add(this.picPhong);
             this.groupBox1.Controls.Add(this.txtGiaTien);
             this.groupBox1.Controls.Add(this.txtID_Phong);
+            this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(585, 120);
             this.groupBox1.Name = "groupBox1";
@@ -602,7 +603,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(150, 45);
+            this.label3.Location = new System.Drawing.Point(150, 48);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 16);
             this.label3.TabIndex = 0;
@@ -619,6 +620,16 @@
             this.label1.Size = new System.Drawing.Size(367, 45);
             this.label1.TabIndex = 15;
             this.label1.Text = "Đăng Ký Thuê Phòng";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(159, 93);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(54, 16);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Giá Tiền";
             // 
             // DangKycs
             // 
@@ -709,5 +720,6 @@
         private System.Windows.Forms.TextBox txtID_Phong;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label15;
     }
 }
