@@ -143,5 +143,11 @@ namespace Do_An_WindowsForm
         {
             
         }
+         
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Trả_Phòng trả_Phòng =new Trả_Phòng();
+            trả_Phòng.Show();
+        }
     }
 }
