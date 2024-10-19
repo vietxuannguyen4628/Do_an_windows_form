@@ -1,0 +1,92 @@
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\Do_An_WindowsForm.exe.config
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\Do_An_WindowsForm.exe
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\Do_An_WindowsForm.pdb
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Data.Desktop.v22.2.dll
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Data.v22.2.dll
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Drawing.v22.2.dll
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Printing.v22.2.Core.dll
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Utils.v22.2.dll
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.XtraBars.v22.2.dll
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.XtraEditors.v22.2.dll
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.XtraGrid.v22.2.dll
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.XtraLayout.v22.2.dll
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.XtraPrinting.v22.2.dll
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.XtraTreeList.v22.2.dll
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Pdf.v22.2.Core.dll
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Pdf.v22.2.Drawing.dll
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Sparkline.v22.2.Core.dll
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.RichEdit.v22.2.Core.dll
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Office.v22.2.Core.dll
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Data.Desktop.v22.2.xml
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Data.v22.2.xml
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Printing.v22.2.Core.xml
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Utils.v22.2.xml
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.XtraBars.v22.2.xml
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.XtraEditors.v22.2.xml
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.XtraGrid.v22.2.xml
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.XtraLayout.v22.2.xml
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.XtraPrinting.v22.2.xml
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.XtraTreeList.v22.2.xml
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Pdf.v22.2.Core.xml
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Pdf.v22.2.Drawing.xml
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Sparkline.v22.2.Core.xml
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.RichEdit.v22.2.Core.xml
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Office.v22.2.Core.xml
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\obj\Debug\main_form.csproj.AssemblyReference.cache
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\obj\Debug\Do_An_WindowsForm.frm_Quan_Ly.resources
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\obj\Debug\Do_An_WindowsForm.Properties.Resources.resources
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\obj\Debug\main_form.csproj.GenerateResource.cache
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\obj\Debug\Do_An_WindowsForm.exe.licenses
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\obj\Debug\main_form.csproj.CoreCompileInputs.cache
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\obj\Debug\main_form.csproj.Up2Date
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\obj\Debug\Do_An_WindowsForm.exe
+E:\New folder\Do_An_WindowsForm\Do_An_WindowsForm\obj\Debug\Do_An_WindowsForm.pdb
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\Do_An_WindowsForm.exe.config
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\Do_An_WindowsForm.exe
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\Do_An_WindowsForm.pdb
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Data.Desktop.v22.2.dll
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Data.v22.2.dll
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Drawing.v22.2.dll
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Printing.v22.2.Core.dll
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Utils.v22.2.dll
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.XtraBars.v22.2.dll
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.XtraEditors.v22.2.dll
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.XtraGrid.v22.2.dll
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.XtraLayout.v22.2.dll
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.XtraPrinting.v22.2.dll
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.XtraTreeList.v22.2.dll
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Pdf.v22.2.Core.dll
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Pdf.v22.2.Drawing.dll
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Sparkline.v22.2.Core.dll
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.RichEdit.v22.2.Core.dll
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Office.v22.2.Core.dll
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Data.Desktop.v22.2.xml
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Data.v22.2.xml
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Printing.v22.2.Core.xml
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Utils.v22.2.xml
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.XtraBars.v22.2.xml
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.XtraEditors.v22.2.xml
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.XtraGrid.v22.2.xml
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.XtraLayout.v22.2.xml
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.XtraPrinting.v22.2.xml
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.XtraTreeList.v22.2.xml
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Pdf.v22.2.Core.xml
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Pdf.v22.2.Drawing.xml
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Sparkline.v22.2.Core.xml
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.RichEdit.v22.2.Core.xml
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\DevExpress.Office.v22.2.Core.xml
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\obj\Debug\main_form.csproj.AssemblyReference.cache
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\obj\Debug\Do_An_WindowsForm.frm_Quan_Ly.resources
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\obj\Debug\Do_An_WindowsForm.Properties.Resources.resources
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\obj\Debug\main_form.csproj.GenerateResource.cache
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\obj\Debug\Do_An_WindowsForm.exe.licenses
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\obj\Debug\main_form.csproj.CoreCompileInputs.cache
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\obj\Debug\main_form.csproj.Up2Date
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\obj\Debug\Do_An_WindowsForm.exe
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\obj\Debug\Do_An_WindowsForm.pdb
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\obj\Debug\Do_An_WindowsForm.chuc_nang.hinh_anh_phong.resources
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\obj\Debug\Do_An_WindowsForm.chuc_nang.danh_sach_khach_thue.resources
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\EntityFramework.dll
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\EntityFramework.SqlServer.dll
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\EntityFramework.xml
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\EntityFramework.SqlServer.xml
