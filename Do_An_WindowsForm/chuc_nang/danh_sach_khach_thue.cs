@@ -19,7 +19,15 @@ namespace Do_An_WindowsForm.chuc_nang
         {
             InitializeComponent();
         }
-
+        public void setGridViewStyle(DataGridView dgview)
+        {
+            dgview.BorderStyle = BorderStyle.None;
+            dgview.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dgview.CellBorderStyle =
+            DataGridViewCellBorderStyle.SingleHorizontal;
+            dgview.BackgroundColor = Color.White;
+            dgview.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
         private void FillTable(List<PhieuSuDungDV> phieuSDDV)
         {
             dgvKhachHang.Rows.Clear();
@@ -36,6 +44,7 @@ namespace Do_An_WindowsForm.chuc_nang
         }
         private void danh_sach_khach_thue_Load(object sender, EventArgs e)
         {
+            setGridViewStyle(dgvKhachHang);
             List<PhieuSuDungDV> phieuSuDungDVs = qltro.PhieuSuDungDVs.ToList();
             FillTable(phieuSuDungDVs);
 

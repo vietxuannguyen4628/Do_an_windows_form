@@ -90,3 +90,5 @@ G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\EntityFramework.dll
 G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\EntityFramework.SqlServer.dll
 G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\EntityFramework.xml
 G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\bin\Debug\EntityFramework.SqlServer.xml
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\obj\Debug\Do_An_WindowsForm.chuc_nang.trang_thai_thue_.resources
+G:\WinForm\Do_An_WindowsForm\Do_An_WindowsForm\obj\Debug\Do_An_WindowsForm.chuc_nang.backgound.resources
