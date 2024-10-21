@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraTab;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Do_An_WindowsForm
 {
@@ -33,7 +34,37 @@ namespace Do_An_WindowsForm
         {
             try
             {
-                
+                // Kiểm tra xem tab đã tồn tại hay chưa
+                foreach (DevExpress.XtraTab.XtraTabPage tab in xtraTabControl1.TabPages)
+                {
+                    if (tab.Text == e.Item.Caption)
+                    {
+                        // Nếu tab đã tồn tại, chọn tab đó và thoát khỏi phương thức
+                        xtraTabControl1.SelectedTabPage = tab;
+                        return;
+                    }
+                }
+
+                // Nếu tab chưa tồn tại, tạo một XtraTabPage mới
+                DevExpress.XtraTab.XtraTabPage newTab = new DevExpress.XtraTab.XtraTabPage();
+
+                // Đặt tên tab giống với tên button
+                newTab.Text = e.Item.Caption;
+
+                // Tạo một instance của UserControl
+                trang_thai_thue_ ttThue = new trang_thai_thue_();
+
+                // Đặt DockStyle cho UserControl
+                ttThue.Dock = DockStyle.Fill;
+
+                // Thêm UserControl vào XtraTabPage
+                newTab.Controls.Add(ttThue);
+
+                // Thêm XtraTabPage vào XtraTabControl
+                xtraTabControl1.TabPages.Add(newTab);
+
+                // Chọn tab mới
+                xtraTabControl1.SelectedTabPage = newTab;
             }
             catch (Exception ex)
             {
@@ -142,6 +173,40 @@ namespace Do_An_WindowsForm
         private void xtraTabControl1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void ribbon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frm_Quan_Ly_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                DevExpress.XtraTab.XtraTabPage newTab = new DevExpress.XtraTab.XtraTabPage();
+
+                newTab.Text = "Giới Thiệu";
+
+                // Tạo một instance của UserControl
+                backgound bg = new backgound();
+
+                // Đặt DockStyle cho UserControl
+                bg.Dock = DockStyle.Fill;
+
+                // Thêm UserControl vào XtraTabPage
+                newTab.Controls.Add(bg);
+
+                // Thêm XtraTabPage vào XtraTabControl
+                xtraTabControl1.TabPages.Add(newTab);
+
+                // Chọn tab mới
+                xtraTabControl1.SelectedTabPage = newTab;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
