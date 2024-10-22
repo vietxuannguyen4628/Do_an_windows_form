@@ -72,6 +72,12 @@
     <Compile Include="chuc_nang\danh_sach_khach_thue.Designer.cs">
       <DependentUpon>danh_sach_khach_thue.cs</DependentUpon>
     </Compile>
+    <Compile Include="chuc_nang\DoanhThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="chuc_nang\DoanhThu.Designer.cs">
+      <DependentUpon>DoanhThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="chuc_nang\hinh_anh_phong.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="chuc_nang\danh_sach_khach_thue.resx">
       <DependentUpon>danh_sach_khach_thue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chuc_nang\DoanhThu.resx">
+      <DependentUpon>DoanhThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="chuc_nang\hinh_anh_phong.resx">
       <DependentUpon>hinh_anh_phong.cs</DependentUpon>

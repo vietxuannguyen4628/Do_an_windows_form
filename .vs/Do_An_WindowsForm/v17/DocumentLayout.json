@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\DoAn\\Do_an_windows_form\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8AE75434-CE32-4D21-B1FA-3744AD9C458E}|Do_An_WindowsForm\\main_form.csproj|d:\\doan\\do_an_windows_form\\do_an_windowsform\\chuc_nang\\doanhthu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8AE75434-CE32-4D21-B1FA-3744AD9C458E}|Do_An_WindowsForm\\main_form.csproj|solutionrelative:do_an_windowsform\\chuc_nang\\doanhthu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AE75434-CE32-4D21-B1FA-3744AD9C458E}|Do_An_WindowsForm\\main_form.csproj|D:\\DoAn\\Do_an_windows_form\\do_an_windowsform\\chuc_nang\\thong_ke.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
+      "RelativeMoniker": "D:0:0:{8AE75434-CE32-4D21-B1FA-3744AD9C458E}|Do_An_WindowsForm\\main_form.csproj|solutionrelative:do_an_windowsform\\chuc_nang\\thong_ke.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8AE75434-CE32-4D21-B1FA-3744AD9C458E}|Do_An_WindowsForm\\main_form.csproj|d:\\doan\\do_an_windows_form\\do_an_windowsform\\model\\phieudenbu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8AE75434-CE32-4D21-B1FA-3744AD9C458E}|Do_An_WindowsForm\\main_form.csproj|solutionrelative:do_an_windowsform\\model\\phieudenbu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8AE75434-CE32-4D21-B1FA-3744AD9C458E}|Do_An_WindowsForm\\main_form.csproj|D:\\DoAn\\Do_an_windows_form\\do_an_windowsform\\chuc_nang\\danh_sach_khach_thue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8AE75434-CE32-4D21-B1FA-3744AD9C458E}|Do_An_WindowsForm\\main_form.csproj|solutionrelative:do_an_windowsform\\chuc_nang\\danh_sach_khach_thue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8AE75434-CE32-4D21-B1FA-3744AD9C458E}|Do_An_WindowsForm\\main_form.csproj|D:\\DoAn\\Do_an_windows_form\\do_an_windowsform\\chuc_nang\\thong_ke.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
-      "RelativeMoniker": "D:0:0:{8AE75434-CE32-4D21-B1FA-3744AD9C458E}|Do_An_WindowsForm\\main_form.csproj|solutionrelative:do_an_windowsform\\chuc_nang\\thong_ke.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8AE75434-CE32-4D21-B1FA-3744AD9C458E}|Do_An_WindowsForm\\main_form.csproj|D:\\DoAn\\Do_an_windows_form\\do_an_windowsform\\chuc_nang\\hinh_anh_phong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -63,6 +67,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "DoanhThu.cs [Design]",
+              "DocumentMoniker": "D:\\DoAn\\Do_an_windows_form\\Do_An_WindowsForm\\chuc_nang\\DoanhThu.cs",
+              "RelativeDocumentMoniker": "Do_An_WindowsForm\\chuc_nang\\DoanhThu.cs",
+              "ToolTip": "D:\\DoAn\\Do_an_windows_form\\Do_An_WindowsForm\\chuc_nang\\DoanhThu.cs [Design]",
+              "RelativeToolTip": "Do_An_WindowsForm\\chuc_nang\\DoanhThu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T06:11:38.076Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "PhieuDenBu.cs",
               "DocumentMoniker": "D:\\DoAn\\Do_an_windows_form\\Do_An_WindowsForm\\model\\PhieuDenBu.cs",
               "RelativeDocumentMoniker": "Do_An_WindowsForm\\model\\PhieuDenBu.cs",
@@ -75,7 +91,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "trang_thai_thue_.cs",
               "DocumentMoniker": "D:\\DoAn\\Do_an_windows_form\\Do_An_WindowsForm\\chuc_nang\\trang_thai_thue_.cs",
               "RelativeDocumentMoniker": "Do_An_WindowsForm\\chuc_nang\\trang_thai_thue_.cs",
@@ -87,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "trang_thai_thue_.cs [Design]",
               "DocumentMoniker": "D:\\DoAn\\Do_an_windows_form\\Do_An_WindowsForm\\chuc_nang\\trang_thai_thue_.cs",
               "RelativeDocumentMoniker": "Do_An_WindowsForm\\chuc_nang\\trang_thai_thue_.cs",
@@ -97,7 +113,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "frm_Quan_Ly.cs [Design]",
               "DocumentMoniker": "D:\\DoAn\\Do_an_windows_form\\Do_An_WindowsForm\\frm_Quan_Ly.cs",
               "RelativeDocumentMoniker": "Do_An_WindowsForm\\frm_Quan_Ly.cs",
@@ -107,17 +123,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "thong_ke.rdlc [Design]",
               "DocumentMoniker": "D:\\DoAn\\Do_an_windows_form\\Do_An_WindowsForm\\chuc_nang\\thong_ke.rdlc",
               "RelativeDocumentMoniker": "Do_An_WindowsForm\\chuc_nang\\thong_ke.rdlc",
-              "ToolTip": "G:\\WinForm\\Do_An_WindowsForm\\Do_An_WindowsForm\\chuc_nang\\thong_ke.rdlc [Design]",
+              "ToolTip": "D:\\DoAn\\Do_an_windows_form\\Do_An_WindowsForm\\chuc_nang\\thong_ke.rdlc [Design]",
+              "RelativeToolTip": "Do_An_WindowsForm\\chuc_nang\\thong_ke.rdlc [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
-              "WhenOpened": "2024-10-19T10:02:50.897Z"
+              "WhenOpened": "2024-10-19T10:02:50.897Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "danh_sach_khach_thue.cs",
               "DocumentMoniker": "D:\\DoAn\\Do_an_windows_form\\Do_An_WindowsForm\\chuc_nang\\danh_sach_khach_thue.cs",
               "RelativeDocumentMoniker": "Do_An_WindowsForm\\chuc_nang\\danh_sach_khach_thue.cs",
@@ -129,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "danh_sach_khach_thue.cs [Design]",
               "DocumentMoniker": "D:\\DoAn\\Do_an_windows_form\\Do_An_WindowsForm\\chuc_nang\\danh_sach_khach_thue.cs",
               "RelativeDocumentMoniker": "Do_An_WindowsForm\\chuc_nang\\danh_sach_khach_thue.cs",
@@ -139,7 +157,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "hinh_anh_phong.cs",
               "DocumentMoniker": "D:\\DoAn\\Do_an_windows_form\\Do_An_WindowsForm\\chuc_nang\\hinh_anh_phong.cs",
               "RelativeDocumentMoniker": "Do_An_WindowsForm\\chuc_nang\\hinh_anh_phong.cs",
@@ -151,7 +169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "frm_Quan_Ly.cs",
               "DocumentMoniker": "D:\\DoAn\\Do_an_windows_form\\Do_An_WindowsForm\\frm_Quan_Ly.cs",
               "RelativeDocumentMoniker": "Do_An_WindowsForm\\frm_Quan_Ly.cs",
@@ -163,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "hinh_anh_phong.cs [Design]",
               "DocumentMoniker": "D:\\DoAn\\Do_an_windows_form\\Do_An_WindowsForm\\chuc_nang\\hinh_anh_phong.cs",
               "RelativeDocumentMoniker": "Do_An_WindowsForm\\chuc_nang\\hinh_anh_phong.cs",
