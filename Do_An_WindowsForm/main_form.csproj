@@ -99,9 +99,8 @@
     <Compile Include="model\CT_SuDungDV.cs" />
     <Compile Include="model\DichVu.cs" />
     <Compile Include="model\KhachHang.cs" />
-    <Compile Include="model\PhieuDenBu.cs" />
-    <Compile Include="model\PhieuSuDungDV.cs" />
     <Compile Include="model\PhieuThuePhong.cs" />
+    <Compile Include="model\PhieuThutien.cs" />
     <Compile Include="model\PhieuTraPhong.cs" />
     <Compile Include="model\Phong.cs" />
     <Compile Include="model\QuanLyNhaTroDB.cs" />

@@ -22,7 +22,7 @@ namespace Do_An_WindowsForm.model
         [StringLength(50)]
         public string TenDV { get; set; }
 
-        public int? Gia { get; set; }
+        public int? DonGia { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CT_SuDungDV> CT_SuDungDV { get; set; }

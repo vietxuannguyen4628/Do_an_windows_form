@@ -143,5 +143,47 @@ namespace Do_An_WindowsForm
         {
             
         }
+
+        private void btnDoanhThu_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                // Kiểm tra xem tab đã tồn tại hay chưa
+                foreach (DevExpress.XtraTab.XtraTabPage tab in xtraTabControl1.TabPages)
+                {
+                    if (tab.Text == e.Item.Caption)
+                    {
+                        // Nếu tab đã tồn tại, chọn tab đó và thoát khỏi phương thức
+                        xtraTabControl1.SelectedTabPage = tab;
+                        return;
+                    }
+                }
+
+                // Nếu tab chưa tồn tại, tạo một XtraTabPage mới
+                DevExpress.XtraTab.XtraTabPage newTab = new DevExpress.XtraTab.XtraTabPage();
+
+                // Đặt tên tab giống với tên button
+                newTab.Text = e.Item.Caption;
+
+                // Tạo một instance của UserControl
+                DoanhThu doanhthus = new DoanhThu();
+
+                // Đặt DockStyle cho UserControl
+                doanhthus.Dock = DockStyle.Fill;
+
+                // Thêm UserControl vào XtraTabPage
+                newTab.Controls.Add(doanhthus);
+
+                // Thêm XtraTabPage vào XtraTabControl
+                xtraTabControl1.TabPages.Add(newTab);
+
+                // Chọn tab mới
+                xtraTabControl1.SelectedTabPage = newTab;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

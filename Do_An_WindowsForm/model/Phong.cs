@@ -23,6 +23,8 @@ namespace Do_An_WindowsForm.model
 
         public double? DienTich { get; set; }
 
+        public int? GiaTien { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhieuThuePhong> PhieuThuePhongs { get; set; }
     }

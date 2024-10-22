@@ -211,7 +211,7 @@ INSERT INTO [dbo].[Phong] (MaPhong, TrangThai, DienTich, GiaTien) VALUES
 -- Thêm dữ liệu cho bảng KhachHang
 INSERT INTO [dbo].[KhachHang] (MaKH, HoTen, CMND_CanCuoc, SDT, QueQuan, GioiTinh, NgheNghiep) VALUES
 (1, N'Nguyễn Văn A', '1234567890', '0912345678', N'Hà Nội', N'Nam', N'Kỹ sư'),
-(2, N'Trần Thị B', '0987654321', '0987654321', N'Hồ Chí Minh', N'Nữ', N'Sinh viên'),
+(2, N'Trần Thị B', '0453983444', '0987654321', N'Hồ Chí Minh', N'Nữ', N'Sinh viên'),
 (3, N'Lê Văn C', '1122334455', '0909876543', N'Đà Nẵng', N'Nam', N'Technician');
 
 -- Thêm dữ liệu cho bảng PhieuThuePhong
@@ -242,7 +242,7 @@ INSERT INTO [dbo].[CT_SuDungDV] (MaPTP, MaDV, ChiSoCu, ChiSoMoi, SoLuong) VALUES
 -- Thêm dữ liệu cho bảng PhieuThutien
 INSERT INTO [dbo].[PhieuThutien] (MaPTP, MaDV, TuNgay, DenNgay, ThanhTien, DaThanhToan) VALUES
 (1, 1, '2024-10-01', '2024-10-02', 100000, 1),  -- Từ ngày 01/10/2024 đến 02/10/2024
-(1, 2, '2024-10-15', '2024-10-16', 150000, 0),  -- Từ ngày 15/10/2024 đến 16/10/2024
+(2, 1, '2024-10-15', '2024-10-16', 150000, 0),  -- Từ ngày 15/10/2024 đến 16/10/2024
 (3, 3, '2024-10-20', '2024-10-21', 200000, 0);  -- Từ ngày 20/10/2024 đến 21/10/2024
 
 

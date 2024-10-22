@@ -11,7 +11,7 @@ namespace Do_An_WindowsForm.model
         [Key]
         [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public long MaPSDDV { get; set; }
+        public long MaPTP { get; set; }
 
         [Key]
         [Column(Order = 1)]
@@ -26,6 +26,8 @@ namespace Do_An_WindowsForm.model
 
         public virtual DichVu DichVu { get; set; }
 
-        public virtual PhieuSuDungDV PhieuSuDungDV { get; set; }
+        public virtual PhieuThuePhong PhieuThuePhong { get; set; }
+
+        public virtual PhieuThutien PhieuThutien { get; set; }
     }
 }

@@ -20,24 +20,24 @@ namespace Do_An_WindowsForm.chuc_nang
             InitializeComponent();
         }
 
-        private void FillTable(List<PhieuSuDungDV> phieuSDDV)
+        private void FillTable(List<PhieuThuePhong> phieuSDDV)
         {
             dgvKhachHang.Rows.Clear();
             foreach (var item in phieuSDDV)
             {
                 int index = dgvKhachHang.Rows.Add();
-                dgvKhachHang.Rows[index].Cells[0].Value = item.PhieuThuePhong.MaKH;
-                dgvKhachHang.Rows[index].Cells[1].Value = item.PhieuThuePhong.MaPhong;
-                dgvKhachHang.Rows[index].Cells[2].Value = item.PhieuThuePhong.KhachHang.HoTen;
-                dgvKhachHang.Rows[index].Cells[3].Value = item.PhieuThuePhong.KhachHang.GioiTinh;
-                dgvKhachHang.Rows[index].Cells[4].Value = item.TuNgay;
-                dgvKhachHang.Rows[index].Cells[5].Value = item.PhieuThuePhong.KhachHang.SDT;
+                dgvKhachHang.Rows[index].Cells[0].Value = item.MaKH;
+                dgvKhachHang.Rows[index].Cells[1].Value = item.MaPhong;
+                dgvKhachHang.Rows[index].Cells[2].Value = item.KhachHang.HoTen;
+                dgvKhachHang.Rows[index].Cells[3].Value = item.KhachHang.GioiTinh;
+                dgvKhachHang.Rows[index].Cells[4].Value = item.NgayThue;
+                dgvKhachHang.Rows[index].Cells[5].Value = item.KhachHang.SDT;
             }
         }
         private void danh_sach_khach_thue_Load(object sender, EventArgs e)
         {
-            List<PhieuSuDungDV> phieuSuDungDVs = qltro.PhieuSuDungDVs.ToList();
-            FillTable(phieuSuDungDVs);
+            List<PhieuThuePhong> phieuThuePhongs = qltro.PhieuThuePhongs.ToList();
+            FillTable(phieuThuePhongs);
 
         }
 
