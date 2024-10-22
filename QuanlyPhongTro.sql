@@ -188,11 +188,25 @@ GO
 ALTER TABLE [dbo].[PhieuThutien] CHECK CONSTRAINT [FK_PhieuThuTien_CT_SuDungDV]
 GO
 
+
+
+
+
 -- Thêm dữ liệu cho bảng Phong
 INSERT INTO [dbo].[Phong] (MaPhong, TrangThai, DienTich, GiaTien) VALUES
 (101, 1, 30.5, 500000),
 (102, 0, 25.0, 400000),
-(103, 1, 45.0, 800000);
+(103, 1, 45.0, 800000),
+(104, 1, 28.0, 5500000),
+(105, 0, 32.5, 6500000),
+(106, 1, 20.0, 4800000),
+(107, 1, 25.0, 5200000),
+(108, 0, 30.0, 6100000),
+(109, 1, 22.5, 4900000),
+(110, 1, 29.0, 5700000),
+(111, 0, 24.0, 5400000),
+(112, 1, 26.0, 6000000),
+(113, 1, 21.5, 5000000);
 
 -- Thêm dữ liệu cho bảng KhachHang
 INSERT INTO [dbo].[KhachHang] (MaKH, HoTen, CMND_CanCuoc, SDT, QueQuan, GioiTinh, NgheNghiep) VALUES
