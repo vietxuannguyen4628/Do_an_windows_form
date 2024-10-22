@@ -67,19 +67,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
+
     <Compile Include="chuc_nang\DangKycs.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="chuc_nang\DangKycs.Designer.cs">
       <DependentUpon>DangKycs.cs</DependentUpon>
-=======
+	</Compile>
+
     <Compile Include="chuc_nang\backgound.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="chuc_nang\backgound.Designer.cs">
       <DependentUpon>backgound.cs</DependentUpon>
->>>>>>> master
+
     </Compile>
     <Compile Include="chuc_nang\danh_sach_khach_thue.cs">
       <SubType>UserControl</SubType>
@@ -128,13 +129,16 @@
     <Compile Include="model\QuanLyNhaTroDB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
+
+	
+ 
     <EmbeddedResource Include="chuc_nang\DangKycs.resx">
       <DependentUpon>DangKycs.cs</DependentUpon>
-=======
+	</EmbeddedResource>
+
     <EmbeddedResource Include="chuc_nang\backgound.resx">
       <DependentUpon>backgound.cs</DependentUpon>
->>>>>>> master
+ 
     </EmbeddedResource>
     <EmbeddedResource Include="chuc_nang\danh_sach_khach_thue.resx">
       <DependentUpon>danh_sach_khach_thue.cs</DependentUpon>
