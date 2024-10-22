@@ -25,15 +25,6 @@ namespace Do_An_WindowsForm.chuc_nang
             SetupImageFolder();
         }
 
-        private void SetupImageFolder()
-        {
-            // Đường dẫn đến thư mục "anh" trong solution
-            folderPath = Path.Combine(Application.StartupPath, "anh");
-            if (!Directory.Exists(folderPath))
-            {
-                MessageBox.Show("Thư mục ảnh không tồn tại!");
-            }
-        }
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
@@ -43,12 +34,22 @@ namespace Do_An_WindowsForm.chuc_nang
         {
 
         }
+        private void SetupImageFolder()
+        {
+            // Đường dẫn tương đối đến thư mục "anh" trong solution
+            folderPath = Path.Combine(Application.StartupPath, @"..\..\anh");
+            if (!Directory.Exists(folderPath))
+            {
+                MessageBox.Show("Thư mục ảnh không tồn tại!");
+            }
+        }
+
         private void LoadImages()
         {
             try
             {
                 string[] supportedExtensions = new[] { "*.jpg", "*.jpeg", "*.png", "*.gif", "*.bmp" };
-                var files = supportedExtensions.SelectMany(ext => Directory.GetFiles(folderPath, ext));
+                var files = supportedExtensions.SelectMany(ext => Directory.GetFiles(folderPath, ext)).ToList();
 
                 foreach (string file in files)
                 {
@@ -71,8 +72,10 @@ namespace Do_An_WindowsForm.chuc_nang
                 MessageBox.Show("Lỗi khi tải ảnh: " + ex.Message);
             }
         }
+
         private void hinh_anh_phong_Load(object sender, EventArgs e)
         {
+            SetupImageFolder();
             SetupListView();
             LoadImages();
         }
@@ -85,7 +88,8 @@ namespace Do_An_WindowsForm.chuc_nang
             imageList1.ImageSize = new Size(50, 50);
             listView1.SmallImageList = imageList1;
         }
-    }   
+
+    }
 }
 
         
