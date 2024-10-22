@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "D:\\DoAn\\Do_an_windows_form\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8AE75434-CE32-4D21-B1FA-3744AD9C458E}|Do_An_WindowsForm\\main_form.csproj|d:\\doan\\do_an_windows_form\\do_an_windowsform\\chuc_nang\\dangkycs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8AE75434-CE32-4D21-B1FA-3744AD9C458E}|Do_An_WindowsForm\\main_form.csproj|solutionrelative:do_an_windowsform\\chuc_nang\\dangkycs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{8AE75434-CE32-4D21-B1FA-3744AD9C458E}|Do_An_WindowsForm\\main_form.csproj|d:\\doan\\do_an_windows_form\\do_an_windowsform\\chuc_nang\\tinhtien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8AE75434-CE32-4D21-B1FA-3744AD9C458E}|Do_An_WindowsForm\\main_form.csproj|solutionrelative:do_an_windowsform\\chuc_nang\\tinhtien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8AE75434-CE32-4D21-B1FA-3744AD9C458E}|Do_An_WindowsForm\\main_form.csproj|d:\\doan\\do_an_windows_form\\do_an_windowsform\\chuc_nang\\dangkycs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8AE75434-CE32-4D21-B1FA-3744AD9C458E}|Do_An_WindowsForm\\main_form.csproj|solutionrelative:do_an_windowsform\\chuc_nang\\dangkycs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8AE75434-CE32-4D21-B1FA-3744AD9C458E}|Do_An_WindowsForm\\main_form.csproj|d:\\doan\\do_an_windows_form\\do_an_windowsform\\chuc_nang\\tinhtien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AE75434-CE32-4D21-B1FA-3744AD9C458E}|Do_An_WindowsForm\\main_form.csproj|solutionrelative:do_an_windowsform\\chuc_nang\\tinhtien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AE75434-CE32-4D21-B1FA-3744AD9C458E}|Do_An_WindowsForm\\main_form.csproj|d:\\doan\\do_an_windows_form\\do_an_windowsform\\chuc_nang\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8AE75434-CE32-4D21-B1FA-3744AD9C458E}|Do_An_WindowsForm\\main_form.csproj|solutionrelative:do_an_windowsform\\chuc_nang\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AE75434-CE32-4D21-B1FA-3744AD9C458E}|Do_An_WindowsForm\\main_form.csproj|d:\\doan\\do_an_windows_form\\do_an_windowsform\\chuc_nang\\dangkycs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8AE75434-CE32-4D21-B1FA-3744AD9C458E}|Do_An_WindowsForm\\main_form.csproj|solutionrelative:do_an_windowsform\\chuc_nang\\dangkycs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -27,19 +35,43 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DangKycs.cs",
-              "DocumentMoniker": "D:\\DoAn\\Do_an_windows_form\\Do_An_WindowsForm\\chuc_nang\\DangKycs.cs",
-              "RelativeDocumentMoniker": "Do_An_WindowsForm\\chuc_nang\\DangKycs.cs",
-              "ToolTip": "D:\\DoAn\\Do_an_windows_form\\Do_An_WindowsForm\\chuc_nang\\DangKycs.cs",
-              "RelativeToolTip": "Do_An_WindowsForm\\chuc_nang\\DangKycs.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAYwBYAAAAAAAAAAAAAAA==",
+              "Title": "TinhTien.cs",
+              "DocumentMoniker": "D:\\DoAn\\Do_an_windows_form\\Do_An_WindowsForm\\chuc_nang\\TinhTien.cs",
+              "RelativeDocumentMoniker": "Do_An_WindowsForm\\chuc_nang\\TinhTien.cs",
+              "ToolTip": "D:\\DoAn\\Do_an_windows_form\\Do_An_WindowsForm\\chuc_nang\\TinhTien.cs",
+              "RelativeToolTip": "Do_An_WindowsForm\\chuc_nang\\TinhTien.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAYwBsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T12:35:11.033Z",
+              "WhenOpened": "2024-10-19T13:26:55.162Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "D:\\DoAn\\Do_an_windows_form\\Do_An_WindowsForm\\chuc_nang\\Login.cs",
+              "RelativeDocumentMoniker": "Do_An_WindowsForm\\chuc_nang\\Login.cs",
+              "ToolTip": "D:\\DoAn\\Do_an_windows_form\\Do_An_WindowsForm\\chuc_nang\\Login.cs [Design]",
+              "RelativeToolTip": "Do_An_WindowsForm\\chuc_nang\\Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T13:20:49.989Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "TinhTien.cs [Design]",
+              "DocumentMoniker": "D:\\DoAn\\Do_an_windows_form\\Do_An_WindowsForm\\chuc_nang\\TinhTien.cs",
+              "RelativeDocumentMoniker": "Do_An_WindowsForm\\chuc_nang\\TinhTien.cs",
+              "ToolTip": "D:\\DoAn\\Do_an_windows_form\\Do_An_WindowsForm\\chuc_nang\\TinhTien.cs [Design]",
+              "RelativeToolTip": "Do_An_WindowsForm\\chuc_nang\\TinhTien.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T13:04:35.743Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "DangKycs.cs [Design]",
               "DocumentMoniker": "D:\\DoAn\\Do_an_windows_form\\Do_An_WindowsForm\\chuc_nang\\DangKycs.cs",
               "RelativeDocumentMoniker": "Do_An_WindowsForm\\chuc_nang\\DangKycs.cs",
