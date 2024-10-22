@@ -28,40 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dgvDoanhThu = new System.Windows.Forms.DataGridView();
             this.MAPHONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TENNGUOITHUE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NGAYTHU = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TIENDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TIENPHONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.THANHTIEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dtpThoigian = new System.Windows.Forms.DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDoanhThu)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvDoanhThu
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvDoanhThu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDoanhThu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MAPHONG,
             this.TENNGUOITHUE,
             this.NGAYTHU,
             this.TIENDV,
             this.TIENPHONG,
             this.THANHTIEN});
-            this.dataGridView1.Location = new System.Drawing.Point(139, 71);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(803, 460);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(327, 26);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 1;
+            this.dgvDoanhThu.Location = new System.Drawing.Point(139, 71);
+            this.dgvDoanhThu.Name = "dgvDoanhThu";
+            this.dgvDoanhThu.RowHeadersWidth = 51;
+            this.dgvDoanhThu.RowTemplate.Height = 24;
+            this.dgvDoanhThu.Size = new System.Drawing.Size(803, 460);
+            this.dgvDoanhThu.TabIndex = 0;
             // 
             // MAPHONG
             // 
@@ -105,28 +98,35 @@
             this.THANHTIEN.Name = "THANHTIEN";
             this.THANHTIEN.Width = 125;
             // 
+            // dtpThoigian
+            // 
+            this.dtpThoigian.Location = new System.Drawing.Point(327, 26);
+            this.dtpThoigian.Name = "dtpThoigian";
+            this.dtpThoigian.Size = new System.Drawing.Size(200, 23);
+            this.dtpThoigian.TabIndex = 1;
+            // 
             // DoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtpThoigian);
+            this.Controls.Add(this.dgvDoanhThu);
             this.Name = "DoanhThu";
-            this.Size = new System.Drawing.Size(1061, 550);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Size = new System.Drawing.Size(1061, 566);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDoanhThu)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDoanhThu;
         private System.Windows.Forms.DataGridViewTextBoxColumn MAPHONG;
         private System.Windows.Forms.DataGridViewTextBoxColumn TENNGUOITHUE;
         private System.Windows.Forms.DataGridViewTextBoxColumn NGAYTHU;
         private System.Windows.Forms.DataGridViewTextBoxColumn TIENDV;
         private System.Windows.Forms.DataGridViewTextBoxColumn TIENPHONG;
         private System.Windows.Forms.DataGridViewTextBoxColumn THANHTIEN;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpThoigian;
     }
 }
