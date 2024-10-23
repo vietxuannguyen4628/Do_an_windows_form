@@ -6,7 +6,8 @@ namespace Do_An_WindowsForm.model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class CT_SuDungDV
+    [Table("PhieuThutien")]
+    public partial class PhieuThutien
     {
         [Key]
         [Column(Order = 0)]
@@ -18,16 +19,14 @@ namespace Do_An_WindowsForm.model
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MaDV { get; set; }
 
-        public int? ChiSoCu { get; set; }
+        public DateTime? TuNgay { get; set; }
 
-        public int? ChiSoMoi { get; set; }
+        public DateTime? DenNgay { get; set; }
 
-        public int? SoLuong { get; set; }
+        public int? ThanhTien { get; set; }
 
-        public virtual DichVu DichVu { get; set; }
+        public byte? DaThanhToan { get; set; }
 
-        public virtual PhieuThuePhong PhieuThuePhong { get; set; }
-
-        public virtual PhieuThutien PhieuThutien { get; set; }
+        public virtual CT_SuDungDV CT_SuDungDV { get; set; }
     }
 }

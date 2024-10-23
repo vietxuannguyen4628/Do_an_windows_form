@@ -15,14 +15,17 @@ namespace Do_An_WindowsForm.model
         public virtual DbSet<CT_SuDungDV> CT_SuDungDV { get; set; }
         public virtual DbSet<DichVu> DichVus { get; set; }
         public virtual DbSet<KhachHang> KhachHangs { get; set; }
-        public virtual DbSet<PhieuDenBu> PhieuDenBus { get; set; }
-        public virtual DbSet<PhieuSuDungDV> PhieuSuDungDVs { get; set; }
         public virtual DbSet<PhieuThuePhong> PhieuThuePhongs { get; set; }
+        public virtual DbSet<PhieuThutien> PhieuThutiens { get; set; }
         public virtual DbSet<PhieuTraPhong> PhieuTraPhongs { get; set; }
         public virtual DbSet<Phong> Phongs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<CT_SuDungDV>()
+                .HasOptional(e => e.PhieuThutien)
+                .WithRequired(e => e.CT_SuDungDV);
+
             modelBuilder.Entity<DichVu>()
                 .HasMany(e => e.CT_SuDungDV)
                 .WithRequired(e => e.DichVu)
@@ -43,18 +46,8 @@ namespace Do_An_WindowsForm.model
                 .WithRequired(e => e.KhachHang)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<PhieuSuDungDV>()
+            modelBuilder.Entity<PhieuThuePhong>()
                 .HasMany(e => e.CT_SuDungDV)
-                .WithRequired(e => e.PhieuSuDungDV)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<PhieuThuePhong>()
-                .HasMany(e => e.PhieuDenBus)
-                .WithRequired(e => e.PhieuThuePhong)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<PhieuThuePhong>()
-                .HasMany(e => e.PhieuSuDungDVs)
                 .WithRequired(e => e.PhieuThuePhong)
                 .WillCascadeOnDelete(false);
 

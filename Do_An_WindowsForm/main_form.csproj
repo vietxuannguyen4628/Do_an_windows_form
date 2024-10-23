@@ -84,11 +84,11 @@
     <Compile Include="chuc_nang\trang_thai_thue_.Designer.cs">
       <DependentUpon>trang_thai_thue_.cs</DependentUpon>
     </Compile>
-    <Compile Include="chuc_nang\Trả Phòng.cs">
+    <Compile Include="chuc_nang\Trả_Phòng.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="chuc_nang\Trả Phòng.Designer.cs">
-      <DependentUpon>Trả Phòng.cs</DependentUpon>
+    <Compile Include="chuc_nang\Trả_Phòng.Designer.cs">
+      <DependentUpon>Trả_Phòng.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_Quan_Ly.cs">
       <SubType>Form</SubType>
@@ -99,9 +99,8 @@
     <Compile Include="model\CT_SuDungDV.cs" />
     <Compile Include="model\DichVu.cs" />
     <Compile Include="model\KhachHang.cs" />
-    <Compile Include="model\PhieuDenBu.cs" />
-    <Compile Include="model\PhieuSuDungDV.cs" />
     <Compile Include="model\PhieuThuePhong.cs" />
+    <Compile Include="model\PhieuThutien.cs" />
     <Compile Include="model\PhieuTraPhong.cs" />
     <Compile Include="model\Phong.cs" />
     <Compile Include="model\QuanLyNhaTroDB.cs" />
@@ -117,8 +116,8 @@
     <EmbeddedResource Include="chuc_nang\trang_thai_thue_.resx">
       <DependentUpon>trang_thai_thue_.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="chuc_nang\Trả Phòng.resx">
-      <DependentUpon>Trả Phòng.cs</DependentUpon>
+    <EmbeddedResource Include="chuc_nang\Trả_Phòng.resx">
+      <DependentUpon>Trả_Phòng.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Quan_Ly.resx">
       <DependentUpon>frm_Quan_Ly.cs</DependentUpon>

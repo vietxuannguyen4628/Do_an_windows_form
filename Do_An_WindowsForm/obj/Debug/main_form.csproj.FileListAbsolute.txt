@@ -140,4 +140,4 @@ D:\Doan\Do_an_windows_form\Do_An_WindowsForm\obj\Debug\main_form.csproj.CoreComp
 D:\Doan\Do_an_windows_form\Do_An_WindowsForm\obj\Debug\main_form.csproj.Up2Date
 D:\Doan\Do_an_windows_form\Do_An_WindowsForm\obj\Debug\Do_An_WindowsForm.exe
 D:\Doan\Do_an_windows_form\Do_An_WindowsForm\obj\Debug\Do_An_WindowsForm.pdb
-D:\Doan\Do_an_windows_form\Do_An_WindowsForm\obj\Debug\Do_An_WindowsForm.chuc_nang.Trả_Phòng.resources
+D:\Doan\Do_an_windows_form\Do_An_WindowsForm\obj\Debug\Do_An_WindowsForm.chuc_nang.Tra_Phong.resources
