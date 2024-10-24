@@ -93,7 +93,6 @@ CREATE TABLE [dbo].[PhieuTraPhong](
 	[MaPTP] [bigint] NOT NULL,
 	[NgayTra] [datetime],
 	[DaThanhtoan] [tinyint],
-	[ThanhTien] [int],
  CONSTRAINT [PK_PhieuTraPhong] PRIMARY KEY CLUSTERED 
 (
 	[MaPTrP] ASC
@@ -140,7 +139,7 @@ CREATE TABLE [dbo].[CT_SuDungDV](
 	[MaDV] [int] NOT NULL,
 	[ChiSoCu] [int],
 	[ChiSoMoi] [int],
-	[SoLuong] [int],
+	--[SoLuong] [int],
  CONSTRAINT [PK_CT_SuDungDV] PRIMARY KEY CLUSTERED 
 (
 	[MaPTP] ASC,
@@ -206,44 +205,139 @@ INSERT INTO [dbo].[Phong] (MaPhong, TrangThai, DienTich, GiaTien) VALUES
 (110, 1, 29.0, 5700000),
 (111, 0, 24.0, 5400000),
 (112, 1, 26.0, 6000000),
-(113, 1, 21.5, 5000000);
+(113, 1, 21.5, 5000000),
+(114, 0, 22.5, 4900000),
+(115, 0, 29.0, 5700000);
+--phòng đã cho thuê 101, 103, 104, 106, 107, 109, 110, 112, 113
 
 -- Thêm dữ liệu cho bảng KhachHang
 INSERT INTO [dbo].[KhachHang] (MaKH, HoTen, CMND_CanCuoc, SDT, QueQuan, GioiTinh, NgheNghiep) VALUES
 (1, N'Nguyễn Văn A', '1234567890', '0912345678', N'Hà Nội', N'Nam', N'Kỹ sư'),
 (2, N'Trần Thị B', '0453983444', '0987654321', N'Hồ Chí Minh', N'Nữ', N'Sinh viên'),
-(3, N'Lê Văn C', '1122334455', '0909876543', N'Đà Nẵng', N'Nam', N'Technician');
+(3, N'Lê Văn C', '1122334455', '0909876543', N'Đà Nẵng', N'Nam', N'Technician'),
+(4, N'Phạm Văn D', '2233445566', '0901234567', N'Hải Phòng', N'Nam', N'Giáo viên'),
+(5, N'Hoàng Thị E', '3344556677', '0913456789', N'Cần Thơ', N'Nữ', N'Nhân viên văn phòng'),
+(6, N'Bùi Văn F', '5566778899', '0939876543', N'Nha Trang', N'Nam', N'Kinh doanh'),
+(7, N'Ngô Thị G', '6677889900', '0945678912', N'Quảng Ninh', N'Nữ', N'Công nhân'),
+(8, N'Lý Văn H', '7788990011', '0956789123', N'Vũng Tàu', N'Nam', N'Tài xế'),
+(9, N'Tô Thị I', '8899001122', '0967891234', N'Phú Thọ', N'Nữ', N'Bán hàng');
 
 -- Thêm dữ liệu cho bảng PhieuThuePhong
 INSERT INTO [dbo].[PhieuThuePhong] (MaPTP, MaPhong, MaKH, TienDacCoc, NgayThue, DaThanhToan) VALUES
 (1, 101, 1, 100000, '2024-10-01', 1),  -- Ngày thuê 01/10/2024
-(2, 102, 2, 200000, '2024-10-15', 0),  -- Ngày thuê 15/10/2024
-(3, 103, 3, 150000, '2024-10-20', 0);  -- Ngày thuê 20/10/2024
+(2, 103, 2, 200000, '2024-10-15', 0),  -- Ngày thuê 15/10/2024
+(3, 104, 3, 150000, '2024-10-20', 0),  -- Ngày thuê 20/10/2024
+(4, 106, 4, 300000, '2024-10-23', 1),  -- Ngày thuê 23/10/2024
+(5, 107, 5, 250000, '2024-10-22', 0),  -- Ngày thuê 22/10/2024
+(6, 109, 6, 270000, '2024-10-20', 0),  -- Ngày thuê 20/10/2024
+(7, 110, 7, 200000, '2024-10-21', 1),  -- Ngày thuê 21/10/2024
+(8, 112, 8, 220000, '2024-10-19', 0),  -- Ngày thuê 19/10/2024
+(9, 113, 9, 280000, '2024-10-18', 0);  -- Ngày thuê 18/10/2024
+--101, 103, 104, 106, 107, 109, 110, 112, 113
 
 -- Thêm dữ liệu cho bảng PhieuTraPhong
-INSERT INTO [dbo].[PhieuTraPhong] (MaPTrP, MaPTP, NgayTra, DaThanhtoan, ThanhTien) VALUES
-(1, 1, '2024-10-05', 1, 500000),  -- Ngày trả 05/10/2024
-(2, 2, '2024-10-20', 0, 400000),  -- Ngày trả 20/10/2024
-(3, 3, '2024-10-25', 0, 600000);  -- Ngày trả 25/10/2024
+INSERT INTO [dbo].[PhieuTraPhong] (MaPTrP, MaPTP, NgayTra, DaThanhtoan) VALUES
+(1, 1, '2024-10-05', 1),  -- Ngày trả 05/10/2024
+(2, 2, '2024-10-20', 0),  -- Ngày trả 20/10/2024
+(3, 3, '2024-10-25', 0);  -- Ngày trả 25/10/2024
 
 -- Thêm dữ liệu cho bảng DichVu
 INSERT INTO [dbo].[DichVu] (MaDV, TenDV, DonGia) VALUES
-(1, N'Dọn phòng', 100000),
-(2, N'Suối nước', 50000),
-(3, N'Giặt ủi', 20000);
+(1, N'Internet', 100000),
+(2, N'Rác', 50000),
+(3, N'Giữ Xe', 20000),
+(4, N'Nước', 10000),
+(5, N'Điện', 3300);
+
 
 -- Thêm dữ liệu cho bảng CT_SuDungDV
-INSERT INTO [dbo].[CT_SuDungDV] (MaPTP, MaDV, ChiSoCu, ChiSoMoi, SoLuong) VALUES
-(1, 1, 0, 1, 1),  -- Sử dụng dịch vụ dọn phòng cho phiếu thuê phòng 1
-(1, 2, 0, 2, 1),  -- Sử dụng dịch vụ suối nước cho phiếu thuê phòng 1
-(2, 1, 0, 1, 1),  -- Sử dụng dịch vụ dọn phòng cho phiếu thuê phòng 2
-(3, 3, 0, 1, 2);  -- Sử dụng dịch vụ giặt ủi cho phiếu thuê phòng 3
+INSERT INTO [dbo].[CT_SuDungDV] (MaPTP, MaDV, ChiSoCu, ChiSoMoi) VALUES
+-- Dịch vụ điện (DonGia = 3300)
+(1, 5, 10, 50),   -- MaPTP = 1
+(2, 5, 20, 60),   -- MaPTP = 2
+(3, 5, 15, 55),   -- MaPTP = 3
+(4, 5, 25, 65),   -- MaPTP = 4
+(5, 5, 18, 58),   -- MaPTP = 5
+(6, 5, 22, 62),   -- MaPTP = 6
+(7, 5, 30, 70),   -- MaPTP = 7
+(8, 5, 20, 60),   -- MaPTP = 8
+(9, 5, 24, 64),   -- MaPTP = 9
+
+-- Dịch vụ nước (DonGia = 10000)
+(1, 4, 5, 10),    -- MaPTP = 1
+(2, 4, 8, 15),    -- MaPTP = 2
+(3, 4, 10, 18),   -- MaPTP = 3
+(4, 4, 12, 20),   -- MaPTP = 4
+(5, 4, 9, 16),    -- MaPTP = 5
+(6, 4, 7, 13),    -- MaPTP = 6
+(7, 4, 6, 12),    -- MaPTP = 7
+(8, 4, 8, 14),    -- MaPTP = 8
+(9, 4, 10, 18),   -- MaPTP = 9
+
+-- Các dịch vụ khác (ChiSoCu = 0, ChiSoMoi = 1)
+(1, 1, 0, 1),    -- Internet cho MaPTP = 1
+(1, 2, 0, 1),    -- Rác cho MaPTP = 1
+(2, 1, 0, 1),    -- Internet cho MaPTP = 2
+(2, 2, 0, 1),    -- Rác cho MaPTP = 2
+(3, 1, 0, 1),    -- Internet cho MaPTP = 3
+(3, 2, 0, 1),    -- Rác cho MaPTP = 3
+(4, 1, 0, 1),    -- Internet cho MaPTP = 4
+(4, 3, 0, 1),    -- Giữ Xe cho MaPTP = 4
+(5, 1, 0, 1),    -- Internet cho MaPTP = 5
+(5, 2, 0, 1),    -- Rác cho MaPTP = 5
+(6, 1, 0, 1),    -- Internet cho MaPTP = 6
+(6, 3, 0, 1),    -- Giữ Xe cho MaPTP = 6
+(7, 1, 0, 1),    -- Internet cho MaPTP = 7
+(7, 2, 0, 1),    -- Rác cho MaPTP = 7
+(8, 1, 0, 1),    -- Internet cho MaPTP = 8
+(8, 3, 0, 1),    -- Giữ Xe cho MaPTP = 8
+(9, 1, 0, 1),    -- Internet cho MaPTP = 9
+(9, 2, 0, 1);    -- Rác cho MaPTP = 9
 
 -- Thêm dữ liệu cho bảng PhieuThutien
 INSERT INTO [dbo].[PhieuThutien] (MaPTP, MaDV, TuNgay, DenNgay, ThanhTien, DaThanhToan) VALUES
-(1, 1, '2024-10-01', '2024-10-02', 100000, 1),  -- Từ ngày 01/10/2024 đến 02/10/2024
-(2, 1, '2024-10-15', '2024-10-16', 150000, 0),  -- Từ ngày 15/10/2024 đến 16/10/2024
-(3, 3, '2024-10-20', '2024-10-21', 200000, 0);  -- Từ ngày 20/10/2024 đến 21/10/2024
+-- Dịch vụ điện (ThanhTien = (ChiSoMoi - ChiSoCu) * DonGia)
+(1, 5, '2024-10-01', '2024-10-05', (50 - 10) * 3300, 1),
+(2, 5, '2024-10-15', '2024-10-20', (60 - 20) * 3300, 0),
+(3, 5, '2024-10-20', '2024-10-25', (55 - 15) * 3300, 0),
+(4, 5, '2024-10-23', '2024-10-30', (65 - 25) * 3300, 1),
+(5, 5, '2024-10-22', '2024-10-29', (58 - 18) * 3300, 0),
+(6, 5, '2024-10-20', '2024-10-27', (62 - 22) * 3300, 0),
+(7, 5, '2024-10-21', '2024-10-28', (70 - 30) * 3300, 1),
+(8, 5, '2024-10-19', '2024-10-26', (60 - 20) * 3300, 0),
+(9, 5, '2024-10-18', '2024-10-25', (64 - 24) * 3300, 0),
+
+-- Dịch vụ nước (ThanhTien = (ChiSoMoi - ChiSoCu) * DonGia)
+(1, 4, '2024-10-01', '2024-10-05', (10 - 5) * 10000, 1),
+(2, 4, '2024-10-15', '2024-10-20', (15 - 8) * 10000, 0),
+(3, 4, '2024-10-20', '2024-10-25', (18 - 10) * 10000, 0),
+(4, 4, '2024-10-23', '2024-10-30', (20 - 12) * 10000, 1),
+(5, 4, '2024-10-22', '2024-10-29', (16 - 9) * 10000, 0),
+(6, 4, '2024-10-20', '2024-10-27', (13 - 7) * 10000, 0),
+(7, 4, '2024-10-21', '2024-10-28', (12 - 6) * 10000, 1),
+(8, 4, '2024-10-19', '2024-10-26', (14 - 8) * 10000, 0),
+(9, 4, '2024-10-18', '2024-10-25', (18 - 10) * 10000, 0),
+
+-- Các dịch vụ khác (ChiSoMoi - ChiSoCu = 1)
+(1, 1, '2024-10-01', '2024-10-05', (1 - 0) * 100000, 1), -- Internet
+(1, 2, '2024-10-01', '2024-10-05', (1 - 0) * 50000, 1),  -- Rác
+(2, 1, '2024-10-15', '2024-10-20', (1 - 0) * 100000, 0), -- Internet
+(2, 2, '2024-10-15', '2024-10-20', (1 - 0) * 50000, 0),  -- Rác
+(3, 1, '2024-10-20', '2024-10-25', (1 - 0) * 100000, 0), -- Internet
+(3, 2, '2024-10-20', '2024-10-25', (1 - 0) * 50000, 0),  -- Rác
+(4, 1, '2024-10-23', '2024-10-30', (1 - 0) * 100000, 1), -- Internet
+(4, 3, '2024-10-23', '2024-10-30', (1 - 0) * 200000, 1), -- Giữ Xe
+(5, 1, '2024-10-22', '2024-10-29', (1 - 0) * 100000, 0), -- Internet
+(5, 2, '2024-10-22', '2024-10-29', (1 - 0) * 50000, 0),  -- Rác
+(6, 1, '2024-10-20', '2024-10-27', (1 - 0) * 100000, 0), -- Internet
+(6, 3, '2024-10-20', '2024-10-27', (1 - 0) * 200000, 0), -- Giữ Xe
+(7, 1, '2024-10-21', '2024-10-28', (1 - 0) * 100000, 1), -- Internet
+(7, 2, '2024-10-21', '2024-10-28', (1 - 0) * 50000, 1),  -- Rác
+(8, 1, '2024-10-19', '2024-10-26', (1 - 0) * 100000, 0), -- Internet
+(8, 3, '2024-10-19', '2024-10-26', (1 - 0) * 200000, 0), -- Giữ Xe
+(9, 1, '2024-10-18', '2024-10-25', (1 - 0) * 100000, 0), -- Internet
+(9, 2, '2024-10-18', '2024-10-25', (1 - 0) * 50000, 0);  -- Rác
+
 
 
 SELECT * FROM [dbo].[CT_SuDungDV];
@@ -310,55 +404,3 @@ USE [master]
 GO
 ALTER DATABASE [QuanLyPhongTro] SET  READ_WRITE 
 GO
-
-
-
-
-
-
-
--- Insert data into Faculty table
---INSERT [dbo].[Faculty] ([FacultyID], [FacultyName], [TotalProfessor]) VALUES ('1258453483', N'Công nghệ thông tin',2)
---INSERT [dbo].[Faculty] ([FacultyID], [FacultyName], [TotalProfessor]) VALUES ('2438294564', N'Ngôn ngữ Anh',2)
---INSERT [dbo].[Faculty] ([FacultyID], [FacultyName], [TotalProfessor]) VALUES ('6122485930', N'Quản trị kinh doanh',2)
---INSERT [dbo].[Faculty] ([FacultyID], [FacultyName], [TotalProfessor]) VALUES ('7144839204', N'Công nghệ ô tô',1)
---INSERT [dbo].[Faculty] ([FacultyID], [FacultyName], [TotalProfessor]) VALUES ('9483502358', N'Kế Toán',1)
---INSERT [dbo].[Faculty] ([FacultyID], [FacultyName], [TotalProfessor]) VALUES ('3204224573', N'Khoa học môi trường', 3);
---INSERT [dbo].[Faculty] ([FacultyID], [FacultyName], [TotalProfessor]) VALUES ('4430459823', N'Kỹ thuật điện tử', 2);
---INSERT [dbo].[Faculty] ([FacultyID], [FacultyName], [TotalProfessor]) VALUES ('2390423325', N'Marketing', 1);
---INSERT [dbo].[Faculty] ([FacultyID], [FacultyName], [TotalProfessor]) VALUES ('0294234408', N'Tài chính - Ngân hàng', 2);
---INSERT [dbo].[Faculty] ([FacultyID], [FacultyName], [TotalProfessor]) VALUES ('1902348740', N'Du lịch', 1);
-
----- Insert data into Student table with Gender values and order before FacultyID
---INSERT [dbo].[Student] ([StudentID], [FullName], [AverageScore], [Gender], [FacultyID]) 
---VALUES (N'1611061916', N'Nguyễn Trần Hoàng Lan', 4.5, N'Female', '1258453483');
---INSERT [dbo].[Student] ([StudentID], [FullName], [AverageScore], [Gender], [FacultyID]) 
---VALUES (N'1711060596', N'Đảm Minh Đức', 10, N'Male', '6122485930');
---INSERT [dbo].[Student] ([StudentID], [FullName], [AverageScore], [Gender], [FacultyID]) 
---VALUES (N'1811061004', N'Nguyễn Quốc An', 8, N'Male', '1258453483');
---INSERT [dbo].[Student] ([StudentID], [FullName], [AverageScore], [Gender], [FacultyID]) 
---VALUES (N'2111062201', N'Dương Quốc Minh', 6.5, N'Male', '4430459823');
---INSERT [dbo].[Student] ([StudentID], [FullName], [AverageScore], [Gender], [FacultyID]) 
---VALUES (N'2111061113', N'Nguyễn Thị B', 5.5, N'Female', '6122485930');
---INSERT [dbo].[Student] ([StudentID], [FullName], [AverageScore], [Gender], [FacultyID]) 
---VALUES (N'1711061233', N'Trần Văn A', 7, N'Male', '2438294564');
---INSERT [dbo].[Student] ([StudentID], [FullName], [AverageScore], [Gender], [FacultyID]) 
---VALUES (N'1911060023', N'Lê Hoàng Phương', 7.8, N'Female', '1258453483');
---INSERT [dbo].[Student] ([StudentID], [FullName], [AverageScore], [Gender], [FacultyID]) 
---VALUES (N'2011061205', N'Phạm Văn Cường', 9.1, N'Male', '2438294564');
---INSERT [dbo].[Student] ([StudentID], [FullName], [AverageScore], [Gender], [FacultyID]) 
---VALUES (N'2111062234', N'Trần Thị Hoa', 6.9, N'Female', '9483502358');
---INSERT [dbo].[Student] ([StudentID], [FullName], [AverageScore], [Gender], [FacultyID]) 
---VALUES (N'2211063312', N'Nguyễn Minh Tú', 8.5, N'Male', '1902348740');
---INSERT [dbo].[Student] ([StudentID], [FullName], [AverageScore], [Gender], [FacultyID]) 
---VALUES (N'2211063419', N'Hoàng Thị Minh', 9.0, N'Female', '3204224573');
---GO
---ALTER TABLE [dbo].[Student]  WITH CHECK ADD  CONSTRAINT [FK_Student_Faculty] FOREIGN KEY([FacultyID])
---REFERENCES [dbo].[Faculty] ([FacultyID])
---GO
---ALTER TABLE [dbo].[Student] CHECK CONSTRAINT [FK_Student_Faculty]
---GO
---USE [master]
---GO
---ALTER DATABASE [QuanLyPhongTro] SET  READ_WRITE 
---GO

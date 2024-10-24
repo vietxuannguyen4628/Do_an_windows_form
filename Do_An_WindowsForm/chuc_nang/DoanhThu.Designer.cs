@@ -40,6 +40,9 @@
             this.dtpdenngay = new System.Windows.Forms.DateTimePicker();
             this.txttongtien = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnChart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoanhThu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,18 +116,19 @@
             // 
             // dtptungay
             // 
-            this.dtptungay.Location = new System.Drawing.Point(240, 26);
+            this.dtptungay.Location = new System.Drawing.Point(204, 26);
             this.dtptungay.Name = "dtptungay";
             this.dtptungay.Size = new System.Drawing.Size(200, 23);
             this.dtptungay.TabIndex = 1;
-            this.dtptungay.ValueChanged += new System.EventHandler(this.dtpThoigian_ValueChanged);
+            this.dtptungay.ValueChanged += new System.EventHandler(this.dtptungay_ValueChanged);
             // 
             // dtpdenngay
             // 
-            this.dtpdenngay.Location = new System.Drawing.Point(564, 26);
+            this.dtpdenngay.Location = new System.Drawing.Point(438, 26);
             this.dtpdenngay.Name = "dtpdenngay";
             this.dtpdenngay.Size = new System.Drawing.Size(200, 23);
             this.dtpdenngay.TabIndex = 2;
+            this.dtpdenngay.ValueChanged += new System.EventHandler(this.dtpdenngay_ValueChanged);
             // 
             // txttongtien
             // 
@@ -142,10 +146,43 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Tổng tiền";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label2.Location = new System.Drawing.Point(120, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 21);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Thời gian";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label3.Location = new System.Drawing.Point(410, 26);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(22, 21);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "~";
+            // 
+            // btnChart
+            // 
+            this.btnChart.Location = new System.Drawing.Point(803, 24);
+            this.btnChart.Name = "btnChart";
+            this.btnChart.Size = new System.Drawing.Size(195, 30);
+            this.btnChart.TabIndex = 7;
+            this.btnChart.Text = "Biểu đồ thống kê";
+            this.btnChart.UseVisualStyleBackColor = true;
+            this.btnChart.Click += new System.EventHandler(this.btnChart_Click);
+            // 
             // DoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnChart);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txttongtien);
             this.Controls.Add(this.dtpdenngay);
@@ -174,5 +211,8 @@
         private System.Windows.Forms.DateTimePicker dtpdenngay;
         private System.Windows.Forms.TextBox txttongtien;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnChart;
     }
 }
