@@ -1,4 +1,6 @@
-﻿using Do_An_WindowsForm.chuc_nang;
+﻿//using Newtonsoft.Json.Linq;
+//using ZaloCSharpSDK;
+using Do_An_WindowsForm.chuc_nang;
 using DevExpress.XtraBars;
 using System;
 using System.Collections.Generic;
@@ -11,11 +13,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraTab;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Diagnostics;
+using ZaloCSharpSDK;
 
 namespace Do_An_WindowsForm
 {
     public partial class frm_Quan_Ly : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        
         public frm_Quan_Ly()
         {
             InitializeComponent();
@@ -163,10 +168,12 @@ namespace Do_An_WindowsForm
 
         private void btnLogout_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DialogResult dlg = MessageBox.Show("Bạn có chắc chắn muốn đóng chương trình không?", "Chương trình quản lý phòng trọ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dlg = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất không?", "Chương trình quản lý phòng trọ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(dlg == DialogResult.Yes)
             {
-                Application.Exit();
+                this.Hide();
+                Login lg = new Login();
+                lg.Show();
             }
         }
 
@@ -208,5 +215,99 @@ namespace Do_An_WindowsForm
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnDk_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                // Kiểm tra xem tab đã tồn tại hay chưa
+                foreach (DevExpress.XtraTab.XtraTabPage tab in xtraTabControl1.TabPages)
+                {
+                    if (tab.Text == e.Item.Caption)
+                    {
+                        // Nếu tab đã tồn tại, chọn tab đó và thoát khỏi phương thức
+                        xtraTabControl1.SelectedTabPage = tab;
+                        return;
+                    }
+                }
+
+                // Nếu tab chưa tồn tại, tạo một XtraTabPage mới
+                DevExpress.XtraTab.XtraTabPage newTab = new DevExpress.XtraTab.XtraTabPage();
+
+                // Đặt tên tab giống với tên button
+                newTab.Text = e.Item.Caption;
+
+                // Tạo một instance của UserControl
+                DangKy dk_hopDong = new DangKy();
+
+                // Đặt DockStyle cho UserControl
+                dk_hopDong.Dock = DockStyle.Fill;
+
+                // Thêm UserControl vào XtraTabPage
+                newTab.Controls.Add(dk_hopDong);
+
+                // Thêm XtraTabPage vào XtraTabControl
+                xtraTabControl1.TabPages.Add(newTab);
+
+                // Chọn tab mới
+                xtraTabControl1.SelectedTabPage = newTab;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnThongKe_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnTinhTien_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                // Kiểm tra xem tab đã tồn tại hay chưa
+                foreach (DevExpress.XtraTab.XtraTabPage tab in xtraTabControl1.TabPages)
+                {
+                    if (tab.Text == e.Item.Caption)
+                    {
+                        // Nếu tab đã tồn tại, chọn tab đó và thoát khỏi phương thức
+                        xtraTabControl1.SelectedTabPage = tab;
+                        return;
+                    }
+                }
+
+                // Nếu tab chưa tồn tại, tạo một XtraTabPage mới
+                DevExpress.XtraTab.XtraTabPage newTab = new DevExpress.XtraTab.XtraTabPage();
+
+                // Đặt tên tab giống với tên button
+                newTab.Text = e.Item.Caption;
+
+                // Tạo một instance của UserControl
+                TinhTien tinhTien = new TinhTien();
+
+                // Đặt DockStyle cho UserControl
+                tinhTien.Dock = DockStyle.Fill;
+
+                // Thêm UserControl vào XtraTabPage
+                newTab.Controls.Add(tinhTien);
+
+                // Thêm XtraTabPage vào XtraTabControl
+                xtraTabControl1.TabPages.Add(newTab);
+
+                // Chọn tab mới
+                xtraTabControl1.SelectedTabPage = newTab;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        //private void btnSendMessage_ItemClick(object sender, ItemClickEventArgs e)
+        //{
+        //    
+        //}
     }
 }

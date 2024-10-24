@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using Do_An_WindowsForm.model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,33 +16,62 @@ namespace Do_An_WindowsForm.chuc_nang
 {
     public partial class trang_thai_thue_ : DevExpress.XtraEditors.XtraUserControl
     {
+        QuanLyPhongTroDB context = new QuanLyPhongTroDB();
         List<Button> buttons = new List<Button>();
         private Button selectedRoom = null;
+        
         public trang_thai_thue_()
         {
             InitializeComponent();
             groupPhong.Resize += new EventHandler(groupPhong_SizeChanged);
         }
-        
+
+        //private void trang_thai_thue__Load(object sender, EventArgs e)
+        //{
+        //    // khởi tạo màu cho backgroud của groupBox
+        //    groupPhong.BackColor = Color.FromArgb(255, 224, 192);
+
+        //    // Tạo và gán sự kiện cho các button GroupBox 
+        //    foreach (Control control in groupPhong.Controls)
+        //    {
+        //        if (control is Button btn)
+        //        {
+        //            btn.BackColor = Color.White; // Mặc định màu là trắng
+        //            btn.Click += new EventHandler(btnChooseASeat);
+        //            buttons.Add(btn); // Thêm nút vào danh sách
+        //        }
+        //    }
+        //    btnHuy.BackColor = Color.Red;
+        //    btnThue.BackColor = Color.LimeGreen;
+
+        //}
         private void trang_thai_thue__Load(object sender, EventArgs e)
         {
             // khởi tạo màu cho backgroud của groupBox
             groupPhong.BackColor = Color.FromArgb(255, 224, 192);
-
+            List<Phong> listPhong = context.Phongs.ToList();
             // Tạo và gán sự kiện cho các button GroupBox 
-            foreach (Control control in groupPhong.Controls)
+             foreach (var item in listPhong)
             {
-                if (control is Button btn)
+                foreach (Control control in groupPhong.Controls)
                 {
-                    btn.BackColor = Color.White; // Mặc định màu là trắng
-                    btn.Click += new EventHandler(btnChooseASeat);
-                    buttons.Add(btn); // Thêm nút vào danh sách
+                    //var find = context.Phongs.Where(p => p.TrangThai == 0).Select(p => p.TrangThai).FirstOrDefault();
+                    //int aaaa = int.Parse(find);
+                    if (control is Button btn)
+                    {
+                        //switch (var)
+                        //{
+                        //    case 
+                        //}
+                        btn.BackColor = Color.White; // Mặc định màu là trắng
+                        btn.Click += new EventHandler(btnChooseASeat);
+                        buttons.Add(btn); // Thêm nút vào danh sách
+                    }
                 }
-            }
+            }           
             btnHuy.BackColor = Color.Red;
             btnThue.BackColor = Color.LimeGreen;
         }
-
         private void goupPhong_Enter(object sender, EventArgs e)
         {
             
@@ -85,6 +115,7 @@ namespace Do_An_WindowsForm.chuc_nang
                 if (selectedRoom != null)
                 {
                     selectedRoom.BackColor = Color.White;
+
                     selectedRoom = null;
                 }
             }
@@ -121,6 +152,11 @@ namespace Do_An_WindowsForm.chuc_nang
             //    //control.Left = (groupPhong.Width - control.Width) / 12; // Căn giữa theo chiều ngang
             //    //control.Top = (groupPhong.Height - control.Height) / 6; // Căn giữa theo chiều dọc
             //}
+        }
+
+        private void fillPhong(List<Phong> listPhong)
+        {
+
         }
     }   
 }

@@ -12,8 +12,7 @@ namespace Do_An_WindowsForm.model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PhieuThuePhong()
         {
-            PhieuDenBus = new HashSet<PhieuDenBu>();
-            PhieuSuDungDVs = new HashSet<PhieuSuDungDV>();
+            CT_SuDungDV = new HashSet<CT_SuDungDV>();
             PhieuTraPhongs = new HashSet<PhieuTraPhong>();
         }
 
@@ -31,13 +30,10 @@ namespace Do_An_WindowsForm.model
 
         public byte? DaThanhToan { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CT_SuDungDV> CT_SuDungDV { get; set; }
+
         public virtual KhachHang KhachHang { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PhieuDenBu> PhieuDenBus { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PhieuSuDungDV> PhieuSuDungDVs { get; set; }
 
         public virtual Phong Phong { get; set; }
 

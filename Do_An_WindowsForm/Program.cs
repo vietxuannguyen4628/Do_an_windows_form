@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Do_An_WindowsForm.chuc_nang;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,10 @@ namespace Do_An_WindowsForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_Quan_Ly());
+            //Application.Run(new frm_Quan_Ly());
+            //Application.Run(new Login());
+            //Application.Run(new TinhTien());
+            Application.Run(new TinhTienTro());
         }
     }
 }

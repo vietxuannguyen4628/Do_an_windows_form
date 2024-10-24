@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -9,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Do_An_WindowsForm</RootNamespace>
     <AssemblyName>Do_An_WindowsForm</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -51,9 +51,15 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -65,22 +71,22 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="ZaloCSharpSDK, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\vng.zalo.ZaloCSharpSDK.1.0.10\lib\net452\ZaloCSharpSDK.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-
-    <Compile Include="chuc_nang\DangKycs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="chuc_nang\DangKycs.Designer.cs">
-      <DependentUpon>DangKycs.cs</DependentUpon>
-	</Compile>
-
     <Compile Include="chuc_nang\backgound.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="chuc_nang\backgound.Designer.cs">
       <DependentUpon>backgound.cs</DependentUpon>
-
+    </Compile>
+    <Compile Include="chuc_nang\DangKy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="chuc_nang\DangKy.Designer.cs">
+      <DependentUpon>DangKy.cs</DependentUpon>
     </Compile>
     <Compile Include="chuc_nang\danh_sach_khach_thue.cs">
       <SubType>UserControl</SubType>
@@ -94,12 +100,6 @@
     <Compile Include="chuc_nang\hinh_anh_phong.Designer.cs">
       <DependentUpon>hinh_anh_phong.cs</DependentUpon>
     </Compile>
-    <Compile Include="chuc_nang\Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="chuc_nang\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
     <Compile Include="chuc_nang\TinhTien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,42 +112,51 @@
     <Compile Include="chuc_nang\trang_thai_thue_.Designer.cs">
       <DependentUpon>trang_thai_thue_.cs</DependentUpon>
     </Compile>
+    <Compile Include="chuc_nang\TraPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="chuc_nang\TraPhong.Designer.cs">
+      <DependentUpon>TraPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Quan_Ly.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_Quan_Ly.Designer.cs">
       <DependentUpon>frm_Quan_Ly.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="model\CT_SuDungDV.cs" />
     <Compile Include="model\DichVu.cs" />
     <Compile Include="model\KhachHang.cs" />
-    <Compile Include="model\PhieuDenBu.cs" />
-    <Compile Include="model\PhieuSuDungDV.cs" />
     <Compile Include="model\PhieuThuePhong.cs" />
+    <Compile Include="model\PhieuThutien.cs" />
     <Compile Include="model\PhieuTraPhong.cs" />
     <Compile Include="model\Phong.cs" />
-    <Compile Include="model\QuanLyNhaTroDB.cs" />
+    <Compile Include="model\QuanLyPhongTroDB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-
-	
- 
-    <EmbeddedResource Include="chuc_nang\DangKycs.resx">
-      <DependentUpon>DangKycs.cs</DependentUpon>
-	</EmbeddedResource>
-
+    <Compile Include="TinhTienTro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TinhTienTro.Designer.cs">
+      <DependentUpon>TinhTienTro.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="chuc_nang\backgound.resx">
       <DependentUpon>backgound.cs</DependentUpon>
- 
+    </EmbeddedResource>
+    <EmbeddedResource Include="chuc_nang\DangKy.resx">
+      <DependentUpon>DangKy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="chuc_nang\danh_sach_khach_thue.resx">
       <DependentUpon>danh_sach_khach_thue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="chuc_nang\hinh_anh_phong.resx">
       <DependentUpon>hinh_anh_phong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="chuc_nang\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="chuc_nang\thong_ke.rdlc" />
     <EmbeddedResource Include="chuc_nang\TinhTien.resx">
@@ -156,8 +165,14 @@
     <EmbeddedResource Include="chuc_nang\trang_thai_thue_.resx">
       <DependentUpon>trang_thai_thue_.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="chuc_nang\TraPhong.resx">
+      <DependentUpon>TraPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Quan_Ly.resx">
       <DependentUpon>frm_Quan_Ly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -168,7 +183,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TinhTienTro.resx">
+      <DependentUpon>TinhTienTro.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -308,7 +308,7 @@
             // button12
             // 
             this.button12.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.button12.Location = new System.Drawing.Point(352, 489);
+            this.button12.Location = new System.Drawing.Point(373, 489);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(109, 120);
             this.button12.TabIndex = 0;
@@ -328,7 +328,7 @@
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.button7.Location = new System.Drawing.Point(362, 310);
+            this.button7.Location = new System.Drawing.Point(373, 310);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(109, 113);
             this.button7.TabIndex = 0;
@@ -368,7 +368,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.button2.Location = new System.Drawing.Point(362, 130);
+            this.button2.Location = new System.Drawing.Point(373, 130);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(109, 112);
             this.button2.TabIndex = 0;
@@ -427,14 +427,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnThue;
         private System.Windows.Forms.Button btnHuy;
+        private System.Windows.Forms.GroupBox grTinhTrang;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.GroupBox grTinhTrang;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }
