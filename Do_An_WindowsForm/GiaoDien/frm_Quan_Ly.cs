@@ -14,6 +14,7 @@ using System.Windows.Forms;
 using DevExpress.XtraTab;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Diagnostics;
+using Do_An_WindowsForm.QuanLy;
 
 
 namespace Do_An_WindowsForm
@@ -54,7 +55,11 @@ namespace Do_An_WindowsForm
                 DevExpress.XtraTab.XtraTabPage newTab = new DevExpress.XtraTab.XtraTabPage();
 
                 // Đặt tên tab giống với tên button
-                
+                newTab.Text = e.Item.Caption;
+                TrangThaiPhong trangThaiPhong = new TrangThaiPhong();
+                trangThaiPhong.Dock = DockStyle.Fill;
+                newTab.Controls.Add(trangThaiPhong);
+
 
                 // Thêm XtraTabPage vào XtraTabControl
                 xtraTabControl1.TabPages.Add(newTab);
@@ -274,12 +279,80 @@ namespace Do_An_WindowsForm
 
                 // Đặt tên tab giống với tên button
                 newTab.Text = e.Item.Caption;
+                TinhTienTro tinhtienTro = new TinhTienTro();
+                tinhtienTro.Dock = DockStyle.Fill;
+                newTab.Controls.Add(tinhtienTro);
 
-            
-               
+                // Thêm XtraTabPage vào XtraTabControl
+                xtraTabControl1.TabPages.Add(newTab);
 
+                // Chọn tab mới
+                xtraTabControl1.SelectedTabPage = newTab;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
                 
+                foreach (DevExpress.XtraTab.XtraTabPage tab in xtraTabControl1.TabPages)
+                {
+                    if (tab.Text == e.Item.Caption)
+                    {                       
+                        xtraTabControl1.SelectedTabPage = tab;
+                        return;
+                    }
+                }
 
+                // Nếu tab chưa tồn tại, tạo một XtraTabPage mới
+                DevExpress.XtraTab.XtraTabPage newTab = new DevExpress.XtraTab.XtraTabPage();
+
+                // Đặt tên tab giống với tên button
+                newTab.Text = e.Item.Caption;
+
+                QuanLyPhong quanLyPhong = new QuanLyPhong();
+                quanLyPhong.Dock = DockStyle.Fill;
+                newTab.Controls.Add(quanLyPhong);
+                // Thêm XtraTabPage vào XtraTabControl
+                xtraTabControl1.TabPages.Add(newTab);
+
+                // Chọn tab mới
+                xtraTabControl1.SelectedTabPage = newTab;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+
+                foreach (DevExpress.XtraTab.XtraTabPage tab in xtraTabControl1.TabPages)
+                {
+                    if (tab.Text == e.Item.Caption)
+                    {
+                        xtraTabControl1.SelectedTabPage = tab;
+                        return;
+                    }
+                }
+
+                // Nếu tab chưa tồn tại, tạo một XtraTabPage mới
+                DevExpress.XtraTab.XtraTabPage newTab = new DevExpress.XtraTab.XtraTabPage();
+
+                // Đặt tên tab giống với tên button
+                newTab.Text = e.Item.Caption;
+
+                QuanLyDichVucs quanLyDichvu = new QuanLyDichVucs();
+                quanLyDichvu.Dock = DockStyle.Fill;
+                newTab.Controls.Add(quanLyDichvu);
                 // Thêm XtraTabPage vào XtraTabControl
                 xtraTabControl1.TabPages.Add(newTab);
 

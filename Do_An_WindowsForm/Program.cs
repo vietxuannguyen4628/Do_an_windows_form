@@ -21,7 +21,7 @@ namespace Do_An_WindowsForm
             //Application.Run(new frm_Quan_Ly());
             //Application.Run(new Login());
             //Application.Run(new TinhTien());
-            Application.Run(new TrangThaiPhong());
+            Application.Run(new frm_Quan_Ly());
         }
     }
 }

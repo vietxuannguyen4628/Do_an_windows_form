@@ -45,8 +45,12 @@
             this.btnThongKe = new DevExpress.XtraBars.BarButtonItem();
             this.btnTinhTien = new DevExpress.XtraBars.BarButtonItem();
             this.btnSendMessage = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbGroupThaoTacDuLieu = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -57,10 +61,6 @@
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.SuspendLayout();
@@ -229,6 +229,27 @@
             this.btnSendMessage.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSendMessage.ImageOptions.LargeImage")));
             this.btnSendMessage.Name = "btnSendMessage";
             // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Id = 17;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Quản lí dịch vụ";
+            this.barButtonItem2.Id = 18;
+            this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
+            this.barButtonItem2.Name = "barButtonItem2";
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "Quản Lý Phòng";
+            this.barButtonItem3.Id = 19;
+            this.barButtonItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem3.ImageOptions.SvgImage")));
+            this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -244,6 +265,14 @@
             this.rbGroupThaoTacDuLieu.ItemsLayout = DevExpress.XtraBars.Ribbon.RibbonPageGroupItemsLayout.OneRow;
             this.rbGroupThaoTacDuLieu.Name = "rbGroupThaoTacDuLieu";
             this.rbGroupThaoTacDuLieu.Text = "Thao tác với dữ liệu";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem3);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem2);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "Quản lý nhà trọ";
             // 
             // ribbonPage4
             // 
@@ -315,33 +344,6 @@
             this.xtraTabControl1.Size = new System.Drawing.Size(1286, 605);
             this.xtraTabControl1.TabIndex = 15;
             this.xtraTabControl1.Click += new System.EventHandler(this.xtraTabControl1_Click);
-            // 
-            // ribbonPageGroup1
-            // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem3);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem2);
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "Quản lý nhà trọ";
-            // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.Id = 17;
-            this.barButtonItem1.Name = "barButtonItem1";
-            // 
-            // barButtonItem2
-            // 
-            this.barButtonItem2.Caption = "Quản lí dịch vụ";
-            this.barButtonItem2.Id = 18;
-            this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
-            this.barButtonItem2.Name = "barButtonItem2";
-            // 
-            // barButtonItem3
-            // 
-            this.barButtonItem3.Caption = "Quản Lý Phòng";
-            this.barButtonItem3.Id = 19;
-            this.barButtonItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem3.ImageOptions.SvgImage")));
-            this.barButtonItem3.Name = "barButtonItem3";
             // 
             // frm_Quan_Ly
             // 
