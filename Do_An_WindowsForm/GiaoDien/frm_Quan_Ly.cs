@@ -365,6 +365,41 @@ namespace Do_An_WindowsForm
             }
         }
 
+        private void btnTraPhong_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+
+                foreach (DevExpress.XtraTab.XtraTabPage tab in xtraTabControl1.TabPages)
+                {
+                    if (tab.Text == e.Item.Caption)
+                    {
+                        xtraTabControl1.SelectedTabPage = tab;
+                        return;
+                    }
+                }
+
+                // Nếu tab chưa tồn tại, tạo một XtraTabPage mới
+                DevExpress.XtraTab.XtraTabPage newTab = new DevExpress.XtraTab.XtraTabPage();
+
+                // Đặt tên tab giống với tên button
+                newTab.Text = e.Item.Caption;
+
+                TraPhong traPhong = new TraPhong();
+                traPhong.Dock = DockStyle.Fill;
+                newTab.Controls.Add(traPhong);
+                // Thêm XtraTabPage vào XtraTabControl
+                xtraTabControl1.TabPages.Add(newTab);
+
+                // Chọn tab mới
+                xtraTabControl1.SelectedTabPage = newTab;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         //private void btnSendMessage_ItemClick(object sender, ItemClickEventArgs e)
         //{
         //    

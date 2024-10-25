@@ -307,5 +307,10 @@ namespace Do_An_WindowsForm.chuc_nang
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void groupBox6_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

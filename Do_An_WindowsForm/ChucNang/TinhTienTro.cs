@@ -19,8 +19,6 @@ namespace Do_An_WindowsForm
         public TinhTienTro()
         {
             InitializeComponent();
-            cbDien.CheckedChanged += new EventHandler(xuly);
-            cbNuoc.CheckedChanged += new EventHandler(xuly);
         }
         private void setNull()
         {
@@ -78,6 +76,7 @@ namespace Do_An_WindowsForm
             if (_phieuthue != null)
             {
                 dateThue.EditValue = _phieuthue.NgayThue.Value;
+                
                 txtID_Khach.Text = _phieuthue.MaKH.ToString();
                 txtHoTen.Text = _phieuthue.KhachHang.HoTen.ToString();
                 txtCCCD.Text = _phieuthue.KhachHang.CMND_CanCuoc.ToString();
@@ -97,11 +96,6 @@ namespace Do_An_WindowsForm
                 }
 
             }
-        }
-
-        private void xuly(object sender, EventArgs e)
-        {
-            
         }
 
         private void cbDien_CheckedChanged(object sender, EventArgs e)

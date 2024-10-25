@@ -201,6 +201,7 @@
             this.btnTraPhong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTraPhong.ImageOptions.Image")));
             this.btnTraPhong.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTraPhong.ImageOptions.LargeImage")));
             this.btnTraPhong.Name = "btnTraPhong";
+            this.btnTraPhong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTraPhong_ItemClick);
             // 
             // btnThongKe
             // 

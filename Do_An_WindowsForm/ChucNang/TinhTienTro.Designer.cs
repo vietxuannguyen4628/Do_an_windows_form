@@ -47,6 +47,8 @@
             this.cbGiuXe = new System.Windows.Forms.CheckBox();
             this.cbRac = new System.Windows.Forms.CheckBox();
             this.cbInternet = new System.Windows.Forms.CheckBox();
+            this.cbNuoc = new System.Windows.Forms.CheckBox();
+            this.cbDien = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -65,10 +67,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dateThu = new System.Windows.Forms.DateTimePicker();
-            this.dateDong = new DevExpress.XtraEditors.DateTimeOffsetEdit();
             this.cmbChonPhong = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -82,12 +82,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbDien = new System.Windows.Forms.CheckBox();
-            this.cbNuoc = new System.Windows.Forms.CheckBox();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateThue.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateDong.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -315,6 +312,30 @@
             this.cbInternet.UseVisualStyleBackColor = true;
             this.cbInternet.CheckedChanged += new System.EventHandler(this.cbInternet_CheckedChanged);
             // 
+            // cbNuoc
+            // 
+            this.cbNuoc.AutoSize = true;
+            this.cbNuoc.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbNuoc.Location = new System.Drawing.Point(15, 74);
+            this.cbNuoc.Name = "cbNuoc";
+            this.cbNuoc.Size = new System.Drawing.Size(61, 22);
+            this.cbNuoc.TabIndex = 36;
+            this.cbNuoc.Text = "Nước";
+            this.cbNuoc.UseVisualStyleBackColor = true;
+            this.cbNuoc.CheckedChanged += new System.EventHandler(this.cbNuoc_CheckedChanged);
+            // 
+            // cbDien
+            // 
+            this.cbDien.AutoSize = true;
+            this.cbDien.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbDien.Location = new System.Drawing.Point(15, 33);
+            this.cbDien.Name = "cbDien";
+            this.cbDien.Size = new System.Drawing.Size(55, 22);
+            this.cbDien.TabIndex = 35;
+            this.cbDien.Text = "Điện";
+            this.cbDien.UseVisualStyleBackColor = true;
+            this.cbDien.CheckedChanged += new System.EventHandler(this.cbDien_CheckedChanged);
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -505,18 +526,6 @@
             this.dateThu.Size = new System.Drawing.Size(190, 26);
             this.dateThu.TabIndex = 61;
             // 
-            // dateDong
-            // 
-            this.dateDong.EditValue = null;
-            this.dateDong.Location = new System.Drawing.Point(1153, 45);
-            this.dateDong.Name = "dateDong";
-            this.dateDong.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateDong.Properties.Appearance.Options.UseFont = true;
-            this.dateDong.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateDong.Size = new System.Drawing.Size(190, 24);
-            this.dateDong.TabIndex = 60;
-            // 
             // cmbChonPhong
             // 
             this.cmbChonPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -536,16 +545,6 @@
             this.label25.Size = new System.Drawing.Size(72, 20);
             this.label25.TabIndex = 56;
             this.label25.Text = "Ngày thu";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(1006, 51);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(143, 20);
-            this.label24.TabIndex = 57;
-            this.label24.Text = "Ngày bắt đầu đóng";
             // 
             // label3
             // 
@@ -680,54 +679,26 @@
             this.label1.TabIndex = 54;
             this.label1.Text = "TÍNH TIỀN TRỌ";
             // 
-            // cbDien
-            // 
-            this.cbDien.AutoSize = true;
-            this.cbDien.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbDien.Location = new System.Drawing.Point(15, 33);
-            this.cbDien.Name = "cbDien";
-            this.cbDien.Size = new System.Drawing.Size(55, 22);
-            this.cbDien.TabIndex = 35;
-            this.cbDien.Text = "Điện";
-            this.cbDien.UseVisualStyleBackColor = true;
-            this.cbDien.CheckedChanged += new System.EventHandler(this.cbDien_CheckedChanged);
-            // 
-            // cbNuoc
-            // 
-            this.cbNuoc.AutoSize = true;
-            this.cbNuoc.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbNuoc.Location = new System.Drawing.Point(15, 74);
-            this.cbNuoc.Name = "cbNuoc";
-            this.cbNuoc.Size = new System.Drawing.Size(61, 22);
-            this.cbNuoc.TabIndex = 36;
-            this.cbNuoc.Text = "Nước";
-            this.cbNuoc.UseVisualStyleBackColor = true;
-            this.cbNuoc.CheckedChanged += new System.EventHandler(this.cbNuoc_CheckedChanged);
-            // 
             // TinhTienTro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 524);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dateThu);
-            this.Controls.Add(this.dateDong);
             this.Controls.Add(this.cmbChonPhong);
             this.Controls.Add(this.label25);
-            this.Controls.Add(this.label24);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "TinhTienTro";
-            this.Text = "TinhTienTro";
+            this.Size = new System.Drawing.Size(1370, 524);
             this.Load += new System.EventHandler(this.TinhTienTro_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateThue.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateDong.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -763,10 +734,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateThu;
-        private DevExpress.XtraEditors.DateTimeOffsetEdit dateDong;
         private System.Windows.Forms.ComboBox cmbChonPhong;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label9;

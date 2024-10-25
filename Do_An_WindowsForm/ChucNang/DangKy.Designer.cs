@@ -647,6 +647,7 @@
             this.groupBox6.Size = new System.Drawing.Size(1216, 738);
             this.groupBox6.TabIndex = 28;
             this.groupBox6.TabStop = false;
+            this.groupBox6.Enter += new System.EventHandler(this.groupBox6_Enter);
             // 
             // DangKy
             // 
