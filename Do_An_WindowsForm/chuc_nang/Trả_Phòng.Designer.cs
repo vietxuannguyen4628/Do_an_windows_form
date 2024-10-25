@@ -92,7 +92,7 @@
             this.grpTraPhong.TabIndex = 0;
             this.grpTraPhong.TabStop = false;
             this.grpTraPhong.Text = "TRẢ PHÒNG";
-            this.grpTraPhong.Enter += new System.EventHandler(this.grpTraPhong_Enter);
+//            this.grpTraPhong.Enter += new System.EventHandler(this.grpTraPhong_Enter);
             // 
             // groupBox1
             // 
@@ -170,7 +170,7 @@
             this.grpTTChuThue.TabIndex = 7;
             this.grpTTChuThue.TabStop = false;
             this.grpTTChuThue.Text = "THÔNG TIN CHỦ THUÊ";
-            this.grpTTChuThue.Enter += new System.EventHandler(this.grpTTChuThue_Enter);
+//            this.grpTTChuThue.Enter += new System.EventHandler(this.grpTTChuThue_Enter);
             // 
             // txtNoiSinh
             // 

@@ -55,15 +55,7 @@ namespace Do_An_WindowsForm.chuc_nang
 
      
 
-        private void grpTraPhong_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void grpTTChuThue_Enter(object sender, EventArgs e)
-        {
-
-        }
+        
         private void FillDataChoiceRoom(List<Phong> phongList)
         {
             cmbChoiceRoom.DataSource = phongList;
