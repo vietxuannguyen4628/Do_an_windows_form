@@ -49,22 +49,22 @@ namespace Do_An_WindowsForm.chuc_nang
             this.cmbChonPhong.DisplayMember = "MaPhong";
             this.cmbChonPhong.ValueMember = "MaPTP";
         }
-        private void fillKhachThue(List<PhieuThuePhong> khachthue)
-        {
-            dgv_DanhSachPhieu.Rows.Clear();
-            foreach (var item in khachthue)
-            {
-                int index = dgv_DanhSachPhieu.Rows.Add();
-                dgv_DanhSachPhieu.Rows[index].Cells[0].Value = item.MaPTP;
-                dgv_DanhSachPhieu.Rows[index].Cells[1].Value = item.MaPhong;
-                dgv_DanhSachPhieu.Rows[index].Cells[2].Value = item.MaKH;
-                dgv_DanhSachPhieu.Rows[index].Cells[3].Value = item.KhachHang.HoTen;
-                //dgv_DanhSachPhieu.Rows[index].Cells[4].Value = item.MaPTP;
-                dgv_DanhSachPhieu.Rows[index].Cells[5].Value = item.Phong.GiaTien;
-                dgv_DanhSachPhieu.Rows[index].Cells[6].Value = item.MaPTP;
-                dgv_DanhSachPhieu.Rows[index].Cells[7].Value = item.MaPTP;
-            }
-        }
+        //private void fillKhachThue(List<PhieuThuePhong> khachthue)
+        //{
+        //    dgv_DanhSachPhieu.Rows.Clear();
+        //    foreach (var item in khachthue)
+        //    {
+        //        int index = dgv_DanhSachPhieu.Rows.Add();
+        //        dgv_DanhSachPhieu.Rows[index].Cells[0].Value = item.MaPTP;
+        //        dgv_DanhSachPhieu.Rows[index].Cells[1].Value = item.MaPhong;
+        //        dgv_DanhSachPhieu.Rows[index].Cells[2].Value = item.MaKH;
+        //        dgv_DanhSachPhieu.Rows[index].Cells[3].Value = item.KhachHang.HoTen;
+        //        //dgv_DanhSachPhieu.Rows[index].Cells[4].Value = item.MaPTP;
+        //        dgv_DanhSachPhieu.Rows[index].Cells[5].Value = item.Phong.GiaTien;
+        //        dgv_DanhSachPhieu.Rows[index].Cells[6].Value = item.MaPTP;
+        //        dgv_DanhSachPhieu.Rows[index].Cells[7].Value = item.MaPTP;
+        //    }
+        //}
         private void TinhTien_Load(object sender, EventArgs e)
         {
             setNull();
@@ -109,8 +109,8 @@ namespace Do_An_WindowsForm.chuc_nang
 
         }
         // Hàm gửi tin nhắn qua Zalo
-        private void SendMessage(string phoneNumber, string message)
-        {
+        //private void SendMessage(string phoneNumber, string message)
+        //{
             //try
             //{
             //    // Access Token của ứng dụng Zalo bạn đã tạo
@@ -146,7 +146,7 @@ namespace Do_An_WindowsForm.chuc_nang
             //{
             //    MessageBox.Show("Đã xảy ra lỗi khi gửi tin nhắn: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             //}
-        }
+        //}
 
         private void txtTongTien_TextChanged(object sender, EventArgs e)
         {

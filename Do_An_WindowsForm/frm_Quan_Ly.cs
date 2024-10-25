@@ -285,7 +285,7 @@ namespace Do_An_WindowsForm
                 newTab.Text = e.Item.Caption;
 
                 // Tạo một instance của UserControl
-                TinhTien tinhTien = new TinhTien();
+                TinhTienTro tinhTien = new TinhTienTro();
 
                 // Đặt DockStyle cho UserControl
                 tinhTien.Dock = DockStyle.Fill;

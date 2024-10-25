@@ -31,8 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TinhTienTro));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnSend = new System.Windows.Forms.Button();
+            this.txtSoNuocMoi = new System.Windows.Forms.TextBox();
+            this.txtSoDienMoi = new System.Windows.Forms.TextBox();
+            this.txtSoNuocCu = new System.Windows.Forms.TextBox();
             this.txtSoDienCu = new System.Windows.Forms.TextBox();
             this.txtTongTien = new System.Windows.Forms.TextBox();
+            this.txtTienRac = new System.Windows.Forms.TextBox();
             this.txtTienGiuXe = new System.Windows.Forms.TextBox();
             this.txtTienNuoc = new System.Windows.Forms.TextBox();
             this.txtTienNha = new System.Windows.Forms.TextBox();
@@ -43,10 +47,13 @@
             this.cbInternet = new System.Windows.Forms.CheckBox();
             this.cbNuoc = new System.Windows.Forms.CheckBox();
             this.cbDien = new System.Windows.Forms.CheckBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -54,14 +61,11 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnTinhTien = new System.Windows.Forms.Button();
             this.txtID_Phong = new System.Windows.Forms.TextBox();
-            this.dateThue = new DevExpress.XtraEditors.DateTimeOffsetEdit();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dateThu = new System.Windows.Forms.DateTimePicker();
-            this.dateDong = new DevExpress.XtraEditors.DateTimeOffsetEdit();
             this.cmbChonPhong = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -75,30 +79,19 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtSoDienMoi = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtSoNuocCu = new System.Windows.Forms.TextBox();
-            this.txtSoNuocMoi = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtTienRac = new System.Windows.Forms.TextBox();
-            this.txtSLXe = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.dateThue = new DevExpress.XtraEditors.DateTimeOffsetEdit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateThue.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateDong.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateThue.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.btnSend);
-            this.groupBox3.Controls.Add(this.txtSLXe);
             this.groupBox3.Controls.Add(this.txtSoNuocMoi);
             this.groupBox3.Controls.Add(this.txtSoDienMoi);
             this.groupBox3.Controls.Add(this.txtSoNuocCu);
-            this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.txtSoDienCu);
             this.groupBox3.Controls.Add(this.txtTongTien);
             this.groupBox3.Controls.Add(this.txtTienRac);
@@ -146,11 +139,43 @@
             this.btnSend.UseVisualStyleBackColor = false;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
+            // txtSoNuocMoi
+            // 
+            this.txtSoNuocMoi.Enabled = false;
+            this.txtSoNuocMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoNuocMoi.Location = new System.Drawing.Point(338, 91);
+            this.txtSoNuocMoi.Name = "txtSoNuocMoi";
+            this.txtSoNuocMoi.Size = new System.Drawing.Size(57, 24);
+            this.txtSoNuocMoi.TabIndex = 40;
+            this.txtSoNuocMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtSoNuocMoi.TextChanged += new System.EventHandler(this.txtSoNuocMoi_TextChanged);
+            // 
+            // txtSoDienMoi
+            // 
+            this.txtSoDienMoi.Enabled = false;
+            this.txtSoDienMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoDienMoi.Location = new System.Drawing.Point(338, 49);
+            this.txtSoDienMoi.Name = "txtSoDienMoi";
+            this.txtSoDienMoi.Size = new System.Drawing.Size(57, 24);
+            this.txtSoDienMoi.TabIndex = 40;
+            this.txtSoDienMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtSoDienMoi.TextChanged += new System.EventHandler(this.txtSoDienMoi_TextChanged);
+            // 
+            // txtSoNuocCu
+            // 
+            this.txtSoNuocCu.Enabled = false;
+            this.txtSoNuocCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoNuocCu.Location = new System.Drawing.Point(168, 91);
+            this.txtSoNuocCu.Name = "txtSoNuocCu";
+            this.txtSoNuocCu.Size = new System.Drawing.Size(57, 24);
+            this.txtSoNuocCu.TabIndex = 40;
+            this.txtSoNuocCu.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // txtSoDienCu
             // 
             this.txtSoDienCu.Enabled = false;
             this.txtSoDienCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoDienCu.Location = new System.Drawing.Point(168, 33);
+            this.txtSoDienCu.Location = new System.Drawing.Point(168, 53);
             this.txtSoDienCu.Name = "txtSoDienCu";
             this.txtSoDienCu.Size = new System.Drawing.Size(57, 24);
             this.txtSoDienCu.TabIndex = 40;
@@ -166,6 +191,17 @@
             this.txtTongTien.TabIndex = 40;
             this.txtTongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // txtTienRac
+            // 
+            this.txtTienRac.Enabled = false;
+            this.txtTienRac.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTienRac.Location = new System.Drawing.Point(504, 153);
+            this.txtTienRac.Name = "txtTienRac";
+            this.txtTienRac.Size = new System.Drawing.Size(130, 26);
+            this.txtTienRac.TabIndex = 40;
+            this.txtTienRac.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTienRac.TextChanged += new System.EventHandler(this.txtTienRac_TextChanged);
+            // 
             // txtTienGiuXe
             // 
             this.txtTienGiuXe.Enabled = false;
@@ -175,6 +211,7 @@
             this.txtTienGiuXe.Size = new System.Drawing.Size(130, 26);
             this.txtTienGiuXe.TabIndex = 40;
             this.txtTienGiuXe.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTienGiuXe.TextChanged += new System.EventHandler(this.txtTienGiuXe_TextChanged);
             // 
             // txtTienNuoc
             // 
@@ -185,6 +222,7 @@
             this.txtTienNuoc.Size = new System.Drawing.Size(130, 26);
             this.txtTienNuoc.TabIndex = 40;
             this.txtTienNuoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTienNuoc.TextChanged += new System.EventHandler(this.txtTienNuoc_TextChanged);
             // 
             // txtTienNha
             // 
@@ -195,6 +233,7 @@
             this.txtTienNha.Size = new System.Drawing.Size(130, 26);
             this.txtTienNha.TabIndex = 40;
             this.txtTienNha.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTienNha.TextChanged += new System.EventHandler(this.txtTienNha_TextChanged);
             // 
             // txtTienInternet
             // 
@@ -205,6 +244,7 @@
             this.txtTienInternet.Size = new System.Drawing.Size(130, 26);
             this.txtTienInternet.TabIndex = 40;
             this.txtTienInternet.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTienInternet.TextChanged += new System.EventHandler(this.txtTienInternet_TextChanged);
             // 
             // txtTienDien
             // 
@@ -215,6 +255,7 @@
             this.txtTienDien.Size = new System.Drawing.Size(130, 26);
             this.txtTienDien.TabIndex = 40;
             this.txtTienDien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTienDien.TextChanged += new System.EventHandler(this.txtTienDien_TextChanged);
             // 
             // cbGiuXe
             // 
@@ -256,7 +297,7 @@
             // 
             this.cbNuoc.AutoSize = true;
             this.cbNuoc.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbNuoc.Location = new System.Drawing.Point(15, 74);
+            this.cbNuoc.Location = new System.Drawing.Point(15, 96);
             this.cbNuoc.Name = "cbNuoc";
             this.cbNuoc.Size = new System.Drawing.Size(61, 22);
             this.cbNuoc.TabIndex = 36;
@@ -268,13 +309,23 @@
             // 
             this.cbDien.AutoSize = true;
             this.cbDien.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbDien.Location = new System.Drawing.Point(15, 33);
+            this.cbDien.Location = new System.Drawing.Point(15, 59);
             this.cbDien.Name = "cbDien";
             this.cbDien.Size = new System.Drawing.Size(55, 22);
             this.cbDien.TabIndex = 35;
             this.cbDien.Text = "Điện";
             this.cbDien.UseVisualStyleBackColor = true;
             this.cbDien.CheckedChanged += new System.EventHandler(this.cbDien_CheckedChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(430, 161);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(61, 18);
+            this.label11.TabIndex = 28;
+            this.label11.Text = "Tiền rác";
             // 
             // label23
             // 
@@ -308,15 +359,35 @@
             this.label21.TabIndex = 28;
             this.label21.Text = "Tiền Internet";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(252, 97);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(80, 18);
+            this.label10.TabIndex = 28;
+            this.label10.Text = "Chỉ số mới";
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(252, 35);
+            this.label17.Location = new System.Drawing.Point(252, 55);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(80, 18);
             this.label17.TabIndex = 28;
             this.label17.Text = "Chỉ số mới";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(99, 97);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 18);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Chỉ số cũ";
             // 
             // label20
             // 
@@ -332,7 +403,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(99, 36);
+            this.label16.Location = new System.Drawing.Point(99, 59);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(67, 18);
             this.label16.TabIndex = 28;
@@ -342,7 +413,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(430, 65);
+            this.label19.Location = new System.Drawing.Point(430, 60);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(68, 18);
             this.label19.TabIndex = 28;
@@ -394,18 +465,6 @@
             this.txtID_Phong.Size = new System.Drawing.Size(139, 26);
             this.txtID_Phong.TabIndex = 32;
             // 
-            // dateThue
-            // 
-            this.dateThue.EditValue = null;
-            this.dateThue.Location = new System.Drawing.Point(102, 104);
-            this.dateThue.Name = "dateThue";
-            this.dateThue.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateThue.Properties.Appearance.Options.UseFont = true;
-            this.dateThue.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateThue.Size = new System.Drawing.Size(139, 24);
-            this.dateThue.TabIndex = 30;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -435,18 +494,6 @@
             this.dateThu.Size = new System.Drawing.Size(190, 26);
             this.dateThu.TabIndex = 61;
             // 
-            // dateDong
-            // 
-            this.dateDong.EditValue = null;
-            this.dateDong.Location = new System.Drawing.Point(1153, 45);
-            this.dateDong.Name = "dateDong";
-            this.dateDong.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateDong.Properties.Appearance.Options.UseFont = true;
-            this.dateDong.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateDong.Size = new System.Drawing.Size(190, 24);
-            this.dateDong.TabIndex = 60;
-            // 
             // cmbChonPhong
             // 
             this.cmbChonPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -466,16 +513,6 @@
             this.label25.Size = new System.Drawing.Size(72, 20);
             this.label25.TabIndex = 56;
             this.label25.Text = "Ngày thu";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(1006, 51);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(143, 20);
-            this.label24.TabIndex = 57;
-            this.label24.Text = "Ngày bắt đầu đóng";
             // 
             // label3
             // 
@@ -610,98 +647,17 @@
             this.label1.TabIndex = 54;
             this.label1.Text = "TÍNH TIỀN TRỌ";
             // 
-            // txtSoDienMoi
+            // dateThue
             // 
-            this.txtSoDienMoi.Enabled = false;
-            this.txtSoDienMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoDienMoi.Location = new System.Drawing.Point(338, 35);
-            this.txtSoDienMoi.Name = "txtSoDienMoi";
-            this.txtSoDienMoi.Size = new System.Drawing.Size(57, 24);
-            this.txtSoDienMoi.TabIndex = 40;
-            this.txtSoDienMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtSoDienMoi.TextChanged += new System.EventHandler(this.txtSoDienMoi_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(99, 75);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 18);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "Chỉ số cũ";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(252, 74);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(80, 18);
-            this.label10.TabIndex = 28;
-            this.label10.Text = "Chỉ số mới";
-            // 
-            // txtSoNuocCu
-            // 
-            this.txtSoNuocCu.Enabled = false;
-            this.txtSoNuocCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoNuocCu.Location = new System.Drawing.Point(168, 72);
-            this.txtSoNuocCu.Name = "txtSoNuocCu";
-            this.txtSoNuocCu.Size = new System.Drawing.Size(57, 24);
-            this.txtSoNuocCu.TabIndex = 40;
-            this.txtSoNuocCu.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtSoNuocMoi
-            // 
-            this.txtSoNuocMoi.Enabled = false;
-            this.txtSoNuocMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoNuocMoi.Location = new System.Drawing.Point(338, 74);
-            this.txtSoNuocMoi.Name = "txtSoNuocMoi";
-            this.txtSoNuocMoi.Size = new System.Drawing.Size(57, 24);
-            this.txtSoNuocMoi.TabIndex = 40;
-            this.txtSoNuocMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtSoNuocMoi.TextChanged += new System.EventHandler(this.txtSoNuocMoi_TextChanged);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(430, 161);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(61, 18);
-            this.label11.TabIndex = 28;
-            this.label11.Text = "Tiền rác";
-            // 
-            // txtTienRac
-            // 
-            this.txtTienRac.Enabled = false;
-            this.txtTienRac.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTienRac.Location = new System.Drawing.Point(504, 153);
-            this.txtTienRac.Name = "txtTienRac";
-            this.txtTienRac.Size = new System.Drawing.Size(130, 26);
-            this.txtTienRac.TabIndex = 40;
-            this.txtTienRac.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtSLXe
-            // 
-            this.txtSLXe.Enabled = false;
-            this.txtSLXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSLXe.Location = new System.Drawing.Point(183, 179);
-            this.txtSLXe.Name = "txtSLXe";
-            this.txtSLXe.Size = new System.Drawing.Size(57, 24);
-            this.txtSLXe.TabIndex = 40;
-            this.txtSLXe.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtSLXe.TextChanged += new System.EventHandler(this.txtSLXe_TextChanged);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(111, 182);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(72, 18);
-            this.label12.TabIndex = 56;
-            this.label12.Text = "Số Lượng";
+            this.dateThue.EditValue = null;
+            this.dateThue.Location = new System.Drawing.Point(102, 104);
+            this.dateThue.Name = "dateThue";
+            this.dateThue.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateThue.Properties.Appearance.Options.UseFont = true;
+            this.dateThue.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateThue.Size = new System.Drawing.Size(139, 24);
+            this.dateThue.TabIndex = 30;
             // 
             // TinhTienTro
             // 
@@ -711,10 +667,8 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dateThu);
-            this.Controls.Add(this.dateDong);
             this.Controls.Add(this.cmbChonPhong);
             this.Controls.Add(this.label25);
-            this.Controls.Add(this.label24);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -725,10 +679,9 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateThue.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateDong.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateThue.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -761,14 +714,11 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnTinhTien;
         private System.Windows.Forms.TextBox txtID_Phong;
-        private DevExpress.XtraEditors.DateTimeOffsetEdit dateThue;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateThu;
-        private DevExpress.XtraEditors.DateTimeOffsetEdit dateDong;
         private System.Windows.Forms.ComboBox cmbChonPhong;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label9;
@@ -789,7 +739,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtTienRac;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtSLXe;
-        private System.Windows.Forms.Label label12;
+        private DevExpress.XtraEditors.DateTimeOffsetEdit dateThue;
     }
 }
