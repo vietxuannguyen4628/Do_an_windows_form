@@ -1,4 +1,5 @@
 ﻿using Do_An_WindowsForm.chuc_nang;
+using Do_An_WindowsForm.QuanLy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace Do_An_WindowsForm
             //Application.Run(new frm_Quan_Ly());
             //Application.Run(new Login());
             //Application.Run(new TinhTien());
-            Application.Run(new TinhTienTro());
+            Application.Run(new TrangThaiPhong());
         }
     }
 }

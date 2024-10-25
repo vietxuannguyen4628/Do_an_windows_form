@@ -1,4 +1,4 @@
-namespace Do_An_WindowsForm.model
+namespace Do_An_WindowsForm.Model
 {
     using System;
     using System.Collections.Generic;

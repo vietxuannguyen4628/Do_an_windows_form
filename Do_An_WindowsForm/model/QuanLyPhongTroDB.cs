@@ -3,12 +3,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
 
-namespace Do_An_WindowsForm.model
+namespace Do_An_WindowsForm.Model
 {
     public partial class QuanLyPhongTroDB : DbContext
     {
         public QuanLyPhongTroDB()
-            : base("name=QuanLyPhongTroDB")
+            : base("name=QuanLyPhongTroDB1")
         {
         }
 
