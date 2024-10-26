@@ -22,8 +22,6 @@ namespace Do_An_WindowsForm.Model
 
         public int? ChiSoMoi { get; set; }
 
-        public int? SoLuong { get; set; }
-
         public virtual DichVu DichVu { get; set; }
 
         public virtual PhieuThuePhong PhieuThuePhong { get; set; }

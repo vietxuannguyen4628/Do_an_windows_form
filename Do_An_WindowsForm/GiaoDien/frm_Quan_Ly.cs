@@ -75,6 +75,8 @@ namespace Do_An_WindowsForm
 
         private void btnHinhAnhPhong_Click(object sender, ItemClickEventArgs e)
         {
+            
+            
             try
             {
                 // Tạo một XtraTabPage mới

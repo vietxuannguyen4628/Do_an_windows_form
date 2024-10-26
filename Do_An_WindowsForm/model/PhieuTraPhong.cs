@@ -19,8 +19,6 @@ namespace Do_An_WindowsForm.Model
 
         public byte? DaThanhtoan { get; set; }
 
-        public int? ThanhTien { get; set; }
-
         public virtual PhieuThuePhong PhieuThuePhong { get; set; }
     }
 }

@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Do_An_WindowsForm
 {
-    public partial class TinhTienTro : DevExpress.XtraEditors.XtraForm
+    public partial class TinhTienTro : DevExpress.XtraEditors.XtraUserControl
     {
         QuanLyPhongTroDB context = new QuanLyPhongTroDB();
 
@@ -28,10 +28,10 @@ namespace Do_An_WindowsForm
             txtNgheNghiep.Text = "";
             txtSDT.Text = "";
             txtTienNha.Text = "0";
-            txtSoDienCu.Text = "";
-            txtSoDienMoi.Text = "";
-            txtSoNuocCu.Text = "";
-            txtSoNuocMoi.Text = "";
+            txtSoDienCu.Text = "0";
+            txtSoDienMoi.Text = "0";
+            txtSoNuocCu.Text = "0";
+            txtSoNuocMoi.Text = "0";
             txtTienDien.Text = "0";
             txtTienNuoc.Text = "0";
             txtTienInternet.Text = "0";
@@ -39,7 +39,7 @@ namespace Do_An_WindowsForm
             //txtSLXe.Text = "0";
             txtTienGiuXe.Text = "0";
             txtTongTien.Text = "0";
-            txtID_Phong.Text = "";
+            txtID_Phong.Text = "0";
             dateThue.EditValue = "";
         }
         private void load()
@@ -50,9 +50,15 @@ namespace Do_An_WindowsForm
 
         private void fillPhongThue(List<PhieuThuePhong> phieuthue)
         {
-            this.cmbChonPhong.DataSource = phieuthue;
-            this.cmbChonPhong.DisplayMember = "MaPhong";
-            this.cmbChonPhong.ValueMember = "MaPTP";
+            cmbChonPhong.Items.Clear();
+            List<Phong> list = context.Phongs.ToList();
+            foreach (var item in list)
+            {
+                if (item.TrangThai == 1)
+                {
+                    cmbChonPhong.Items.Add(item.MaPhong);
+                }
+            }
         }
         private void btnSend_Click(object sender, EventArgs e)
         {

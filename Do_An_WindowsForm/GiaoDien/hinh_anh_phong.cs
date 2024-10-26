@@ -37,7 +37,7 @@ namespace Do_An_WindowsForm.chuc_nang
         private void SetupImageFolder()
         {
             // Đường dẫn tương đối đến thư mục "anh" trong solution
-            folderPath = Path.Combine(Application.StartupPath, @"..\..\anh");
+            folderPath = Path.Combine(Application.StartupPath, @"..\..\Images");
             if (!Directory.Exists(folderPath))
             {
                 MessageBox.Show("Thư mục ảnh không tồn tại!");
