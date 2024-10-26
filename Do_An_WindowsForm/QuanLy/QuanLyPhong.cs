@@ -104,6 +104,8 @@ namespace Do_An_WindowsForm.QuanLy
 
                     context.Phongs.AddOrUpdate(phong);
                     context.SaveChanges();
+                    List<Phong> p = context.Phongs.ToList();
+                    BindGrid(p);
                     MessageBox.Show("Đã cập nhật phòng thành công", "Thông Báo", MessageBoxButtons.OK);
                     Clear();
                 }
@@ -133,6 +135,7 @@ namespace Do_An_WindowsForm.QuanLy
                     Clear();
                     txtID_Phong.Enabled = true;
                 }
+               
 
             }
             else
@@ -158,6 +161,8 @@ namespace Do_An_WindowsForm.QuanLy
                         txtID_Phong.Enabled = false;
                         List<Phong> list = context.Phongs.ToList();
                         FillcmbPhong(list);
+                        List<Phong> ph = context.Phongs.ToList();
+                        BindGrid(ph);
                     }
 
                 }

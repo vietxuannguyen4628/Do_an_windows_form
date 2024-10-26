@@ -88,6 +88,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox3.Controls.Add(this.btnSend);
             this.groupBox3.Controls.Add(this.txtSoNuocMoi);
             this.groupBox3.Controls.Add(this.txtSoDienMoi);
@@ -491,6 +492,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.Controls.Add(this.dateThue);
             this.groupBox2.Controls.Add(this.btnTinhTien);
             this.groupBox2.Controls.Add(this.txtID_Phong);
@@ -578,6 +580,7 @@
             // 
             // dateThu
             // 
+            this.dateThu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateThu.CalendarMonthBackground = System.Drawing.Color.Gainsboro;
             this.dateThu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateThu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -589,6 +592,7 @@
             // 
             // cmbChonPhong
             // 
+            this.cmbChonPhong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbChonPhong.BackColor = System.Drawing.Color.Gainsboro;
             this.cmbChonPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbChonPhong.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -602,6 +606,7 @@
             // 
             // label25
             // 
+            this.label25.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.Black;
@@ -614,6 +619,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
@@ -626,6 +632,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtNgheNghiep);
             this.groupBox1.Controls.Add(this.txtSDT);
@@ -759,6 +766,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.SeaShell;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

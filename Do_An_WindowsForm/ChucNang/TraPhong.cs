@@ -81,6 +81,7 @@ namespace Do_An_WindowsForm.chuc_nang
             txtCMND.Text = "";
             txtNgheNghiep.Text = "";
             txtSDT.Text = "";
+            dateNgayTra.Value = DateTime.Now;
         }
 
         private void cmbChoiceRoom_SelectedIndexChanged(object sender, EventArgs e)
@@ -90,11 +91,9 @@ namespace Do_An_WindowsForm.chuc_nang
             if (ph != null)
             {
                 txtIDPhong.Text = ph.MaPhong.ToString();
-
                 txtIDKhachThue.Text = ph.MaKH.ToString();
                 txtTenNguoiThue.Text = ph.KhachHang.HoTen.ToString();
-                txtCMND.Text = ph.KhachHang.CMND_CanCuoc
-                    .ToString();
+                txtCMND.Text = ph.KhachHang.CMND_CanCuoc.ToString();
                 txtNgheNghiep.Text = ph.KhachHang.NgheNghiep.ToString();
                 txtSDT.Text = ph.KhachHang.QueQuan;
             }
@@ -117,21 +116,21 @@ namespace Do_An_WindowsForm.chuc_nang
                 data.MaPTP = ptp.MaPTP;
                 data.MaPTrP = maPTrP;
                 data.NgayTra = dateNgayTra.Value;
-                data.DaThanhtoan = 0;
                 context.PhieuTraPhongs.Add(data);
+                Phong phong = context.Phongs.FirstOrDefault(p=>p.MaPhong == ptp.MaPhong);
+                phong.TrangThai = 0;
+                context.Phongs.AddOrUpdate(phong);
                 context.SaveChanges();
                 MessageBox.Show("Trả phòng thành công!!!", "Thông báo", MessageBoxButtons.OK);
                 setNull();
-                List<PhieuTraPhong> list = context.PhieuTraPhongs.ToList();
-                BindCheckoutData(list);
-
+                TraPhong_Load(sender, e);
             }
         }
 
         private void dgvDoanhThu_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int index = e.RowIndex; 
-            if (index >= 0 && index < dgvTraPhong.Rows.Count -1 )
+            int index = e.RowIndex;
+            if (index >= 0 && index < dgvTraPhong.Rows.Count - 1 )
             {
                 txtIDPhong.Text = dgvTraPhong.Rows[index].Cells[1].Value.ToString(); ;
                 txtIDKhachThue.Text = dgvTraPhong.Rows[index].Cells[2].Value.ToString();
@@ -140,101 +139,6 @@ namespace Do_An_WindowsForm.chuc_nang
                 txtNgheNghiep.Text = dgvTraPhong.Rows[index].Cells[6].Value.ToString();
                 txtSDT.Text = dgvTraPhong.Rows[index].Cells[8].Value.ToString();
             }
-        }
-
-        private void grpTTKhachThue_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSDT_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNgheNghiep_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCMND_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTenNguoiThue_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtIDKhachThue_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void grpTTThuePhong_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtIDPhong_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNote_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-        {
-
-        }
+        }      
     }
 }

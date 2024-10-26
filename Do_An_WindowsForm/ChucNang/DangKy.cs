@@ -26,7 +26,9 @@ namespace Do_An_WindowsForm.chuc_nang
         private void DangKy_Load(object sender, EventArgs e)
         {
             List<PhieuThuePhong> phieuThuePhongs = context.PhieuThuePhongs.ToList();
+            List<Phong> phongs = context.Phongs.Where(p=>p.TrangThai == 0).ToList();
             BindGrid(phieuThuePhongs);
+            cmbID_Phong.Text = "";
             cbFalse.Checked = true;
             cbNu.Checked = true;
         }
@@ -63,7 +65,30 @@ namespace Do_An_WindowsForm.chuc_nang
             txtSDT.Text = "";
         }
 
-        private void cmbID_Phong_SelectedIndexChanged(object sender, EventArgs e)
+        private void dgv_PhongTro_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            cbTrue.Checked = true;
+            int index = e.RowIndex;
+            if (index >= 0 && index < dgv_PhongTro.Rows.Count - 1)
+            {
+                txtID_Phong.Text = dgv_PhongTro.Rows[index].Cells[0].Value.ToString();
+                txtID_Khach.Text = dgv_PhongTro.Rows[index].Cells[1].Value.ToString();
+                txtHoTen.Text = dgv_PhongTro.Rows[index].Cells[2].Value.ToString();
+                txtCCCD.Text = dgv_PhongTro.Rows[index].Cells[3].Value.ToString();
+                if (dgv_PhongTro.Rows[index].Cells[4].Value.ToString() == "Nữ")
+                    cbNu.Checked = true;
+                else
+                    cbNam.Checked = true;
+                txtNgheNghiep.Text = dgv_PhongTro.Rows[index].Cells[5].Value.ToString();
+                txtQueQuan.Text = dgv_PhongTro.Rows[index].Cells[6].Value.ToString();
+                txtSDT.Text = dgv_PhongTro.Rows[index].Cells[7].Value.ToString();
+                dtNgayThue.Text = dgv_PhongTro.Rows[index].Cells[8].Value.ToString();
+                txtTienCoc.Text = dgv_PhongTro.Rows[index].Cells[9].Value.ToString();
+                txtGiaTien.Text = dgv_PhongTro.Rows[index].Cells[10].Value.ToString();
+            }
+        }
+
+        private void cmbID_Phong_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             int item = int.Parse(cmbID_Phong.Text);
             var p = context.Phongs.FirstOrDefault(pc => pc.MaPhong == item);
@@ -90,78 +115,12 @@ namespace Do_An_WindowsForm.chuc_nang
             }
         }
 
-        private void txtSearch_TextChanged_(object sender, EventArgs e)
+        private void groupBox3_Enter(object sender, EventArgs e)
         {
-            Clear();
-            try
-            {
 
-                for (int i = 0; i < dgv_PhongTro.Rows.Count; i++)
-                {
-                    if (dgv_PhongTro.Rows[i].Cells[0].Value != null)
-                        if (dgv_PhongTro.Rows[i].Cells[0].Value.ToString().ToLower().Contains(txtSearch.Text))
-                        {
-                            dgv_PhongTro.Rows[i].Visible = true;
-                        }
-                        else
-                            dgv_PhongTro.Rows[i].Visible = false;
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
 
-        private void btnThoat_Click_1(object sender, EventArgs e)
-        {
-            DialogResult dlg = MessageBox.Show("Bạn có chắc chắn muốn thoát??", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dlg == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
-
-        private void dgv_PhongTro_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            cbTrue.Checked = true;
-            int index = e.RowIndex;
-            if (index >= 0 && index < dgv_PhongTro.Rows.Count - 1)
-            {
-                txtID_Phong.Text = dgv_PhongTro.Rows[index].Cells[0].Value.ToString();
-                txtID_Khach.Text = dgv_PhongTro.Rows[index].Cells[1].Value.ToString();
-                txtHoTen.Text = dgv_PhongTro.Rows[index].Cells[2].Value.ToString();
-                txtCCCD.Text = dgv_PhongTro.Rows[index].Cells[3].Value.ToString();
-                if (dgv_PhongTro.Rows[index].Cells[4].Value.ToString() == "Nữ")
-                    cbNu.Checked = true;
-                else
-                    cbNam.Checked = true;
-                txtNgheNghiep.Text = dgv_PhongTro.Rows[index].Cells[5].Value.ToString();
-                txtQueQuan.Text = dgv_PhongTro.Rows[index].Cells[6].Value.ToString();
-                txtSDT.Text = dgv_PhongTro.Rows[index].Cells[7].Value.ToString();
-                dtNgayThue.Text = dgv_PhongTro.Rows[index].Cells[8].Value.ToString();
-                txtTienCoc.Text = dgv_PhongTro.Rows[index].Cells[9].Value.ToString();
-                txtGiaTien.Text = dgv_PhongTro.Rows[index].Cells[10].Value.ToString();
-            }
-        }
-
-        private void cbFalse_CheckedChanged_1(object sender, EventArgs e)
-        {
-            List<Phong> phongs = context.Phongs.ToList();
-            cmbID_Phong.Text = "";
-            cmbID_Phong.Items.Clear();
-            foreach (var p in phongs)
-            {
-                if (p.TrangThai == 0)
-                {
-                    cmbID_Phong.Items.Add(p.MaPhong);
-                }
-            }
-            Clear();
-        }
-
-        private void cbTrue_CheckedChanged_1(object sender, EventArgs e)
+        private void cbTrue_CheckedChanged(object sender, EventArgs e)
         {
             List<Phong> phongs = context.Phongs.ToList();
             cmbID_Phong.Text = "";
@@ -176,7 +135,23 @@ namespace Do_An_WindowsForm.chuc_nang
             Clear();
         }
 
-        private void btnDangKy_Click_1(object sender, EventArgs e)
+        private void cbFalse_CheckedChanged(object sender, EventArgs e)
+        {
+            List<Phong> phongs = context.Phongs.ToList();
+            cmbID_Phong.Text = "";
+            cmbID_Phong.Items.Clear();
+            foreach (var p in phongs)
+            {
+                if (p.TrangThai == 0)
+                {
+                    cmbID_Phong.Items.Add(p.MaPhong);
+                }
+            }
+            Clear();
+
+        }
+
+        private void btnDangKy_Click(object sender, EventArgs e)
         {
             try
             {
@@ -186,7 +161,7 @@ namespace Do_An_WindowsForm.chuc_nang
                     throw new Exception("Vui lòng chọn phòng muốn thuê");
                 if (txtID_Khach.Text == "" || txtHoTen.Text == "" || txtCCCD.Text == "" || txtNgheNghiep.Text == "" || txtQueQuan.Text == "" || txtSDT.Text == "")
                     throw new Exception("Vui lòng nhập đầy đủ thông tin khách hàng");
-                
+
 
                 int item = int.Parse(txtID_Khach.Text);
                 int idP = int.Parse(cmbID_Phong.Text);
@@ -245,7 +220,31 @@ namespace Do_An_WindowsForm.chuc_nang
             }
         }
 
-        private void btnCapNhat_Click_1(object sender, EventArgs e)
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            Clear();
+            try
+            {
+
+                for (int i = 0; i < dgv_PhongTro.Rows.Count; i++)
+                {
+                    if (dgv_PhongTro.Rows[i].Cells[0].Value != null)
+                        if (dgv_PhongTro.Rows[i].Cells[0].Value.ToString().ToLower().Contains(txtSearch.Text))
+                        {
+                            dgv_PhongTro.Rows[i].Visible = true;
+                        }
+                        else
+                            dgv_PhongTro.Rows[i].Visible = false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
         {
             try
             {
@@ -280,6 +279,15 @@ namespace Do_An_WindowsForm.chuc_nang
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            DialogResult dlg = MessageBox.Show("Bạn có chắc chắn muốn thoát??", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlg == DialogResult.Yes)
+            {
+                Application.Exit();
             }
         }
     }

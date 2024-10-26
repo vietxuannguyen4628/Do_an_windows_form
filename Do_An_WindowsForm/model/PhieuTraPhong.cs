@@ -17,8 +17,6 @@ namespace Do_An_WindowsForm.Model
 
         public DateTime? NgayTra { get; set; }
 
-        public byte? DaThanhtoan { get; set; }
-
         public virtual PhieuThuePhong PhieuThuePhong { get; set; }
     }
 }

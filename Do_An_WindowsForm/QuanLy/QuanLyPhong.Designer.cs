@@ -56,6 +56,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.SeaShell;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -70,6 +71,7 @@
             // 
             // dgvPhong
             // 
+            this.dgvPhong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvPhong.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPhong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -77,11 +79,11 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dgvPhong.Location = new System.Drawing.Point(605, 176);
-            this.dgvPhong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvPhong.Location = new System.Drawing.Point(655, 165);
+            this.dgvPhong.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPhong.Name = "dgvPhong";
             this.dgvPhong.RowHeadersWidth = 51;
-            this.dgvPhong.Size = new System.Drawing.Size(619, 366);
+            this.dgvPhong.Size = new System.Drawing.Size(599, 363);
             this.dgvPhong.TabIndex = 1;
             this.dgvPhong.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhong_CellContentClick);
             // 
@@ -115,21 +117,23 @@
             // 
             // cmbID_Phong
             // 
+            this.cmbID_Phong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbID_Phong.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cmbID_Phong.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbID_Phong.FormattingEnabled = true;
-            this.cmbID_Phong.Location = new System.Drawing.Point(263, 108);
-            this.cmbID_Phong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbID_Phong.Location = new System.Drawing.Point(845, 102);
+            this.cmbID_Phong.Margin = new System.Windows.Forms.Padding(4);
             this.cmbID_Phong.Name = "cmbID_Phong";
-            this.cmbID_Phong.Size = new System.Drawing.Size(222, 32);
+            this.cmbID_Phong.Size = new System.Drawing.Size(324, 32);
             this.cmbID_Phong.TabIndex = 2;
             this.cmbID_Phong.SelectedIndexChanged += new System.EventHandler(this.cmbID_Phong_SelectedIndexChanged);
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(63, 118);
+            this.label2.Location = new System.Drawing.Point(651, 112);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 22);
@@ -179,7 +183,7 @@
             this.txtID_Phong.Enabled = false;
             this.txtID_Phong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID_Phong.Location = new System.Drawing.Point(208, 51);
-            this.txtID_Phong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtID_Phong.Margin = new System.Windows.Forms.Padding(4);
             this.txtID_Phong.Name = "txtID_Phong";
             this.txtID_Phong.Size = new System.Drawing.Size(229, 30);
             this.txtID_Phong.TabIndex = 3;
@@ -189,7 +193,7 @@
             this.txtGiaTien.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtGiaTien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGiaTien.Location = new System.Drawing.Point(208, 175);
-            this.txtGiaTien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGiaTien.Margin = new System.Windows.Forms.Padding(4);
             this.txtGiaTien.Name = "txtGiaTien";
             this.txtGiaTien.Size = new System.Drawing.Size(229, 30);
             this.txtGiaTien.TabIndex = 3;
@@ -199,13 +203,14 @@
             this.txtDienTich.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtDienTich.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDienTich.Location = new System.Drawing.Point(208, 115);
-            this.txtDienTich.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDienTich.Margin = new System.Windows.Forms.Padding(4);
             this.txtDienTich.Name = "txtDienTich";
             this.txtDienTich.Size = new System.Drawing.Size(229, 30);
             this.txtDienTich.TabIndex = 3;
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.txtDienTich);
             this.groupBox1.Controls.Add(this.txtGiaTien);
             this.groupBox1.Controls.Add(this.txtID_Phong);
@@ -214,9 +219,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(48, 165);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(549, 225);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
@@ -224,10 +229,11 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.Location = new System.Drawing.Point(896, 167);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(9, 10);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
@@ -239,7 +245,7 @@
             this.btnDangKy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangKy.Image = ((System.Drawing.Image)(resources.GetObject("btnDangKy.Image")));
             this.btnDangKy.Location = new System.Drawing.Point(36, 45);
-            this.btnDangKy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDangKy.Margin = new System.Windows.Forms.Padding(4);
             this.btnDangKy.Name = "btnDangKy";
             this.btnDangKy.Size = new System.Drawing.Size(127, 58);
             this.btnDangKy.TabIndex = 9;
@@ -254,7 +260,7 @@
             this.btnCapNhat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhat.Image = ((System.Drawing.Image)(resources.GetObject("btnCapNhat.Image")));
             this.btnCapNhat.Location = new System.Drawing.Point(208, 45);
-            this.btnCapNhat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCapNhat.Margin = new System.Windows.Forms.Padding(4);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(140, 58);
             this.btnCapNhat.TabIndex = 10;
@@ -270,7 +276,7 @@
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThoat.Location = new System.Drawing.Point(387, 45);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(127, 58);
             this.btnThoat.TabIndex = 11;
@@ -281,14 +287,15 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox3.Controls.Add(this.btnThoat);
             this.groupBox3.Controls.Add(this.btnDangKy);
             this.groupBox3.Controls.Add(this.btnCapNhat);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(48, 425);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(549, 128);
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
@@ -307,7 +314,7 @@
             this.Controls.Add(this.dgvPhong);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "QuanLyPhong";
             this.Size = new System.Drawing.Size(1273, 621);
             this.Load += new System.EventHandler(this.QuanLyPhong_Load);
