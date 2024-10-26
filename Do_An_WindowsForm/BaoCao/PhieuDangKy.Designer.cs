@@ -46,10 +46,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 532);
             this.Controls.Add(this.reportViewer1);
             this.Name = "PhieuDangKy";
-            this.Text = "PhieuDangKy";
+            this.Size = new System.Drawing.Size(928, 532);
             this.Load += new System.EventHandler(this.PhieuDangKy_Load);
             this.ResumeLayout(false);
 

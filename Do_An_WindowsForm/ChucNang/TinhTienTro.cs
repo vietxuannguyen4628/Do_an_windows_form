@@ -10,7 +10,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
 using System.Net.Http;
+=======
+using static DevExpress.XtraPrinting.Native.ExportOptionsPropertiesNames;
+>>>>>>> cdd85c17459ffc9fa3661b35e82623bf8776cc77
 
 namespace Do_An_WindowsForm
 {
@@ -252,11 +256,33 @@ namespace Do_An_WindowsForm
             TinhTienDien_Nuoc();
         }
 
+<<<<<<< HEAD
+=======
+
+        private void txtSoDienMoi_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                TinhTienDien_Nuoc();
+                e.SuppressKeyPress = true;
+                e.Handled = true;
+            }
+        }
+        private void txtSoDienMoi_Leave(object sender, EventArgs e)
+        {
+            TinhTienDien_Nuoc();
+        }
+
+>>>>>>> cdd85c17459ffc9fa3661b35e82623bf8776cc77
         private void TinhTienDien_Nuoc()
         {
             PhieuThuePhong _phieuthue = context.PhieuThuePhongs.FirstOrDefault(pt => pt.MaPhong.ToString() == cmbChonPhong.Text);
             if (_phieuthue != null)
             {
+<<<<<<< HEAD
+=======
+                // tim dich vu dien
+>>>>>>> cdd85c17459ffc9fa3661b35e82623bf8776cc77
                 DichVu dichVuDien = context.DichVus.FirstOrDefault(dvI => dvI.TenDV == "Điện");
                 int dvDien = 0;
                 if (dichVuDien != null)
@@ -279,28 +305,55 @@ namespace Do_An_WindowsForm
                         txtSoDienMoi.Text = txtSoDienCu.Text;
                     }
                 }
+<<<<<<< HEAD
             }
         }
         private void txtSoNuocMoi_TextChanged(object sender, EventArgs e)
-        {
-            PhieuThuePhong _phieuthue = context.PhieuThuePhongs.FirstOrDefault(pt => pt.MaPhong.ToString() == cmbChonPhong.Text);
-            if (_phieuthue != null)
-            {
-                DichVu dichVu = context.DichVus.FirstOrDefault(dvI => dvI.TenDV == "Nước");
-                if (dichVu != null)
+=======
+
+                // tim dich vu nuoc
+                DichVu dichVuNuoc = context.DichVus.FirstOrDefault(dvI => dvI.TenDV == "Nước");
+                int dvNuoc = 0;
+                if (dichVuNuoc != null)
                 {
-                    txtTienNuoc.Text = (((int.Parse(txtSoNuocMoi.Text)) - (int.Parse(txtSoNuocCu.Text))) * (dichVu.DonGia)).ToString();
+                    if (txtSoNuocMoi.Text != "")
+                    {
+                        if (int.Parse(txtSoNuocMoi.Text) < int.Parse(txtSoNuocCu.Text))
+                        {
+                            MessageBox.Show("Chỉ số nước mới không được nhỏ hơn chỉ số cũ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            txtSoNuocMoi.Text = txtSoNuocCu.Text;
+                        }
+                        else
+                        {
+                            dvNuoc = (int.Parse(txtSoNuocMoi.Text) - int.Parse(txtSoNuocCu.Text)) * dichVuNuoc.DonGia.Value;
+                        }
+                        txtTienNuoc.Text = dvNuoc.ToString();
+                    }
+                    else
+                    {
+                        txtSoNuocMoi.Text = txtSoNuocCu.Text;
+                    }
                 }
-                else
-                {
-                    txtTienDien.Text = "0";
-                }
-            }
-            else
-            {
-                return;
+
             }
         }
+
+        private void txtSoNuocMoi_KeyDown(object sender, KeyEventArgs e)
+>>>>>>> cdd85c17459ffc9fa3661b35e82623bf8776cc77
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                TinhTienDien_Nuoc();
+                e.SuppressKeyPress = true;
+                e.Handled = true;
+            }
+        }
+
+        private void txtSoNuocMoi_Leave(object sender, EventArgs e)
+        {
+            TinhTienDien_Nuoc();
+        }
+       
         private void TinhTongTien()
         {
             // Chuyển đổi giá trị Text sang số nguyên để tính toán, nếu có lỗi thì gán bằng 0
@@ -348,6 +401,10 @@ namespace Do_An_WindowsForm
             TinhTongTien();
         }
 
+<<<<<<< HEAD
         
+=======
+       
+>>>>>>> cdd85c17459ffc9fa3661b35e82623bf8776cc77
     }
 }
