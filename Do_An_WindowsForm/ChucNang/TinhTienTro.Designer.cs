@@ -88,6 +88,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox3.Controls.Add(this.btnSend);
             this.groupBox3.Controls.Add(this.txtSoNuocMoi);
             this.groupBox3.Controls.Add(this.txtSoDienMoi);
@@ -126,6 +127,7 @@
             // 
             // btnSend
             // 
+            this.btnSend.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSend.AutoSize = true;
             this.btnSend.BackColor = System.Drawing.Color.White;
             this.btnSend.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -141,6 +143,7 @@
             // 
             // txtSoNuocMoi
             // 
+            this.txtSoNuocMoi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSoNuocMoi.Enabled = false;
             this.txtSoNuocMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoNuocMoi.Location = new System.Drawing.Point(338, 74);
@@ -148,10 +151,12 @@
             this.txtSoNuocMoi.Size = new System.Drawing.Size(57, 24);
             this.txtSoNuocMoi.TabIndex = 40;
             this.txtSoNuocMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtSoNuocMoi.TextChanged += new System.EventHandler(this.txtSoNuocMoi_TextChanged);
+            this.txtSoNuocMoi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSoNuocMoi_KeyDown);
+            this.txtSoNuocMoi.Leave += new System.EventHandler(this.txtSoNuocMoi_Leave);
             // 
             // txtSoDienMoi
             // 
+            this.txtSoDienMoi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSoDienMoi.Enabled = false;
             this.txtSoDienMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoDienMoi.Location = new System.Drawing.Point(338, 35);
@@ -159,10 +164,12 @@
             this.txtSoDienMoi.Size = new System.Drawing.Size(57, 24);
             this.txtSoDienMoi.TabIndex = 40;
             this.txtSoDienMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtSoDienMoi.TextChanged += new System.EventHandler(this.txtSoDienMoi_TextChanged);
+            this.txtSoDienMoi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSoDienMoi_KeyDown);
+            this.txtSoDienMoi.Leave += new System.EventHandler(this.txtSoDienMoi_Leave);
             // 
             // txtSoNuocCu
             // 
+            this.txtSoNuocCu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSoNuocCu.Enabled = false;
             this.txtSoNuocCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoNuocCu.Location = new System.Drawing.Point(168, 72);
@@ -173,6 +180,7 @@
             // 
             // txtSoDienCu
             // 
+            this.txtSoDienCu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSoDienCu.Enabled = false;
             this.txtSoDienCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoDienCu.Location = new System.Drawing.Point(168, 33);
@@ -183,6 +191,7 @@
             // 
             // txtTongTien
             // 
+            this.txtTongTien.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTongTien.Enabled = false;
             this.txtTongTien.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTongTien.Location = new System.Drawing.Point(464, 232);
@@ -193,6 +202,7 @@
             // 
             // txtTienRac
             // 
+            this.txtTienRac.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTienRac.Enabled = false;
             this.txtTienRac.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTienRac.Location = new System.Drawing.Point(504, 153);
@@ -204,6 +214,7 @@
             // 
             // txtTienGiuXe
             // 
+            this.txtTienGiuXe.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTienGiuXe.Enabled = false;
             this.txtTienGiuXe.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTienGiuXe.Location = new System.Drawing.Point(504, 185);
@@ -215,6 +226,7 @@
             // 
             // txtTienNuoc
             // 
+            this.txtTienNuoc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTienNuoc.Enabled = false;
             this.txtTienNuoc.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTienNuoc.Location = new System.Drawing.Point(504, 89);
@@ -226,6 +238,7 @@
             // 
             // txtTienNha
             // 
+            this.txtTienNha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTienNha.Enabled = false;
             this.txtTienNha.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTienNha.Location = new System.Drawing.Point(504, 23);
@@ -237,6 +250,7 @@
             // 
             // txtTienInternet
             // 
+            this.txtTienInternet.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTienInternet.Enabled = false;
             this.txtTienInternet.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTienInternet.Location = new System.Drawing.Point(504, 122);
@@ -248,6 +262,7 @@
             // 
             // txtTienDien
             // 
+            this.txtTienDien.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTienDien.Enabled = false;
             this.txtTienDien.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTienDien.Location = new System.Drawing.Point(504, 55);
@@ -259,6 +274,7 @@
             // 
             // cbGiuXe
             // 
+            this.cbGiuXe.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbGiuXe.AutoSize = true;
             this.cbGiuXe.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbGiuXe.Location = new System.Drawing.Point(15, 181);
@@ -271,6 +287,7 @@
             // 
             // cbRac
             // 
+            this.cbRac.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbRac.AutoSize = true;
             this.cbRac.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbRac.Location = new System.Drawing.Point(15, 153);
@@ -283,6 +300,7 @@
             // 
             // cbInternet
             // 
+            this.cbInternet.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbInternet.AutoSize = true;
             this.cbInternet.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbInternet.Location = new System.Drawing.Point(15, 127);
@@ -295,6 +313,7 @@
             // 
             // cbNuoc
             // 
+            this.cbNuoc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbNuoc.AutoSize = true;
             this.cbNuoc.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNuoc.Location = new System.Drawing.Point(15, 74);
@@ -307,6 +326,7 @@
             // 
             // cbDien
             // 
+            this.cbDien.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbDien.AutoSize = true;
             this.cbDien.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDien.Location = new System.Drawing.Point(15, 33);
@@ -319,6 +339,7 @@
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(430, 161);
@@ -329,6 +350,7 @@
             // 
             // label23
             // 
+            this.label23.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label23.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -341,6 +363,7 @@
             // 
             // label22
             // 
+            this.label22.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(417, 193);
@@ -351,6 +374,7 @@
             // 
             // label21
             // 
+            this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(404, 127);
@@ -361,6 +385,7 @@
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(252, 74);
@@ -371,6 +396,7 @@
             // 
             // label17
             // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(252, 35);
@@ -381,6 +407,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(99, 75);
@@ -391,6 +418,7 @@
             // 
             // label20
             // 
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(425, 97);
@@ -401,6 +429,7 @@
             // 
             // label16
             // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(99, 36);
@@ -411,6 +440,7 @@
             // 
             // label19
             // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(430, 65);
@@ -421,6 +451,7 @@
             // 
             // label18
             // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(433, 32);
@@ -431,6 +462,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.Controls.Add(this.dateThue);
             this.groupBox2.Controls.Add(this.btnTinhTien);
             this.groupBox2.Controls.Add(this.txtID_Phong);
@@ -446,6 +478,7 @@
             // 
             // dateThue
             // 
+            this.dateThue.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateThue.EditValue = null;
             this.dateThue.Enabled = false;
             this.dateThue.Location = new System.Drawing.Point(102, 106);
@@ -459,6 +492,7 @@
             // 
             // btnTinhTien
             // 
+            this.btnTinhTien.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnTinhTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnTinhTien.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTinhTien.Image = ((System.Drawing.Image)(resources.GetObject("btnTinhTien.Image")));
@@ -472,6 +506,7 @@
             // 
             // txtID_Phong
             // 
+            this.txtID_Phong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtID_Phong.Enabled = false;
             this.txtID_Phong.Location = new System.Drawing.Point(102, 50);
             this.txtID_Phong.Name = "txtID_Phong";
@@ -480,6 +515,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(10, 107);
@@ -490,6 +526,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(18, 50);
@@ -500,6 +537,8 @@
             // 
             // dateThu
             // 
+            this.dateThu.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateThu.CustomFormat = "dd/MM/yyyy";
             this.dateThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateThu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateThu.Location = new System.Drawing.Point(1153, 85);
@@ -509,6 +548,7 @@
             // 
             // cmbChonPhong
             // 
+            this.cmbChonPhong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbChonPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbChonPhong.FormattingEnabled = true;
             this.cmbChonPhong.Location = new System.Drawing.Point(166, 85);
@@ -519,6 +559,7 @@
             // 
             // label25
             // 
+            this.label25.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.Location = new System.Drawing.Point(1070, 88);
@@ -529,6 +570,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(63, 88);
@@ -539,6 +581,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtNgheNghiep);
             this.groupBox1.Controls.Add(this.txtSDT);
@@ -560,6 +603,7 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(41, 169);
@@ -570,6 +614,7 @@
             // 
             // txtNgheNghiep
             // 
+            this.txtNgheNghiep.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNgheNghiep.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNgheNghiep.Location = new System.Drawing.Point(140, 166);
             this.txtNgheNghiep.Name = "txtNgheNghiep";
@@ -578,6 +623,7 @@
             // 
             // txtSDT
             // 
+            this.txtSDT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSDT.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDT.Location = new System.Drawing.Point(140, 207);
             this.txtSDT.Name = "txtSDT";
@@ -586,6 +632,7 @@
             // 
             // lblSDT
             // 
+            this.lblSDT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSDT.AutoSize = true;
             this.lblSDT.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSDT.Location = new System.Drawing.Point(88, 210);
@@ -596,6 +643,7 @@
             // 
             // txtHoTen
             // 
+            this.txtHoTen.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtHoTen.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHoTen.Location = new System.Drawing.Point(140, 75);
             this.txtHoTen.Name = "txtHoTen";
@@ -604,6 +652,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(55, 78);
@@ -614,6 +663,7 @@
             // 
             // txtCCCD
             // 
+            this.txtCCCD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCCCD.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCCCD.Location = new System.Drawing.Point(140, 120);
             this.txtCCCD.Name = "txtCCCD";
@@ -622,6 +672,7 @@
             // 
             // txtID_Khach
             // 
+            this.txtID_Khach.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtID_Khach.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID_Khach.Location = new System.Drawing.Point(140, 33);
             this.txtID_Khach.Name = "txtID_Khach";
@@ -630,6 +681,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(88, 123);
@@ -640,6 +692,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(22, 36);
@@ -650,6 +703,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label1.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -664,7 +718,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1368, 492);
+            this.AutoSize = true;
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dateThu);
@@ -674,6 +728,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "TinhTienTro";
+            this.Size = new System.Drawing.Size(1368, 557);
             this.Load += new System.EventHandler(this.TinhTienTro_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();

@@ -110,7 +110,7 @@
       <DependentUpon>BaoCaoDoanhThu.cs</DependentUpon>
     </Compile>
     <Compile Include="BaoCao\PhieuDangKy.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="BaoCao\PhieuDangKy.Designer.cs">
       <DependentUpon>PhieuDangKy.cs</DependentUpon>
@@ -201,8 +201,12 @@
     <EmbeddedResource Include="BaoCao\BaoCaoDoanhThu.resx">
       <DependentUpon>BaoCaoDoanhThu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\DoanhThu.rdlc" />
-    <EmbeddedResource Include="BaoCao\PhieuDangKy.rdlc" />
+    <EmbeddedResource Include="BaoCao\DoanhThu.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\PhieuDangKy.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\PhieuDangKy.resx">
       <DependentUpon>PhieuDangKy.cs</DependentUpon>
     </EmbeddedResource>
@@ -255,6 +259,7 @@
       <DependentUpon>QuanLyPhong.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Do_An_WindowsForm.Model.KhachHang.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

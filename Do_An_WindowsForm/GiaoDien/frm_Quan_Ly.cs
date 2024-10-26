@@ -15,6 +15,7 @@ using DevExpress.XtraTab;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Diagnostics;
 using Do_An_WindowsForm.QuanLy;
+using Do_An_WindowsForm.BaoCao;
 
 
 namespace Do_An_WindowsForm
@@ -258,7 +259,44 @@ namespace Do_An_WindowsForm
 
         private void btnThongKe_ItemClick(object sender, ItemClickEventArgs e)
         {
+            try
+            {
+                // Kiểm tra xem tab đã tồn tại hay chưa
+                foreach (DevExpress.XtraTab.XtraTabPage tab in xtraTabControl1.TabPages)
+                {
+                    if (tab.Text == e.Item.Caption)
+                    {
+                        // Nếu tab đã tồn tại, chọn tab đó và thoát khỏi phương thức
+                        xtraTabControl1.SelectedTabPage = tab;
+                        return;
+                    }
+                }
 
+                // Nếu tab chưa tồn tại, tạo một XtraTabPage mới
+                DevExpress.XtraTab.XtraTabPage newTab = new DevExpress.XtraTab.XtraTabPage();
+
+                // Đặt tên tab giống với tên button
+                newTab.Text = e.Item.Caption;
+
+                // Tạo một instance của UserControl
+                BaoCaoDoanhThu phieuDangKy = new BaoCaoDoanhThu();
+
+                // Đặt DockStyle cho UserControl
+                phieuDangKy.Dock = DockStyle.Fill;
+
+                // Thêm UserControl vào XtraTabPage
+                newTab.Controls.Add(phieuDangKy);
+
+                // Thêm XtraTabPage vào XtraTabControl
+                xtraTabControl1.TabPages.Add(newTab);
+
+                // Chọn tab mới
+                xtraTabControl1.SelectedTabPage = newTab;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnTinhTien_ItemClick(object sender, ItemClickEventArgs e)
@@ -281,9 +319,9 @@ namespace Do_An_WindowsForm
 
                 // Đặt tên tab giống với tên button
                 newTab.Text = e.Item.Caption;
-                TinhTienTro tinhtienTro = new TinhTienTro();
-                tinhtienTro.Dock = DockStyle.Fill;
-                newTab.Controls.Add(tinhtienTro);
+                TinhTienTro tinhTienTro = new TinhTienTro();
+                tinhTienTro.Dock = DockStyle.Fill;
+                newTab.Controls.Add(tinhTienTro);
 
                 // Thêm XtraTabPage vào XtraTabControl
                 xtraTabControl1.TabPages.Add(newTab);

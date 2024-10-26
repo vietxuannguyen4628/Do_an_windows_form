@@ -83,7 +83,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PhongTro)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -92,11 +91,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPhong)).BeginInit();
-            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgv_PhongTro
             // 
+            this.dgv_PhongTro.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgv_PhongTro.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_PhongTro.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_PhongTro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
@@ -109,35 +110,31 @@
             this.Column9,
             this.Column10,
             this.Column11});
-            this.dgv_PhongTro.Location = new System.Drawing.Point(17, 535);
+            this.dgv_PhongTro.Location = new System.Drawing.Point(22, 533);
             this.dgv_PhongTro.Name = "dgv_PhongTro";
             this.dgv_PhongTro.Size = new System.Drawing.Size(1172, 192);
-            this.dgv_PhongTro.TabIndex = 21;
-            this.dgv_PhongTro.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_PhongTro_CellContentClick);
+            this.dgv_PhongTro.TabIndex = 49;
+            this.dgv_PhongTro.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_PhongTro_CellContentClick_1);
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Mã Phòng";
             this.Column1.Name = "Column1";
-            this.Column1.Width = 80;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Mã Khách Hàng";
             this.Column2.Name = "Column2";
-            this.Column2.Width = 80;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Họ Tên";
             this.Column3.Name = "Column3";
-            this.Column3.Width = 150;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "CCCD";
             this.Column4.Name = "Column4";
-            this.Column4.Width = 70;
             // 
             // Column5
             // 
@@ -153,7 +150,6 @@
             // 
             this.Column7.HeaderText = "Quê Quán";
             this.Column7.Name = "Column7";
-            this.Column7.Width = 150;
             // 
             // Column8
             // 
@@ -177,14 +173,16 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox5.AutoSize = true;
             this.groupBox5.Controls.Add(this.btnThoat);
             this.groupBox5.Controls.Add(this.btnDangKy);
             this.groupBox5.Controls.Add(this.btnCapNhat);
             this.groupBox5.Controls.Add(this.btnInPhieu);
-            this.groupBox5.Location = new System.Drawing.Point(546, 424);
+            this.groupBox5.Location = new System.Drawing.Point(551, 428);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(643, 88);
-            this.groupBox5.TabIndex = 27;
+            this.groupBox5.Size = new System.Drawing.Size(643, 89);
+            this.groupBox5.TabIndex = 48;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Chức năng";
             // 
@@ -201,7 +199,7 @@
             this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnThoat.UseVisualStyleBackColor = true;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click_1);
             // 
             // btnDangKy
             // 
@@ -214,7 +212,7 @@
             this.btnDangKy.Text = "Đăng Ký";
             this.btnDangKy.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnDangKy.UseVisualStyleBackColor = true;
-            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click_1);
             // 
             // btnCapNhat
             // 
@@ -227,7 +225,7 @@
             this.btnCapNhat.Text = "Cập Nhật";
             this.btnCapNhat.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnCapNhat.UseVisualStyleBackColor = true;
-            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click_1);
             // 
             // btnInPhieu
             // 
@@ -243,13 +241,15 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox4.AutoSize = true;
             this.groupBox4.Controls.Add(this.txtSearch);
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(17, 424);
+            this.groupBox4.Location = new System.Drawing.Point(22, 428);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(525, 88);
-            this.groupBox4.TabIndex = 26;
+            this.groupBox4.TabIndex = 47;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Tìm Kiếm";
             // 
@@ -260,7 +260,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(206, 20);
             this.txtSearch.TabIndex = 11;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged_1);
             // 
             // label14
             // 
@@ -274,15 +274,17 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox3.AutoSize = true;
             this.groupBox3.Controls.Add(this.cbFalse);
             this.groupBox3.Controls.Add(this.cmbID_Phong);
             this.groupBox3.Controls.Add(this.cbTrue);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Location = new System.Drawing.Point(28, 78);
+            this.groupBox3.Location = new System.Drawing.Point(22, 82);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(514, 154);
-            this.groupBox3.TabIndex = 25;
+            this.groupBox3.Size = new System.Drawing.Size(525, 154);
+            this.groupBox3.TabIndex = 46;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh Sách Phòng Trống";
             // 
@@ -297,7 +299,7 @@
             this.cbFalse.TabStop = true;
             this.cbFalse.Text = "Chưa thuê";
             this.cbFalse.UseVisualStyleBackColor = true;
-            this.cbFalse.CheckedChanged += new System.EventHandler(this.cbFalse_CheckedChanged);
+            this.cbFalse.CheckedChanged += new System.EventHandler(this.cbFalse_CheckedChanged_1);
             // 
             // cmbID_Phong
             // 
@@ -306,7 +308,7 @@
             this.cmbID_Phong.Name = "cmbID_Phong";
             this.cmbID_Phong.Size = new System.Drawing.Size(302, 21);
             this.cmbID_Phong.TabIndex = 9;
-            this.cmbID_Phong.SelectedIndexChanged += new System.EventHandler(this.cmbID_Phong_SelectedIndexChanged);
+            this.cmbID_Phong.SelectedIndexChanged += new System.EventHandler(this.cmbID_Phong_SelectedIndexChanged_1);
             // 
             // cbTrue
             // 
@@ -319,7 +321,7 @@
             this.cbTrue.TabStop = true;
             this.cbTrue.Text = "Đã thuê";
             this.cbTrue.UseVisualStyleBackColor = true;
-            this.cbTrue.CheckedChanged += new System.EventHandler(this.cbTrue_CheckedChanged);
+            this.cbTrue.CheckedChanged += new System.EventHandler(this.cbTrue_CheckedChanged_1);
             // 
             // label13
             // 
@@ -343,6 +345,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox2.AutoSize = true;
             this.groupBox2.Controls.Add(this.cbNu);
             this.groupBox2.Controls.Add(this.cbNam);
             this.groupBox2.Controls.Add(this.label4);
@@ -364,10 +368,10 @@
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(17, 238);
+            this.groupBox2.Location = new System.Drawing.Point(22, 242);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1172, 180);
-            this.groupBox2.TabIndex = 24;
+            this.groupBox2.Size = new System.Drawing.Size(1172, 191);
+            this.groupBox2.TabIndex = 45;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin Khách Hàng";
             // 
@@ -558,15 +562,17 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.AutoSize = true;
             this.groupBox1.Controls.Add(this.picPhong);
             this.groupBox1.Controls.Add(this.txtGiaTien);
             this.groupBox1.Controls.Add(this.txtID_Phong);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(560, 78);
+            this.groupBox1.Location = new System.Drawing.Point(565, 82);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(629, 154);
-            this.groupBox1.TabIndex = 23;
+            this.groupBox1.TabIndex = 44;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin phòng";
             // 
@@ -622,38 +628,30 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label1.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(406, 10);
+            this.label1.Location = new System.Drawing.Point(411, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(367, 45);
-            this.label1.TabIndex = 22;
+            this.label1.TabIndex = 43;
             this.label1.Text = "Đăng Ký Thuê Phòng";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.dgv_PhongTro);
-            this.groupBox6.Controls.Add(this.groupBox5);
-            this.groupBox6.Controls.Add(this.groupBox4);
-            this.groupBox6.Controls.Add(this.groupBox3);
-            this.groupBox6.Controls.Add(this.groupBox2);
-            this.groupBox6.Controls.Add(this.groupBox1);
-            this.groupBox6.Controls.Add(this.label1);
-            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox6.Location = new System.Drawing.Point(0, 0);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(1216, 738);
-            this.groupBox6.TabIndex = 28;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Enter += new System.EventHandler(this.groupBox6_Enter);
             // 
             // DangKy
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.groupBox6);
+            this.AutoSize = true;
+            this.Controls.Add(this.dgv_PhongTro);
+            this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label1);
             this.Name = "DangKy";
             this.Size = new System.Drawing.Size(1216, 738);
             this.Load += new System.EventHandler(this.DangKy_Load);
@@ -669,9 +667,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPhong)).EndInit();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -731,6 +728,5 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox6;
     }
 }
