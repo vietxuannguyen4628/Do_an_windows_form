@@ -141,5 +141,100 @@ namespace Do_An_WindowsForm.chuc_nang
                 txtSDT.Text = dgvTraPhong.Rows[index].Cells[8].Value.ToString();
             }
         }
+
+        private void grpTTKhachThue_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSDT_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNgheNghiep_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCMND_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTenNguoiThue_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIDKhachThue_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grpTTThuePhong_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIDPhong_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNote_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+        }
     }
 }

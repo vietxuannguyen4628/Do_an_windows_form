@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static DevExpress.XtraPrinting.Native.ExportOptionsPropertiesNames;
 
 namespace Do_An_WindowsForm
 {
@@ -215,48 +216,91 @@ namespace Do_An_WindowsForm
 
 
 
-        private void txtSoDienMoi_TextChanged(object sender, EventArgs e)
+        private void txtSoDienMoi_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                TinhTienDien_Nuoc();
+                e.SuppressKeyPress = true;
+                e.Handled = true;
+            }
+        }
+        private void txtSoDienMoi_Leave(object sender, EventArgs e)
+        {
+            TinhTienDien_Nuoc();
+        }
+
+        private void TinhTienDien_Nuoc()
         {
             PhieuThuePhong _phieuthue = context.PhieuThuePhongs.FirstOrDefault(pt => pt.MaPhong.ToString() == cmbChonPhong.Text);
             if (_phieuthue != null)
             {
-                DichVu dichVu = context.DichVus.FirstOrDefault(dvI => dvI.TenDV == "Điện");
-                if (dichVu != null)
+                // tim dich vu dien
+                DichVu dichVuDien = context.DichVus.FirstOrDefault(dvI => dvI.TenDV == "Điện");
+                int dvDien = 0;
+                if (dichVuDien != null)
                 {
-                    txtTienDien.Text = (((int.Parse(txtSoDienMoi.Text)) - (int.Parse(txtSoDienCu.Text))) * (dichVu.DonGia)).ToString();
+                    if (txtSoDienMoi.Text != "")
+                    {
+                        if (int.Parse(txtSoDienMoi.Text) < int.Parse(txtSoDienCu.Text))
+                        {
+                            MessageBox.Show("Chỉ số điện mới không được nhỏ hơn chỉ số cũ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            txtSoDienMoi.Text = txtSoDienCu.Text;
+                        }
+                        else
+                        {
+                            dvDien = (int.Parse(txtSoDienMoi.Text) - int.Parse(txtSoDienCu.Text)) * dichVuDien.DonGia.Value;
+                        }
+                        txtTienDien.Text = dvDien.ToString();
+                    }
+                    else
+                    {
+                        txtSoDienMoi.Text = txtSoDienCu.Text;
+                    }
                 }
-                else
-                {
-                    txtTienDien.Text = "0";
-                }
-            }
-            else
-            {
-                return;
-            }
 
+                // tim dich vu nuoc
+                DichVu dichVuNuoc = context.DichVus.FirstOrDefault(dvI => dvI.TenDV == "Nước");
+                int dvNuoc = 0;
+                if (dichVuNuoc != null)
+                {
+                    if (txtSoNuocMoi.Text != "")
+                    {
+                        if (int.Parse(txtSoNuocMoi.Text) < int.Parse(txtSoNuocCu.Text))
+                        {
+                            MessageBox.Show("Chỉ số nước mới không được nhỏ hơn chỉ số cũ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            txtSoNuocMoi.Text = txtSoNuocCu.Text;
+                        }
+                        else
+                        {
+                            dvNuoc = (int.Parse(txtSoNuocMoi.Text) - int.Parse(txtSoNuocCu.Text)) * dichVuNuoc.DonGia.Value;
+                        }
+                        txtTienNuoc.Text = dvNuoc.ToString();
+                    }
+                    else
+                    {
+                        txtSoNuocMoi.Text = txtSoNuocCu.Text;
+                    }
+                }
+
+            }
         }
 
-        private void txtSoNuocMoi_TextChanged(object sender, EventArgs e)
+        private void txtSoNuocMoi_KeyDown(object sender, KeyEventArgs e)
         {
-            PhieuThuePhong _phieuthue = context.PhieuThuePhongs.FirstOrDefault(pt => pt.MaPhong.ToString() == cmbChonPhong.Text);
-            if (_phieuthue != null)
+            if (e.KeyCode == Keys.Enter)
             {
-                DichVu dichVu = context.DichVus.FirstOrDefault(dvI => dvI.TenDV == "Nước");
-                if (dichVu != null)
-                {
-                    txtTienNuoc.Text = (((int.Parse(txtSoNuocMoi.Text)) - (int.Parse(txtSoNuocCu.Text))) * (dichVu.DonGia)).ToString();
-                }
-                else
-                {
-                    txtTienDien.Text = "0";
-                }
-            }
-            else
-            {
-                return;
+                TinhTienDien_Nuoc();
+                e.SuppressKeyPress = true;
+                e.Handled = true;
             }
         }
+
+        private void txtSoNuocMoi_Leave(object sender, EventArgs e)
+        {
+            TinhTienDien_Nuoc();
+        }
+       
         private void TinhTongTien()
         {
             // Chuyển đổi giá trị Text sang số nguyên để tính toán, nếu có lỗi thì gán bằng 0
@@ -303,5 +347,7 @@ namespace Do_An_WindowsForm
         {
             TinhTongTien();
         }
+
+       
     }
 }
