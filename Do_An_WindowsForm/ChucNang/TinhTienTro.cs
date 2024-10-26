@@ -1,14 +1,18 @@
 ﻿using DevExpress.XtraEditors;
 using Do_An_WindowsForm.Model;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Migrations;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//using static DevExpress.Data.Mask.Internal.MaskSettings<T>;
 using static DevExpress.XtraPrinting.Native.ExportOptionsPropertiesNames;
 
 namespace Do_An_WindowsForm
@@ -42,6 +46,12 @@ namespace Do_An_WindowsForm
             txtTongTien.Text = "0";
             txtID_Phong.Text = "0";
             dateThue.EditValue = "";
+            cbDien.Checked = false;
+            cbNuoc.Checked = false;
+            cbInternet.Checked = false;
+            cbRac.Checked = false;
+            cbGiuXe.Checked = false;
+            cmbChonPhong.SelectedText = "";
         }
         private void load()
         {
@@ -61,9 +71,167 @@ namespace Do_An_WindowsForm
                 }
             }
         }
+
+        
         private void btnSend_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (cbDien.Checked == false && cbNuoc.Checked ==  false && cbInternet.Checked == false && cbRac.Checked == false && cbGiuXe.Checked ==false) 
+                    throw new Exception("Vui lòng chọn dịch vụ muốn tính tiền");
+                long item = int.Parse(txtID_Phong.Text) + int.Parse(txtID_Khach.Text);
+                var ptp = context.PhieuThuePhongs.FirstOrDefault(p => p.MaPTP == item);
+                if (ptp != null)
+                {
+                    if (cbDien.Checked)
+                    {
+                        var dien = context.DichVus.FirstOrDefault(p => p.TenDV == "Điện");
+                        var ct = context.CT_SuDungDV.FirstOrDefault(p => p.MaPTP == ptp.MaPTP && p.MaDV == dien.MaDV);
+                        if (ct != null)
+                        {
+                            long id = dien.MaDV + ptp.MaPTP + dateThu.Value.Month + dateThu.Value.Year;
+                            var ptt = context.PhieuThutiens.FirstOrDefault(p => p.MaPTT == id);
+                            if (ptt == null)
+                            {
+                                PhieuThutien pThu = new PhieuThutien();
+                                pThu.MaPTT = dien.MaDV + ptp.MaPTP + dateThu.Value.Month + dateThu.Value.Year;
+                                pThu.MaPTP = ptp.MaPTP;
+                                pThu.MaDV = dien.MaDV;
+                                pThu.NgayThanhToan = dateThu.Value;
+                                pThu.ThanhTien = int.Parse(txtTienDien.Text);
+                                context.PhieuThutiens.Add(pThu);
+                                context.SaveChanges();
+                                MessageBox.Show("Tiền điện tháng này đã thu thành công", "Thông Báo", MessageBoxButtons.OK);
+                                setNull();
 
+                                ct.ChiSoCu = ct.ChiSoMoi;
+                                ct.ChiSoMoi = int.Parse(txtSoDienMoi.Text);
+                                context.CT_SuDungDV.AddOrUpdate(ct);
+                                context.SaveChanges();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Tiền điện tháng này đã được thu", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                setNull();
+                            }
+
+                        }
+                    }
+
+                    if (cbNuoc.Checked)
+                    {
+                        var dv = context.DichVus.FirstOrDefault(p => p.TenDV == "Nước");
+                        var ct = context.CT_SuDungDV.FirstOrDefault(p => p.MaPTP == ptp.MaPTP && p.MaDV == dv.MaDV);
+                        if (ct != null)
+                        {
+                            int id = dv.MaDV + ptp.MaPTP + dateThu.Value.Month + dateThu.Value.Year;
+                            var ptt = context.PhieuThutiens.FirstOrDefault(p => p.MaPTT == id);
+                            if (ptt == null)
+                            {
+                                PhieuThutien pThu = new PhieuThutien();
+                                pThu.MaPTT = id;
+                                pThu.MaPTP = ptp.MaPTP;
+                                pThu.MaDV = dv.MaDV;
+                                pThu.NgayThanhToan = dateThu.Value;
+                                pThu.ThanhTien = int.Parse(txtTienNuoc.Text);
+                                context.PhieuThutiens.Add(pThu);
+                                context.SaveChanges();
+                                MessageBox.Show("Tiền nước tháng này đã thu thành công", "Thông Báo", MessageBoxButtons.OK);
+                                setNull();
+
+                                ct.ChiSoCu = ct.ChiSoMoi;
+                                ct.ChiSoMoi = int.Parse(txtSoNuocMoi.Text);
+                                context.CT_SuDungDV.AddOrUpdate(ct);
+                                context.SaveChanges();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Tiền nước tháng này đã được thu", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                setNull();
+                            }
+                        }
+                    }
+                    if (cbInternet.Checked)
+                    {
+                        var dv = context.DichVus.FirstOrDefault(p => p.TenDV == "Internet");
+                        int id = dv.MaDV + ptp.MaPTP + dateThu.Value.Month + dateThu.Value.Year;
+                        var ptt = context.PhieuThutiens.FirstOrDefault(p => p.MaPTT == id);
+                        if (ptt == null)
+                        {
+                            PhieuThutien pThu = new PhieuThutien();
+                            pThu.MaPTT = id;
+                            pThu.MaPTP = ptp.MaPTP;
+                            pThu.MaDV = dv.MaDV;
+                            pThu.NgayThanhToan = dateThu.Value;
+                            pThu.ThanhTien = int.Parse(txtTienInternet.Text);
+                            context.PhieuThutiens.Add(pThu);
+                            context.SaveChanges();
+                            MessageBox.Show("Tiền internet tháng này đã thu thành công", "Thông Báo", MessageBoxButtons.OK);
+                            setNull();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Tiền internet tháng này đã được thu", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            setNull();
+                        }
+
+
+                    }
+                    if (cbRac.Checked)
+                    {
+                        var dv = context.DichVus.FirstOrDefault(p => p.TenDV == "Rác");
+                        long id = dv.MaDV + ptp.MaPTP + dateThu.Value.Month + dateThu.Value.Year;
+                        var ptt = context.PhieuThutiens.FirstOrDefault(p => p.MaPTT == id);
+                        if (ptt == null)
+                        {
+                            PhieuThutien pThu = new PhieuThutien();
+                            pThu.MaPTT = dv.MaDV + ptp.MaPTP + dateThu.Value.Month + dateThu.Value.Year;
+                            pThu.MaPTP = ptp.MaPTP;
+                            pThu.MaDV = dv.MaDV;
+                            pThu.NgayThanhToan = dateThu.Value;
+                            pThu.ThanhTien = int.Parse(txtTienRac.Text);
+                            context.PhieuThutiens.Add(pThu);
+                            context.SaveChanges();
+                            MessageBox.Show("Tiền rác tháng này đã thu thành công", "Thông Báo", MessageBoxButtons.OK);
+                            setNull();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Tiền rác tháng này đã được thu", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            setNull();
+                        }
+                    }
+                    if (cbGiuXe.Checked)
+                    {
+                        var dv = context.DichVus.FirstOrDefault(p => p.TenDV == "Giữ Xe");
+                        long id = dv.MaDV + ptp.MaPTP + dateThu.Value.Month + dateThu.Value.Year;
+                        var ptt = context.PhieuThutiens.FirstOrDefault(p => p.MaPTT == id);
+                        if (ptt == null)
+                        {
+                            PhieuThutien pThu = new PhieuThutien();
+                            pThu.MaPTT = dv.MaDV + ptp.MaPTP + dateThu.Value.Month + dateThu.Value.Year;
+                            pThu.MaPTP = ptp.MaPTP;
+                            pThu.MaDV = dv.MaDV;
+                            pThu.NgayThanhToan = dateThu.Value;
+                            pThu.ThanhTien = int.Parse(txtTienGiuXe.Text);
+                            context.PhieuThutiens.Add(pThu);
+                            context.SaveChanges();
+                            MessageBox.Show("Tiền giữ xe tháng này đã thu thành công", "Thông Báo", MessageBoxButtons.OK);
+                            setNull();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Tiền giữ xe tháng này đã được thu", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            setNull();
+                        }
+                    }
+
+                }
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void TinhTienTro_Load(object sender, EventArgs e)
@@ -284,6 +452,7 @@ namespace Do_An_WindowsForm
                 }
 
             }
+
         }
 
         private void txtSoNuocMoi_KeyDown(object sender, KeyEventArgs e)

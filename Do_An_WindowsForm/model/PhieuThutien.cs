@@ -10,22 +10,16 @@ namespace Do_An_WindowsForm.Model
     public partial class PhieuThutien
     {
         [Key]
-        [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public long MaPTP { get; set; }
+        public int MaPTT { get; set; }
 
-        [Key]
-        [Column(Order = 1)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int MaPTP { get; set; }
+
         public int MaDV { get; set; }
 
-        public DateTime? TuNgay { get; set; }
-
-        public DateTime? DenNgay { get; set; }
+        public DateTime? NgayThanhToan { get; set; }
 
         public int? ThanhTien { get; set; }
-
-        public byte? DaThanhToan { get; set; }
 
         public virtual CT_SuDungDV CT_SuDungDV { get; set; }
     }

@@ -117,8 +117,12 @@ namespace Do_An_WindowsForm.chuc_nang
                 data.MaPTP = ptp.MaPTP;
                 data.MaPTrP = maPTrP;
                 data.NgayTra = dateNgayTra.Value;
-                data.DaThanhtoan = 0;
                 context.PhieuTraPhongs.Add(data);
+                context.SaveChanges();
+
+                var phong = context.Phongs.FirstOrDefault(p => p.MaPhong == ptp.MaPhong);
+                phong.TrangThai = 0;
+                context.Phongs.AddOrUpdate(phong);
                 context.SaveChanges();
                 MessageBox.Show("Trả phòng thành công!!!", "Thông báo", MessageBoxButtons.OK);
                 setNull();

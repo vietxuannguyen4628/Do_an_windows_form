@@ -80,13 +80,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1598, 718);
+            this.AutoSize = true;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "TrangThaiPhong";
-            this.Text = "QuanLyPhong";
+            this.Size = new System.Drawing.Size(1598, 718);
             this.Load += new System.EventHandler(this.QuanLyPhong_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -57,6 +57,7 @@ namespace Do_An_WindowsForm.QuanLy
                     {
                         btn.BackColor = Color.White;
                     }
+                   // btn.Anchor = AnchorStyles.None;
 
                     // Thêm button vào form
                     this.Controls.Add(btn);

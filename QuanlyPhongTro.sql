@@ -1,6 +1,4 @@
-﻿﻿USE [master]
-GO
-IF EXISTS (SELECT name FROM sys.databases WHERE name = 'QuanLyPhongTro')
+﻿IF EXISTS (SELECT name FROM sys.databases WHERE name = 'QuanLyPhongTro')
     DROP DATABASE QuanLyPhongTro;
 GO
 --Drop table Faculty
@@ -35,10 +33,10 @@ GO
 CREATE TABLE [dbo].[KhachHang](
 	[MaKH] [int] NOT NULL,
 	[HoTen] [nvarchar](70),
-	[CMND_CanCuoc] [char](10),
-	[SDT] [char](10),
+	[CMND_CanCuoc] [varchar](20),
+	[SDT] [varchar](20),
 	[QueQuan] [nvarchar](150),
-	[GioiTinh] [nvarchar](5),
+	[GioiTinh] [nvarchar](20),
 	[NgheNghiep] [nvarchar](30),
  CONSTRAINT [PK_KhachHang] PRIMARY KEY CLUSTERED 
 (
@@ -54,12 +52,11 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[PhieuThuePhong](
-	[MaPTP] [bigint] NOT NULL,
+	[MaPTP] [int] NOT NULL,
 	[MaPhong] [int] NOT NULL,
 	[MaKH] [int]NOT NULL,
 	[TienDacCoc] [int],
 	[NgayThue] [datetime],
-	[DaThanhToan] [tinyint],
  CONSTRAINT [PK_PhieuThuePhong] PRIMARY KEY CLUSTERED 
 (
 	[MaPTP] ASC
@@ -89,10 +86,9 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[PhieuTraPhong](
-	[MaPTrP] [bigint] NOT NULL,
-	[MaPTP] [bigint] NOT NULL,
+	[MaPTrP] [int] NOT NULL,
+	[MaPTP] [int] NOT NULL,
 	[NgayTra] [datetime],
-	[DaThanhtoan] [tinyint],
  CONSTRAINT [PK_PhieuTraPhong] PRIMARY KEY CLUSTERED 
 (
 	[MaPTrP] ASC
@@ -125,21 +121,15 @@ CREATE TABLE [dbo].[DichVu](
 GO
 
 
-
-
-
-
-
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[CT_SuDungDV](
-	[MaPTP] [bigint] NOT NULL,
+	[MaPTP] [int] NOT NULL,
 	[MaDV] [int] NOT NULL,
 	[ChiSoCu] [int],
 	[ChiSoMoi] [int],
-	--[SoLuong] [int],
  CONSTRAINT [PK_CT_SuDungDV] PRIMARY KEY CLUSTERED 
 (
 	[MaPTP] ASC,
@@ -167,16 +157,14 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[PhieuThutien](
-	[MaPTP] [bigint] NOT NULL,
+	[MaPTT] [int] NOT NULL,
+	[MaPTP] [int] NOT NULL,
 	[MaDV] [int] NOT NULL,
-	[TuNgay] [datetime],
-	[DenNgay] [datetime],
+	[NgayThanhToan] [datetime],
 	[ThanhTien] [int],
-	[DaThanhToan] [tinyint],
  CONSTRAINT [PK_PhieuThutien] PRIMARY KEY CLUSTERED 
 (
-	[MaPTP] ASC,
-	[MaDV] ASC
+	[MaPTT] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
@@ -193,53 +181,26 @@ GO
 
 -- Thêm dữ liệu cho bảng Phong
 INSERT INTO [dbo].[Phong] (MaPhong, TrangThai, DienTich, GiaTien) VALUES
-(101, 1, 30.5, 500000),
+(101, 0, 30.5, 500000),
 (102, 0, 25.0, 400000),
-(103, 1, 45.0, 800000),
-(104, 1, 28.0, 5500000),
+(103, 0, 45.0, 800000),
+(104, 0, 28.0, 5500000),
 (105, 0, 32.5, 6500000),
-(106, 1, 20.0, 4800000),
-(107, 1, 25.0, 5200000),
+(106, 0, 20.0, 4800000),
+(107, 0, 25.0, 5200000),
 (108, 0, 30.0, 6100000),
-(109, 1, 22.5, 4900000),
-(110, 1, 29.0, 5700000),
+(109, 0, 22.5, 4900000),
+(110, 0, 29.0, 5700000),
 (111, 0, 24.0, 5400000),
-(112, 1, 26.0, 6000000),
-(113, 1, 21.5, 5000000),
+(112, 0, 26.0, 6000000),
+(113, 0, 21.5, 5000000),
 (114, 0, 22.5, 4900000),
 (115, 0, 29.0, 5700000);
 --phòng đã cho thuê 101, 103, 104, 106, 107, 109, 110, 112, 113
 
--- Thêm dữ liệu cho bảng KhachHang
-INSERT INTO [dbo].[KhachHang] (MaKH, HoTen, CMND_CanCuoc, SDT, QueQuan, GioiTinh, NgheNghiep) VALUES
-(1, N'Nguyễn Văn A', '1234567890', '0912345678', N'Hà Nội', N'Nam', N'Kỹ sư'),
-(2, N'Trần Thị B', '0453983444', '0987654321', N'Hồ Chí Minh', N'Nữ', N'Sinh viên'),
-(3, N'Lê Văn C', '1122334455', '0909876543', N'Đà Nẵng', N'Nam', N'Technician'),
-(4, N'Phạm Văn D', '2233445566', '0901234567', N'Hải Phòng', N'Nam', N'Giáo viên'),
-(5, N'Hoàng Thị E', '3344556677', '0913456789', N'Cần Thơ', N'Nữ', N'Nhân viên văn phòng'),
-(6, N'Bùi Văn F', '5566778899', '0939876543', N'Nha Trang', N'Nam', N'Kinh doanh'),
-(7, N'Ngô Thị G', '6677889900', '0945678912', N'Quảng Ninh', N'Nữ', N'Công nhân'),
-(8, N'Lý Văn H', '7788990011', '0956789123', N'Vũng Tàu', N'Nam', N'Tài xế'),
-(9, N'Tô Thị I', '8899001122', '0967891234', N'Phú Thọ', N'Nữ', N'Bán hàng');
 
--- Thêm dữ liệu cho bảng PhieuThuePhong
-INSERT INTO [dbo].[PhieuThuePhong] (MaPTP, MaPhong, MaKH, TienDacCoc, NgayThue, DaThanhToan) VALUES
-(1, 101, 1, 100000, '2024-10-01', 1),  -- Ngày thuê 01/10/2024
-(2, 103, 2, 200000, '2024-10-15', 0),  -- Ngày thuê 15/10/2024
-(3, 104, 3, 150000, '2024-10-20', 0),  -- Ngày thuê 20/10/2024
-(4, 106, 4, 300000, '2024-10-23', 1),  -- Ngày thuê 23/10/2024
-(5, 107, 5, 250000, '2024-10-22', 0),  -- Ngày thuê 22/10/2024
-(6, 109, 6, 270000, '2024-10-20', 0),  -- Ngày thuê 20/10/2024
-(7, 110, 7, 200000, '2024-10-21', 1),  -- Ngày thuê 21/10/2024
-(8, 112, 8, 220000, '2024-10-19', 0),  -- Ngày thuê 19/10/2024
-(9, 113, 9, 280000, '2024-10-18', 0);  -- Ngày thuê 18/10/2024
---101, 103, 104, 106, 107, 109, 110, 112, 113
 
--- Thêm dữ liệu cho bảng PhieuTraPhong
-INSERT INTO [dbo].[PhieuTraPhong] (MaPTrP, MaPTP, NgayTra, DaThanhtoan) VALUES
-(1, 1, '2024-10-05', 1),  -- Ngày trả 05/10/2024
-(2, 2, '2024-10-20', 0),  -- Ngày trả 20/10/2024
-(3, 3, '2024-10-25', 0);  -- Ngày trả 25/10/2024
+
 
 -- Thêm dữ liệu cho bảng DichVu
 INSERT INTO [dbo].[DichVu] (MaDV, TenDV, DonGia) VALUES
@@ -250,97 +211,6 @@ INSERT INTO [dbo].[DichVu] (MaDV, TenDV, DonGia) VALUES
 (5, N'Điện', 3300);
 
 
--- Thêm dữ liệu cho bảng CT_SuDungDV
-INSERT INTO [dbo].[CT_SuDungDV] (MaPTP, MaDV, ChiSoCu, ChiSoMoi) VALUES
--- Dịch vụ điện (DonGia = 3300)
-(1, 5, 10, 50),   -- MaPTP = 1
-(2, 5, 20, 60),   -- MaPTP = 2
-(3, 5, 15, 55),   -- MaPTP = 3
-(4, 5, 25, 65),   -- MaPTP = 4
-(5, 5, 18, 58),   -- MaPTP = 5
-(6, 5, 22, 62),   -- MaPTP = 6
-(7, 5, 30, 70),   -- MaPTP = 7
-(8, 5, 20, 60),   -- MaPTP = 8
-(9, 5, 24, 64),   -- MaPTP = 9
-
--- Dịch vụ nước (DonGia = 10000)
-(1, 4, 5, 10),    -- MaPTP = 1
-(2, 4, 8, 15),    -- MaPTP = 2
-(3, 4, 10, 18),   -- MaPTP = 3
-(4, 4, 12, 20),   -- MaPTP = 4
-(5, 4, 9, 16),    -- MaPTP = 5
-(6, 4, 7, 13),    -- MaPTP = 6
-(7, 4, 6, 12),    -- MaPTP = 7
-(8, 4, 8, 14),    -- MaPTP = 8
-(9, 4, 10, 18),   -- MaPTP = 9
-
--- Các dịch vụ khác (ChiSoCu = 0, ChiSoMoi = 1)
-(1, 1, 0, 1),    -- Internet cho MaPTP = 1
-(1, 2, 0, 1),    -- Rác cho MaPTP = 1
-(2, 1, 0, 1),    -- Internet cho MaPTP = 2
-(2, 2, 0, 1),    -- Rác cho MaPTP = 2
-(3, 1, 0, 1),    -- Internet cho MaPTP = 3
-(3, 2, 0, 1),    -- Rác cho MaPTP = 3
-(4, 1, 0, 1),    -- Internet cho MaPTP = 4
-(4, 3, 0, 1),    -- Giữ Xe cho MaPTP = 4
-(5, 1, 0, 1),    -- Internet cho MaPTP = 5
-(5, 2, 0, 1),    -- Rác cho MaPTP = 5
-(6, 1, 0, 1),    -- Internet cho MaPTP = 6
-(6, 3, 0, 1),    -- Giữ Xe cho MaPTP = 6
-(7, 1, 0, 1),    -- Internet cho MaPTP = 7
-(7, 2, 0, 1),    -- Rác cho MaPTP = 7
-(8, 1, 0, 1),    -- Internet cho MaPTP = 8
-(8, 3, 0, 1),    -- Giữ Xe cho MaPTP = 8
-(9, 1, 0, 1),    -- Internet cho MaPTP = 9
-(9, 2, 0, 1);    -- Rác cho MaPTP = 9
-
--- Thêm dữ liệu cho bảng PhieuThutien
-INSERT INTO [dbo].[PhieuThutien] (MaPTP, MaDV, TuNgay, DenNgay, ThanhTien, DaThanhToan) VALUES
--- Dịch vụ điện (ThanhTien = (ChiSoMoi - ChiSoCu) * DonGia)
-(1, 5, '2024-10-01', '2024-10-05', (50 - 10) * 3300, 1),
-(2, 5, '2024-10-15', '2024-10-20', (60 - 20) * 3300, 0),
-(3, 5, '2024-10-20', '2024-10-25', (55 - 15) * 3300, 0),
-(4, 5, '2024-10-23', '2024-10-30', (65 - 25) * 3300, 1),
-(5, 5, '2024-10-22', '2024-10-29', (58 - 18) * 3300, 0),
-(6, 5, '2024-10-20', '2024-10-27', (62 - 22) * 3300, 0),
-(7, 5, '2024-10-21', '2024-10-28', (70 - 30) * 3300, 1),
-(8, 5, '2024-10-19', '2024-10-26', (60 - 20) * 3300, 0),
-(9, 5, '2024-10-18', '2024-10-25', (64 - 24) * 3300, 0),
-
--- Dịch vụ nước (ThanhTien = (ChiSoMoi - ChiSoCu) * DonGia)
-(1, 4, '2024-10-01', '2024-10-05', (10 - 5) * 10000, 1),
-(2, 4, '2024-10-15', '2024-10-20', (15 - 8) * 10000, 0),
-(3, 4, '2024-10-20', '2024-10-25', (18 - 10) * 10000, 0),
-(4, 4, '2024-10-23', '2024-10-30', (20 - 12) * 10000, 1),
-(5, 4, '2024-10-22', '2024-10-29', (16 - 9) * 10000, 0),
-(6, 4, '2024-10-20', '2024-10-27', (13 - 7) * 10000, 0),
-(7, 4, '2024-10-21', '2024-10-28', (12 - 6) * 10000, 1),
-(8, 4, '2024-10-19', '2024-10-26', (14 - 8) * 10000, 0),
-(9, 4, '2024-10-18', '2024-10-25', (18 - 10) * 10000, 0),
-
--- Các dịch vụ khác (ChiSoMoi - ChiSoCu = 1)
-(1, 1, '2024-10-01', '2024-10-05', (1 - 0) * 100000, 1), -- Internet
-(1, 2, '2024-10-01', '2024-10-05', (1 - 0) * 50000, 1),  -- Rác
-(2, 1, '2024-10-15', '2024-10-20', (1 - 0) * 100000, 0), -- Internet
-(2, 2, '2024-10-15', '2024-10-20', (1 - 0) * 50000, 0),  -- Rác
-(3, 1, '2024-10-20', '2024-10-25', (1 - 0) * 100000, 0), -- Internet
-(3, 2, '2024-10-20', '2024-10-25', (1 - 0) * 50000, 0),  -- Rác
-(4, 1, '2024-10-23', '2024-10-30', (1 - 0) * 100000, 1), -- Internet
-(4, 3, '2024-10-23', '2024-10-30', (1 - 0) * 200000, 1), -- Giữ Xe
-(5, 1, '2024-10-22', '2024-10-29', (1 - 0) * 100000, 0), -- Internet
-(5, 2, '2024-10-22', '2024-10-29', (1 - 0) * 50000, 0),  -- Rác
-(6, 1, '2024-10-20', '2024-10-27', (1 - 0) * 100000, 0), -- Internet
-(6, 3, '2024-10-20', '2024-10-27', (1 - 0) * 200000, 0), -- Giữ Xe
-(7, 1, '2024-10-21', '2024-10-28', (1 - 0) * 100000, 1), -- Internet
-(7, 2, '2024-10-21', '2024-10-28', (1 - 0) * 50000, 1),  -- Rác
-(8, 1, '2024-10-19', '2024-10-26', (1 - 0) * 100000, 0), -- Internet
-(8, 3, '2024-10-19', '2024-10-26', (1 - 0) * 200000, 0), -- Giữ Xe
-(9, 1, '2024-10-18', '2024-10-25', (1 - 0) * 100000, 0), -- Internet
-(9, 2, '2024-10-18', '2024-10-25', (1 - 0) * 50000, 0);  -- Rác
-
-
-
-SELECT * FROM [dbo].[CT_SuDungDV];
 
 
 --INSERT INTO [dbo].[Phong] (MaPhong, TrangThai, DienTich)

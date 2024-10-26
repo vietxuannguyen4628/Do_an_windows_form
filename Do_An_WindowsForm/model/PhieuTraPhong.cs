@@ -11,13 +11,11 @@ namespace Do_An_WindowsForm.Model
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public long MaPTrP { get; set; }
+        public int MaPTrP { get; set; }
 
-        public long MaPTP { get; set; }
+        public int MaPTP { get; set; }
 
         public DateTime? NgayTra { get; set; }
-
-        public byte? DaThanhtoan { get; set; }
 
         public virtual PhieuThuePhong PhieuThuePhong { get; set; }
     }

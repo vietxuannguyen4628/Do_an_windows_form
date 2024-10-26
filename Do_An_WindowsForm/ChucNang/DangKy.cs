@@ -195,14 +195,14 @@ namespace Do_An_WindowsForm.chuc_nang
 
                 int item = int.Parse(txtID_Khach.Text);
                 int idP = int.Parse(cmbID_Phong.Text);
-                var phieu = context.PhieuThuePhongs.FirstOrDefault(p => p.MaKH == item && p.MaPhong == idP);
+                int idPhieu = item + idP;
+                var phieu = context.PhieuThuePhongs.FirstOrDefault(p => p.MaPTP == idPhieu);
                 if (phieu != null)
                 {
                     throw new Exception("Phiếu đã tồn tại");
                 }
                 else
                 {
-
                     var k = context.KhachHangs.FirstOrDefault(p => p.MaKH == item);
                     if (k == null)
                     {
@@ -222,20 +222,21 @@ namespace Do_An_WindowsForm.chuc_nang
                         context.SaveChanges();
 
                         PhieuThuePhong ph = new PhieuThuePhong();
-                        ph.MaPTP = idP + item;
+                        ph.MaPTP = idPhieu;
                         ph.MaPhong = idP;
                         ph.MaKH = item;
                         ph.TienDacCoc = int.Parse(txtTienCoc.Text);
                         ph.NgayThue = dtNgayThue.Value;
-                        ph.DaThanhToan = 0;
                         context.PhieuThuePhongs.Add(ph);
                         context.SaveChanges();
                         MessageBox.Show("Đã đăng ký thuê phòng thành công!", "Thông báo", MessageBoxButtons.OK);
+                        AddCTDV(ph.MaPTP);
 
                         var phong = context.Phongs.FirstOrDefault(p => p.MaPhong == idP);
                         phong.TrangThai = 1;
                         context.Phongs.AddOrUpdate(phong);
                         context.SaveChanges();
+
                         Clear();
                         DangKy_Load(sender, e);
                     }
@@ -247,6 +248,21 @@ namespace Do_An_WindowsForm.chuc_nang
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void AddCTDV(int MaPTP)
+        {
+            List<DichVu> list = context.DichVus.ToList();
+            foreach (var dv in list)
+            {
+                CT_SuDungDV c = new CT_SuDungDV();
+                c.MaPTP = MaPTP;
+                c.MaDV = dv.MaDV;
+                c.ChiSoCu = 0;
+                c.ChiSoMoi = 0;
+                context.CT_SuDungDV.Add(c);
+                context.SaveChanges();
             }
         }
 

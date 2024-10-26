@@ -1,6 +1,4 @@
-﻿//using Newtonsoft.Json.Linq;
-//using ZaloCSharpSDK;
-using Do_An_WindowsForm.chuc_nang;
+﻿
 using DevExpress.XtraBars;
 using System;
 using System.Collections.Generic;
@@ -15,6 +13,8 @@ using DevExpress.XtraTab;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Diagnostics;
 using Do_An_WindowsForm.QuanLy;
+using Do_An_WindowsForm.chuc_nang;
+
 
 
 namespace Do_An_WindowsForm
@@ -87,6 +87,7 @@ namespace Do_An_WindowsForm
                 //newTab.AutoSizeChanged();
                 // Tạo một instance của UserControl
                 hinh_anh_phong hinhAnhPhongControl = new hinh_anh_phong();
+
 
                 // Đặt DockStyle cho UserControl
                 hinhAnhPhongControl.Dock = DockStyle.Fill;
