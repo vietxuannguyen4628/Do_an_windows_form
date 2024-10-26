@@ -580,30 +580,21 @@
             // 
             // dateThu
             // 
-<<<<<<< HEAD
+            this.dateThu.CalendarMonthBackground = System.Drawing.Color.Gainsboro;
             this.dateThu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateThu.CustomFormat = "dd/MM/yyyy";
-            this.dateThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateThu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateThu.Location = new System.Drawing.Point(1151, 85);
-=======
-            this.dateThu.CalendarMonthBackground = System.Drawing.Color.Gainsboro;
             this.dateThu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateThu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateThu.Location = new System.Drawing.Point(856, 134);
             this.dateThu.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> cdd85c17459ffc9fa3661b35e82623bf8776cc77
             this.dateThu.Name = "dateThu";
             this.dateThu.Size = new System.Drawing.Size(251, 30);
             this.dateThu.TabIndex = 61;
             // 
             // cmbChonPhong
             // 
-<<<<<<< HEAD
             this.cmbChonPhong.Anchor = System.Windows.Forms.AnchorStyles.None;
-=======
             this.cmbChonPhong.BackColor = System.Drawing.Color.Gainsboro;
->>>>>>> cdd85c17459ffc9fa3661b35e82623bf8776cc77
             this.cmbChonPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbChonPhong.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cmbChonPhong.FormattingEnabled = true;
@@ -806,11 +797,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TinhTienTro";
-<<<<<<< HEAD
-            this.Size = new System.Drawing.Size(1368, 492);
-=======
             this.Size = new System.Drawing.Size(1596, 668);
->>>>>>> cdd85c17459ffc9fa3661b35e82623bf8776cc77
             this.Load += new System.EventHandler(this.TinhTienTro_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
