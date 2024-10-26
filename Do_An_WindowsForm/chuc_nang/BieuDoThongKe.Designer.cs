@@ -34,11 +34,13 @@
             // 
             // ctcThongKe
             // 
-            this.ctcThongKe.Location = new System.Drawing.Point(-1, 39);
+            this.ctcThongKe.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ctcThongKe.Location = new System.Drawing.Point(0, 0);
             this.ctcThongKe.Name = "ctcThongKe";
             this.ctcThongKe.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.ctcThongKe.Size = new System.Drawing.Size(688, 462);
+            this.ctcThongKe.Size = new System.Drawing.Size(686, 499);
             this.ctcThongKe.TabIndex = 0;
+            this.ctcThongKe.Click += new System.EventHandler(this.ctcThongKe_Click);
             // 
             // BieuDoThongKe
             // 
@@ -47,7 +49,8 @@
             this.ClientSize = new System.Drawing.Size(686, 499);
             this.Controls.Add(this.ctcThongKe);
             this.Name = "BieuDoThongKe";
-            this.Text = "BieuDoThongKe";
+            this.Text = "Biểu đồ thống kê";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Exit);
             this.Load += new System.EventHandler(this.BieuDoThongKe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ctcThongKe)).EndInit();
             this.ResumeLayout(false);

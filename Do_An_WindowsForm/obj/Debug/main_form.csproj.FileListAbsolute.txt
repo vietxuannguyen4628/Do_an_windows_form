@@ -165,3 +165,4 @@ D:\DoAn\Do_an_windows_form\Do_An_WindowsForm\bin\Debug\DevExpress.DataAccess.v22
 D:\DoAn\Do_an_windows_form\Do_An_WindowsForm\bin\Debug\DevExpress.XtraNavBar.v22.2.xml
 D:\DoAn\Do_an_windows_form\Do_An_WindowsForm\bin\Debug\DevExpress.Xpo.v22.2.xml
 D:\DoAn\Do_an_windows_form\Do_An_WindowsForm\obj\Debug\Do_An_WindowsForm.chuc_nang.BieuDoThongKe.resources
+D:\DoAn\Do_an_windows_form\Do_An_WindowsForm\obj\Debug\Do_An_WindowsForm.chuc_nang.Chonnam.resources

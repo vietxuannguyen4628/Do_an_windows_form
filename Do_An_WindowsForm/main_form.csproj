@@ -77,6 +77,12 @@
     <Compile Include="chuc_nang\BieuDoThongKe.Designer.cs">
       <DependentUpon>BieuDoThongKe.cs</DependentUpon>
     </Compile>
+    <Compile Include="chuc_nang\Chonnam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chuc_nang\Chonnam.Designer.cs">
+      <DependentUpon>Chonnam.cs</DependentUpon>
+    </Compile>
     <Compile Include="chuc_nang\danh_sach_khach_thue.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="chuc_nang\BieuDoThongKe.resx">
       <DependentUpon>BieuDoThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chuc_nang\Chonnam.resx">
+      <DependentUpon>Chonnam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="chuc_nang\danh_sach_khach_thue.resx">
       <DependentUpon>danh_sach_khach_thue.cs</DependentUpon>

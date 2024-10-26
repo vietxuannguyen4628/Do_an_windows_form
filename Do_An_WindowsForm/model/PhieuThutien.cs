@@ -25,8 +25,6 @@ namespace Do_An_WindowsForm.model
 
         public int? ThanhTien { get; set; }
 
-        public byte? DaThanhToan { get; set; }
-
         public virtual CT_SuDungDV CT_SuDungDV { get; set; }
     }
 }

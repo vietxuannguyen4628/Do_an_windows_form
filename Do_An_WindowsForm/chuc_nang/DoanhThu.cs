@@ -1,16 +1,8 @@
-﻿using DevExpress.Data.Filtering;
-using DevExpress.Utils.Extensions;
-using DevExpress.XtraEditors;
-using DevExpress.XtraPrinting.Native;
-using Do_An_WindowsForm.model;
+﻿using Do_An_WindowsForm.model;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Do_An_WindowsForm.chuc_nang
@@ -42,7 +34,7 @@ namespace Do_An_WindowsForm.chuc_nang
             int money = 0;
             var list = ql.CT_SuDungDV.Where(p => p.MaPTP == check).ToList();
             for (int i = 0; i < list.Count; i++)
-                money = money + (int.Parse(list[i].SoLuong.ToString()) * int.Parse(list[i].DichVu.DonGia.ToString()));
+                money = money + ((int.Parse(list[i].ChiSoMoi.ToString()) - int.Parse(list[i].ChiSoCu.ToString())) * int.Parse(list[i].DichVu.DonGia.ToString()));
             return money.ToString();
         }
         private string ngay(int check)
@@ -57,12 +49,12 @@ namespace Do_An_WindowsForm.chuc_nang
         private void tongtien()
         {
             int money = 0;
-            for(int i = 0;i < dgvDoanhThu.Rows.Count;i++)
+            for (int i = 0; i < dgvDoanhThu.Rows.Count; i++)
             {
-                if(dgvDoanhThu.Rows[i].Cells[6].Value != null && dgvDoanhThu.Rows[i].Visible ==true)
+                if (dgvDoanhThu.Rows[i].Cells[6].Value != null && dgvDoanhThu.Rows[i].Visible == true)
                     money = money + int.Parse(dgvDoanhThu.Rows[i].Cells[6].Value.ToString());
             }
-            txttongtien.Text = money +"đ";
+            txttongtien.Text = money + "đ";
         }
         private void BinDaTa(List<PhieuThuePhong> list_thutien)
         {
@@ -72,10 +64,11 @@ namespace Do_An_WindowsForm.chuc_nang
                 int index = dgvDoanhThu.Rows.Add();
                 string dl = tinhtien(int.Parse(list_thutien[i].MaPTP.ToString()));
                 string dl1 = ngay(int.Parse(list_thutien[i].MaPTP.ToString()));
+                DateTime ngaythu = Convert.ToDateTime(dl1);
                 dgvDoanhThu.Rows[index].Cells[0].Value = list_thutien[i].MaPhong;
                 dgvDoanhThu.Rows[index].Cells[1].Value = list_thutien[i].KhachHang.HoTen;
                 dgvDoanhThu.Rows[index].Cells[2].Value = list_thutien[i].KhachHang.CMND_CanCuoc;
-                dgvDoanhThu.Rows[index].Cells[3].Value = dl1;
+                dgvDoanhThu.Rows[index].Cells[3].Value = ngaythu.ToString("dd/MM/yyyy");
                 dgvDoanhThu.Rows[index].Cells[4].Value = dl;
                 dgvDoanhThu.Rows[index].Cells[5].Value = list_thutien[i].Phong.GiaTien;
                 int money = int.Parse(dl) + int.Parse(list_thutien[i].Phong.GiaTien.ToString());
@@ -149,7 +142,9 @@ namespace Do_An_WindowsForm.chuc_nang
 
         private void btnChart_Click(object sender, EventArgs e)
         {
-
+            Chonnam chonnam = new Chonnam();
+            chonnam.StartPosition = FormStartPosition.CenterParent;
+            chonnam.ShowDialog();
         }
     }
 }

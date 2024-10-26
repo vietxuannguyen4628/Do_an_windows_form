@@ -57,7 +57,7 @@
             this.TONGTIENDV,
             this.TIENPHONG,
             this.THANHTIEN});
-            this.dgvDoanhThu.Location = new System.Drawing.Point(66, 76);
+            this.dgvDoanhThu.Location = new System.Drawing.Point(66, 82);
             this.dgvDoanhThu.Name = "dgvDoanhThu";
             this.dgvDoanhThu.RowHeadersWidth = 51;
             this.dgvDoanhThu.RowTemplate.Height = 24;
