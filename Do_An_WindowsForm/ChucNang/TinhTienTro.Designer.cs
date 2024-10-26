@@ -31,11 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TinhTienTro));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnSend = new System.Windows.Forms.Button();
-            this.txtSLXe = new System.Windows.Forms.TextBox();
             this.txtSoNuocMoi = new System.Windows.Forms.TextBox();
             this.txtSoDienMoi = new System.Windows.Forms.TextBox();
             this.txtSoNuocCu = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.txtSoDienCu = new System.Windows.Forms.TextBox();
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.txtTienRac = new System.Windows.Forms.TextBox();
@@ -91,11 +89,9 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.btnSend);
-            this.groupBox3.Controls.Add(this.txtSLXe);
             this.groupBox3.Controls.Add(this.txtSoNuocMoi);
             this.groupBox3.Controls.Add(this.txtSoDienMoi);
             this.groupBox3.Controls.Add(this.txtSoNuocCu);
-            this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.txtSoDienCu);
             this.groupBox3.Controls.Add(this.txtTongTien);
             this.groupBox3.Controls.Add(this.txtTienRac);
@@ -143,17 +139,6 @@
             this.btnSend.UseVisualStyleBackColor = false;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
-            // txtSLXe
-            // 
-            this.txtSLXe.Enabled = false;
-            this.txtSLXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSLXe.Location = new System.Drawing.Point(183, 179);
-            this.txtSLXe.Name = "txtSLXe";
-            this.txtSLXe.Size = new System.Drawing.Size(57, 24);
-            this.txtSLXe.TabIndex = 40;
-            this.txtSLXe.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtSLXe.TextChanged += new System.EventHandler(this.txtSLXe_TextChanged);
-            // 
             // txtSoNuocMoi
             // 
             this.txtSoNuocMoi.Enabled = false;
@@ -186,16 +171,6 @@
             this.txtSoNuocCu.TabIndex = 40;
             this.txtSoNuocCu.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(111, 182);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(72, 18);
-            this.label12.TabIndex = 56;
-            this.label12.Text = "Số Lượng";
-            // 
             // txtSoDienCu
             // 
             this.txtSoDienCu.Enabled = false;
@@ -225,6 +200,7 @@
             this.txtTienRac.Size = new System.Drawing.Size(130, 26);
             this.txtTienRac.TabIndex = 40;
             this.txtTienRac.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTienRac.TextChanged += new System.EventHandler(this.txtTienRac_TextChanged);
             // 
             // txtTienGiuXe
             // 
@@ -235,6 +211,7 @@
             this.txtTienGiuXe.Size = new System.Drawing.Size(130, 26);
             this.txtTienGiuXe.TabIndex = 40;
             this.txtTienGiuXe.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTienGiuXe.TextChanged += new System.EventHandler(this.txtTienGiuXe_TextChanged);
             // 
             // txtTienNuoc
             // 
@@ -245,6 +222,7 @@
             this.txtTienNuoc.Size = new System.Drawing.Size(130, 26);
             this.txtTienNuoc.TabIndex = 40;
             this.txtTienNuoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTienNuoc.TextChanged += new System.EventHandler(this.txtTienNuoc_TextChanged);
             // 
             // txtTienNha
             // 
@@ -255,6 +233,7 @@
             this.txtTienNha.Size = new System.Drawing.Size(130, 26);
             this.txtTienNha.TabIndex = 40;
             this.txtTienNha.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTienNha.TextChanged += new System.EventHandler(this.txtTienNha_TextChanged);
             // 
             // txtTienInternet
             // 
@@ -265,6 +244,7 @@
             this.txtTienInternet.Size = new System.Drawing.Size(130, 26);
             this.txtTienInternet.TabIndex = 40;
             this.txtTienInternet.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTienInternet.TextChanged += new System.EventHandler(this.txtTienInternet_TextChanged);
             // 
             // txtTienDien
             // 
@@ -275,6 +255,7 @@
             this.txtTienDien.Size = new System.Drawing.Size(130, 26);
             this.txtTienDien.TabIndex = 40;
             this.txtTienDien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTienDien.TextChanged += new System.EventHandler(this.txtTienDien_TextChanged);
             // 
             // cbGiuXe
             // 
@@ -683,6 +664,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1368, 492);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dateThu);
@@ -692,7 +674,6 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "TinhTienTro";
-            this.Size = new System.Drawing.Size(1370, 524);
             this.Load += new System.EventHandler(this.TinhTienTro_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -756,8 +737,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtTienRac;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtSLXe;
-        private System.Windows.Forms.Label label12;
         private DevExpress.XtraEditors.DateTimeOffsetEdit dateThue;
         private System.Windows.Forms.CheckBox cbNuoc;
         private System.Windows.Forms.CheckBox cbDien;
