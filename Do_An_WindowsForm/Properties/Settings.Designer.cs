@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+<<<<<<< HEAD
 namespace Do_An_WindowsForm.Properties
 {
 
@@ -23,6 +24,19 @@ namespace Do_An_WindowsForm.Properties
         {
             get
             {
+=======
+namespace Do_An_WindowsForm.Properties {
+    
+    
+    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.11.0.0")]
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
+        
+        public static Settings Default {
+            get {
+>>>>>>> e927a4bbe293e18106af5486b222cb49bf20a5d5
                 return defaultInstance;
             }
         }

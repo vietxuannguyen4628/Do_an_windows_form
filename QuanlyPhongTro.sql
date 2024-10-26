@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿USE [master]
+=======
+﻿﻿USE [master]
+>>>>>>> e927a4bbe293e18106af5486b222cb49bf20a5d5
 GO
 IF EXISTS (SELECT name FROM sys.databases WHERE name = 'QuanLyPhongTro')
     DROP DATABASE QuanLyPhongTro;
@@ -124,11 +128,14 @@ CREATE TABLE [dbo].[DichVu](
 GO
 
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> e927a4bbe293e18106af5486b222cb49bf20a5d5
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -166,6 +173,10 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[PhieuThutien](
+<<<<<<< HEAD
+=======
+	[MaPTT] [int] NOT NULL,
+>>>>>>> e927a4bbe293e18106af5486b222cb49bf20a5d5
 	[MaPTP] [bigint] NOT NULL,
 	[MaDV] [int] NOT NULL,
 	[TuNgay] [datetime],
@@ -173,8 +184,12 @@ CREATE TABLE [dbo].[PhieuThutien](
 	[ThanhTien] [int],
  CONSTRAINT [PK_PhieuThutien] PRIMARY KEY CLUSTERED 
 (
+<<<<<<< HEAD
 	[MaPTP] ASC,
 	[MaDV] ASC
+=======
+	[MaPTT] ASC
+>>>>>>> e927a4bbe293e18106af5486b222cb49bf20a5d5
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
@@ -295,6 +310,7 @@ INSERT INTO [dbo].[CT_SuDungDV] (MaPTP, MaDV, ChiSoCu, ChiSoMoi) VALUES
 (9, 2, 0, 1);    -- Rác cho MaPTP = 9
 
 -- Thêm dữ liệu cho bảng PhieuThutien
+<<<<<<< HEAD
 INSERT INTO [dbo].[PhieuThutien] (MaPTP, MaDV, TuNgay, DenNgay, ThanhTien) VALUES
 -- Dịch vụ điện (ThanhTien = (ChiSoMoi - ChiSoCu) * DonGia)
 (1, 5, '2024-10-01', '2024-10-05', (50 - 10) * 3300),
@@ -337,6 +353,50 @@ INSERT INTO [dbo].[PhieuThutien] (MaPTP, MaDV, TuNgay, DenNgay, ThanhTien) VALUE
 (8, 3, '2024-10-19', '2024-10-26', (1 - 0) * 200000), -- Giữ Xe
 (9, 1, '2024-10-18', '2024-10-25', (1 - 0) * 100000), -- Internet
 (9, 2, '2024-10-18', '2024-10-25', (1 - 0) * 50000);  -- Rác
+=======
+INSERT INTO [dbo].[PhieuThutien] (MaPTT, MaPTP, MaDV, TuNgay, DenNgay, ThanhTien) VALUES
+-- Dịch vụ điện (ThanhTien = (ChiSoMoi - ChiSoCu) * DonGia)
+(1, 1, 5, '2024-10-01', '2024-10-05', (50 - 10) * 3300),
+(2, 2, 5, '2024-10-15', '2024-10-20', (60 - 20) * 3300),
+(3, 3, 5, '2024-10-20', '2024-10-25', (55 - 15) * 3300),
+(4, 4, 5, '2024-10-23', '2024-10-30', (65 - 25) * 3300),
+(5, 5, 5, '2024-10-22', '2024-10-29', (58 - 18) * 3300),
+(6, 6, 5, '2024-10-20', '2024-10-27', (62 - 22) * 3300),
+(7, 7, 5, '2024-10-21', '2024-10-28', (70 - 30) * 3300),
+(8, 8, 5, '2024-10-19', '2024-10-26', (60 - 20) * 3300),
+(9, 9, 5, '2024-10-18', '2024-10-25', (64 - 24) * 3300),
+
+-- Dịch vụ nước (ThanhTien = (ChiSoMoi - ChiSoCu) * DonGia)
+(10, 1, 4, '2024-10-01', '2024-10-05', (10 - 5) * 10000),
+(11, 2, 4, '2024-10-15', '2024-10-20', (15 - 8) * 10000),
+(12, 3, 4, '2024-10-20', '2024-10-25', (18 - 10) * 10000),
+(13, 4, 4, '2024-10-23', '2024-10-30', (20 - 12) * 10000),
+(14, 5, 4, '2024-10-22', '2024-10-29', (16 - 9) * 10000),
+(15, 6, 4, '2024-10-20', '2024-10-27', (13 - 7) * 10000),
+(16, 7, 4, '2024-10-21', '2024-10-28', (12 - 6) * 10000),
+(17, 8, 4, '2024-10-19', '2024-10-26', (14 - 8) * 10000),
+(18, 9, 4, '2024-10-18', '2024-10-25', (18 - 10) * 10000),
+
+-- Các dịch vụ khác (ChiSoMoi - ChiSoCu = 1)
+(19, 1, 1, '2024-10-01', '2024-10-05', (1 - 0) * 100000), -- Internet
+(20, 1, 2, '2024-10-01', '2024-10-05', (1 - 0) * 50000),  -- Rác
+(21, 2, 1, '2024-10-15', '2024-10-20', (1 - 0) * 100000), -- Internet
+(22, 2, 2, '2024-10-15', '2024-10-20', (1 - 0) * 50000),  -- Rác
+(23, 3, 1, '2024-10-20', '2024-10-25', (1 - 0) * 100000), -- Internet
+(24, 3, 2, '2024-10-20', '2024-10-25', (1 - 0) * 50000),  -- Rác
+(25, 4, 1, '2024-10-23', '2024-10-30', (1 - 0) * 100000), -- Internet
+(26, 4, 3, '2024-10-23', '2024-10-30', (1 - 0) * 200000), -- Giữ Xe
+(27, 5, 1, '2024-10-22', '2024-10-29', (1 - 0) * 100000), -- Internet
+(28, 5, 2, '2024-10-22', '2024-10-29', (1 - 0) * 50000),  -- Rác
+(29, 6, 1, '2024-10-20', '2024-10-27', (1 - 0) * 100000), -- Internet
+(30, 6, 3, '2024-10-20', '2024-10-27', (1 - 0) * 200000), -- Giữ Xe
+(31, 7, 1, '2024-10-21', '2024-10-28', (1 - 0) * 100000), -- Internet
+(32, 7, 2, '2024-10-21', '2024-10-28', (1 - 0) * 50000),  -- Rác
+(33, 8, 1, '2024-10-19', '2024-10-26', (1 - 0) * 100000), -- Internet
+(34, 8, 3, '2024-10-19', '2024-10-26', (1 - 0) * 200000), -- Giữ Xe
+(35, 9, 1, '2024-10-18', '2024-10-25', (1 - 0) * 100000), -- Internet
+(36, 9, 2, '2024-10-18', '2024-10-25', (1 - 0) * 50000);  -- Rác
+>>>>>>> e927a4bbe293e18106af5486b222cb49bf20a5d5
 
 
 
@@ -403,4 +463,8 @@ SELECT * FROM [dbo].[CT_SuDungDV];
 USE [master]
 GO
 ALTER DATABASE [QuanLyPhongTro] SET  READ_WRITE 
+<<<<<<< HEAD
 GO
+=======
+GO
+>>>>>>> e927a4bbe293e18106af5486b222cb49bf20a5d5
