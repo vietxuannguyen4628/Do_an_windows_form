@@ -121,6 +121,7 @@
     <Compile Include="BaoCao\PhieuTinhTien.Designer.cs">
       <DependentUpon>PhieuTinhTien.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChucNang\SpeedSMSService.cs" />
     <Compile Include="GiaoDien\backgound.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -100,7 +100,7 @@
             this.ribbonPage3,
             this.ribbonPage2});
             this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbon.Size = new System.Drawing.Size(1286, 158);
+            this.ribbon.Size = new System.Drawing.Size(1372, 158);
             this.ribbon.Click += new System.EventHandler(this.ribbon_Click);
             // 
             // btnTrangThaiPhong
@@ -342,7 +342,7 @@
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 158);
             this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.Size = new System.Drawing.Size(1286, 605);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1372, 625);
             this.xtraTabControl1.TabIndex = 15;
             this.xtraTabControl1.Click += new System.EventHandler(this.xtraTabControl1_Click);
             // 
@@ -352,7 +352,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1286, 763);
+            this.ClientSize = new System.Drawing.Size(1372, 783);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.ribbon);
             this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frm_Quan_Ly.IconOptions.Image")));

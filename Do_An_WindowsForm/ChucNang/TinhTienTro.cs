@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using Do_An_WindowsForm.ChucNang;
 using Do_An_WindowsForm.Model;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Http;
 using static DevExpress.XtraPrinting.Native.ExportOptionsPropertiesNames;
 
 namespace Do_An_WindowsForm
@@ -61,9 +63,33 @@ namespace Do_An_WindowsForm
                 }
             }
         }
-        private void btnSend_Click(object sender, EventArgs e)
+        private async void btnSend_Click(object sender, EventArgs e)
         {
+            try
+            {
+                var smsService = new SpeedSMSService(
+                    "gtuSZ1YVxRw64dOnGdT3QpODcgFVAeST",
+                    "Quản Lý Nhà Trọ"
+                );
+                string noidung = "Thông báo từ phần mềm quản lý nhà trọ:\nÔng/ Bà: " + txtHoTen.Text + "\tMã phòng: " + txtID_Phong + "\tSDT: " + txtSDT.Text 
+                    + "\nTiền Nhà: " + txtTienNha + "\tTiền Điện: "+ txtTienDien + "\tTiền Nước: " + txtTienNuoc + "\tInternet: " + txtTienInternet + "\t Tiền Rác: " + txtTienRac + "\t Tiền Giữ Xe: " + txtTienGiuXe 
+                    + "\n Tổng Tiền: " + txtTongTien;
+                //var (success, message) = await smsService.SendSMS(txtSDT.Text,"Thông báo từ phần mềm quản lý nhà trọ:");
+                var (success, message) = await smsService.SendSMS(txtSDT.Text, noidung);
 
+                if (success)
+                {
+                    MessageBox.Show("Gửi SMS thành công!", "Thông báo");
+                }
+                else
+                {
+                    MessageBox.Show($"Lỗi gửi SMS: {message}", "Lỗi");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi");
+            }
         }
 
         private void TinhTienTro_Load(object sender, EventArgs e)
@@ -188,6 +214,7 @@ namespace Do_An_WindowsForm
         private void cbRac_CheckedChanged(object sender, EventArgs e)
         {
             DichVu dichVu = context.DichVus.FirstOrDefault(dvI => dvI.TenDV == cbRac.Text);
+
             if (cbRac.Checked == true)
             {
                 //txtTienRac.Enabled = true;
@@ -214,15 +241,11 @@ namespace Do_An_WindowsForm
             }
         }
 
-
-
         private void txtSoDienMoi_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
                 TinhTienDien_Nuoc();
-                e.SuppressKeyPress = true;
-                e.Handled = true;
             }
         }
         private void txtSoDienMoi_Leave(object sender, EventArgs e)
@@ -258,7 +281,6 @@ namespace Do_An_WindowsForm
                         txtSoDienMoi.Text = txtSoDienCu.Text;
                     }
                 }
-
                 // tim dich vu nuoc
                 DichVu dichVuNuoc = context.DichVus.FirstOrDefault(dvI => dvI.TenDV == "Nước");
                 int dvNuoc = 0;
@@ -347,7 +369,5 @@ namespace Do_An_WindowsForm
         {
             TinhTongTien();
         }
-
-       
     }
 }

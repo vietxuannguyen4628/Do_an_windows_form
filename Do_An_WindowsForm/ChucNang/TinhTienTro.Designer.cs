@@ -582,6 +582,8 @@
             // 
             this.dateThu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateThu.CalendarMonthBackground = System.Drawing.Color.Gainsboro;
+            this.dateThu.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateThu.CustomFormat = "dd/MM/yyyy";
             this.dateThu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateThu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateThu.Location = new System.Drawing.Point(856, 134);

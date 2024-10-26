@@ -9,6 +9,10 @@ namespace Do_An_WindowsForm.Model
     {
         public QuanLyPhongTroDB()
             : base("name=QuanLyPhongTroDB")
+<<<<<<< HEAD
+=======
+            //: base("name=QuanLyPhongTroDB3")
+>>>>>>> b12edad96d4d44b019fdd23663eac152605cd6c6
         {
         }
 
