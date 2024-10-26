@@ -10,11 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-<<<<<<< HEAD
 using System.Net.Http;
-=======
 using static DevExpress.XtraPrinting.Native.ExportOptionsPropertiesNames;
->>>>>>> cdd85c17459ffc9fa3661b35e82623bf8776cc77
 
 namespace Do_An_WindowsForm
 {
@@ -256,33 +253,12 @@ namespace Do_An_WindowsForm
             TinhTienDien_Nuoc();
         }
 
-<<<<<<< HEAD
-=======
-
-        private void txtSoDienMoi_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                TinhTienDien_Nuoc();
-                e.SuppressKeyPress = true;
-                e.Handled = true;
-            }
-        }
-        private void txtSoDienMoi_Leave(object sender, EventArgs e)
-        {
-            TinhTienDien_Nuoc();
-        }
-
->>>>>>> cdd85c17459ffc9fa3661b35e82623bf8776cc77
         private void TinhTienDien_Nuoc()
         {
             PhieuThuePhong _phieuthue = context.PhieuThuePhongs.FirstOrDefault(pt => pt.MaPhong.ToString() == cmbChonPhong.Text);
             if (_phieuthue != null)
             {
-<<<<<<< HEAD
-=======
                 // tim dich vu dien
->>>>>>> cdd85c17459ffc9fa3661b35e82623bf8776cc77
                 DichVu dichVuDien = context.DichVus.FirstOrDefault(dvI => dvI.TenDV == "Điện");
                 int dvDien = 0;
                 if (dichVuDien != null)
@@ -305,12 +281,6 @@ namespace Do_An_WindowsForm
                         txtSoDienMoi.Text = txtSoDienCu.Text;
                     }
                 }
-<<<<<<< HEAD
-            }
-        }
-        private void txtSoNuocMoi_TextChanged(object sender, EventArgs e)
-=======
-
                 // tim dich vu nuoc
                 DichVu dichVuNuoc = context.DichVus.FirstOrDefault(dvI => dvI.TenDV == "Nước");
                 int dvNuoc = 0;
@@ -339,7 +309,6 @@ namespace Do_An_WindowsForm
         }
 
         private void txtSoNuocMoi_KeyDown(object sender, KeyEventArgs e)
->>>>>>> cdd85c17459ffc9fa3661b35e82623bf8776cc77
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -400,11 +369,5 @@ namespace Do_An_WindowsForm
         {
             TinhTongTien();
         }
-
-<<<<<<< HEAD
-        
-=======
-       
->>>>>>> cdd85c17459ffc9fa3661b35e82623bf8776cc77
     }
 }
