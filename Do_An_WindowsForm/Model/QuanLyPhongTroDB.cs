@@ -8,8 +8,7 @@ namespace Do_An_WindowsForm.Model
     public partial class QuanLyPhongTroDB : DbContext
     {
         public QuanLyPhongTroDB()
-            : base("name=QuanLyPhongTroDB")
-            //: base("name=QuanLyPhongTroDB3")
+            : base("name=QuanLyPhongTroDB1")
         {
         }
 
@@ -24,10 +23,8 @@ namespace Do_An_WindowsForm.Model
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<CT_SuDungDV>()
-                .HasMany(e => e.PhieuThutiens)
-                .WithRequired(e => e.CT_SuDungDV)
-                .HasForeignKey(e => new { e.MaPTP, e.MaDV })
-                .WillCascadeOnDelete(false);
+                .HasOptional(e => e.PhieuThutien)
+                .WithRequired(e => e.CT_SuDungDV);
 
             modelBuilder.Entity<DichVu>()
                 .HasMany(e => e.CT_SuDungDV)

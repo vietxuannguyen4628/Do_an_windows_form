@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(backgound));
             System.Windows.Forms.Label label1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(backgound));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -41,12 +41,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
+            // label1
+            // 
+            label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            label1.AutoSize = true;
+            label1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            label1.Font = new System.Drawing.Font("Times New Roman", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            label1.Location = new System.Drawing.Point(572, 52);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(502, 49);
+            label1.TabIndex = 2;
+            label1.Text = "Phần mềm quản lý nhà trọ";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1500, 745);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -60,7 +74,7 @@
             this.label4.Location = new System.Drawing.Point(14, 77);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(207, 26);
+            this.label4.Size = new System.Drawing.Size(206, 26);
             this.label4.TabIndex = 3;
             this.label4.Text = "1. Nguyễn Xuân Việt";
             // 
@@ -71,7 +85,7 @@
             this.label6.Location = new System.Drawing.Point(14, 217);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(252, 26);
+            this.label6.Size = new System.Drawing.Size(250, 26);
             this.label6.TabIndex = 4;
             this.label6.Text = "4. Bạch Huỳnh Như Thuỷ";
             // 
@@ -82,7 +96,7 @@
             this.label5.Location = new System.Drawing.Point(14, 171);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(222, 26);
+            this.label5.Size = new System.Drawing.Size(221, 26);
             this.label5.TabIndex = 5;
             this.label5.Text = "3. Nguyễn Kim Quang";
             // 
@@ -93,23 +107,9 @@
             this.label3.Location = new System.Drawing.Point(14, 124);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(222, 26);
+            this.label3.Size = new System.Drawing.Size(220, 26);
             this.label3.TabIndex = 6;
             this.label3.Text = "2. Huỳnh Minh Quyền";
-            // 
-            // label1
-            // 
-            label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            label1.AutoSize = true;
-            label1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            label1.Font = new System.Drawing.Font("Times New Roman", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            label1.Location = new System.Drawing.Point(572, 52);
-            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(509, 51);
-            label1.TabIndex = 2;
-            label1.Text = "Phần mềm quản lý nhà trọ";
             // 
             // label2
             // 
@@ -121,6 +121,7 @@
             this.label2.Size = new System.Drawing.Size(230, 34);
             this.label2.TabIndex = 7;
             this.label2.Text = "TEAM DEVLOR";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // backgound
             // 
@@ -134,7 +135,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(label1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "backgound";
             this.Size = new System.Drawing.Size(1504, 749);
             this.Load += new System.EventHandler(this.backgound_Load);

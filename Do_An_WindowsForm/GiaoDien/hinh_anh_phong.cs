@@ -25,11 +25,6 @@ namespace Do_An_WindowsForm.chuc_nang
             SetupImageFolder();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 

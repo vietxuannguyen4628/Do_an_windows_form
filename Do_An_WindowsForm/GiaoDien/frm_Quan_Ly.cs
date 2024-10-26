@@ -16,6 +16,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Diagnostics;
 using Do_An_WindowsForm.QuanLy;
 using Do_An_WindowsForm.BaoCao;
+using Do_An_WindowsForm.ChucNang;
 
 
 namespace Do_An_WindowsForm
@@ -32,9 +33,26 @@ namespace Do_An_WindowsForm
             xtraTabControl1.CloseButtonClick += xtraTabControl1_CloseButtonClick;
         }
 
-        private void dev1_information_TextChanged(object sender, EventArgs e)
+        private async Task LoadUserControlDataAsync(Control userControl)
         {
-            
+            await Task.Delay(1500);
+        }
+
+        private async Task ShowWithDelayAsync(XtraTabPage tabPage, Control waitForm, Control mainForm, int delay)
+        {
+            tabPage.Controls.Add(waitForm);
+            waitForm.Dock = DockStyle.Fill;
+
+            // Bắt đầu tải dữ liệu cho mainForm ở chế độ nền
+            await LoadUserControlDataAsync(mainForm);
+
+            // Đợi thêm delay để giữ WaitForm hiển thị đủ thời gian
+            await Task.Delay(delay);
+
+            // Sau khi delay, thay WaitForm bằng mainForm
+            tabPage.Controls.Remove(waitForm);
+            tabPage.Controls.Add(mainForm);
+            mainForm.Dock = DockStyle.Fill;
         }
 
         private void btnTrangThaiPhong_Click(object sender, ItemClickEventArgs e)
@@ -76,8 +94,6 @@ namespace Do_An_WindowsForm
 
         private void btnHinhAnhPhong_Click(object sender, ItemClickEventArgs e)
         {
-            
-            
             try
             {
                 // Tạo một XtraTabPage mới
@@ -186,28 +202,25 @@ namespace Do_An_WindowsForm
 
         }
 
-        private void frm_Quan_Ly_Load(object sender, EventArgs e)
+        private async void frm_Quan_Ly_Load(object sender, EventArgs e)
         {
             try
             {
-                DevExpress.XtraTab.XtraTabPage newTab = new DevExpress.XtraTab.XtraTabPage();
+                DevExpress.XtraTab.XtraTabPage newTab = new DevExpress.XtraTab.XtraTabPage
+                {
+                    Text = "Giới Thiệu"
+                };
 
-                newTab.Text = "Giới Thiệu";
-
-                // Tạo một instance của UserControl
+                // Tạo WaitForm và background
+                WaitForm wait = new WaitForm();
                 backgound bg = new backgound();
 
-                // Đặt DockStyle cho UserControl
-                bg.Dock = DockStyle.Fill;
-
-                // Thêm UserControl vào XtraTabPage
-                newTab.Controls.Add(bg);
-
-                // Thêm XtraTabPage vào XtraTabControl
+                // Thêm tab vào XtraTabControl và chọn tab này
                 xtraTabControl1.TabPages.Add(newTab);
-
-                // Chọn tab mới
                 xtraTabControl1.SelectedTabPage = newTab;
+
+                // Gọi hàm ShowWithDelay với thời gian delay là 1,5s
+                await ShowWithDelayAsync(newTab, wait, bg, 1000);
             }
             catch (Exception ex)
             {
@@ -215,41 +228,26 @@ namespace Do_An_WindowsForm
             }
         }
 
-        private void btnDk_ItemClick(object sender, ItemClickEventArgs e)
+
+        private async void btnDk_ItemClick(object sender, ItemClickEventArgs e)
         {
             try
             {
-                // Kiểm tra xem tab đã tồn tại hay chưa
-                foreach (DevExpress.XtraTab.XtraTabPage tab in xtraTabControl1.TabPages)
+                DevExpress.XtraTab.XtraTabPage newTab = new DevExpress.XtraTab.XtraTabPage
                 {
-                    if (tab.Text == e.Item.Caption)
-                    {
-                        // Nếu tab đã tồn tại, chọn tab đó và thoát khỏi phương thức
-                        xtraTabControl1.SelectedTabPage = tab;
-                        return;
-                    }
-                }
+                    Text = e.Item.Caption
+                };
 
-                // Nếu tab chưa tồn tại, tạo một XtraTabPage mới
-                DevExpress.XtraTab.XtraTabPage newTab = new DevExpress.XtraTab.XtraTabPage();
+                // Tạo WaitForm và background
+                WaitForm wait = new WaitForm();
+                DangKy dk  = new DangKy();
 
-                // Đặt tên tab giống với tên button
-                newTab.Text = e.Item.Caption;
-
-                // Tạo một instance của UserControl
-                DangKy dk_hopDong = new DangKy();
-
-                // Đặt DockStyle cho UserControl
-                dk_hopDong.Dock = DockStyle.Fill;
-
-                // Thêm UserControl vào XtraTabPage
-                newTab.Controls.Add(dk_hopDong);
-
-                // Thêm XtraTabPage vào XtraTabControl
+                // Thêm tab vào XtraTabControl và chọn tab này
                 xtraTabControl1.TabPages.Add(newTab);
-
-                // Chọn tab mới
                 xtraTabControl1.SelectedTabPage = newTab;
+
+                // Gọi hàm ShowWithDelay với thời gian delay là 1,5s
+                await ShowWithDelayAsync(newTab, wait, dk, 1000);
             }
             catch (Exception ex)
             {
@@ -428,6 +426,48 @@ namespace Do_An_WindowsForm
                 TraPhong traPhong = new TraPhong();
                 traPhong.Dock = DockStyle.Fill;
                 newTab.Controls.Add(traPhong);
+                // Thêm XtraTabPage vào XtraTabControl
+                xtraTabControl1.TabPages.Add(newTab);
+
+                // Chọn tab mới
+                xtraTabControl1.SelectedTabPage = newTab;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnDoanh_Thu_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                // Kiểm tra xem tab đã tồn tại hay chưa
+                foreach (DevExpress.XtraTab.XtraTabPage tab in xtraTabControl1.TabPages)
+                {
+                    if (tab.Text == e.Item.Caption)
+                    {
+                        // Nếu tab đã tồn tại, chọn tab đó và thoát khỏi phương thức
+                        xtraTabControl1.SelectedTabPage = tab;
+                        return;
+                    }
+                }
+
+                // Nếu tab chưa tồn tại, tạo một XtraTabPage mới
+                DevExpress.XtraTab.XtraTabPage newTab = new DevExpress.XtraTab.XtraTabPage();
+
+                // Đặt tên tab giống với tên button
+                newTab.Text = e.Item.Caption;
+
+                // Tạo một instance của UserControl
+                DoanhThu doanhthus = new DoanhThu();
+
+                // Đặt DockStyle cho UserControl
+                doanhthus.Dock = DockStyle.Fill;
+
+                // Thêm UserControl vào XtraTabPage
+                newTab.Controls.Add(doanhthus);
+
                 // Thêm XtraTabPage vào XtraTabControl
                 xtraTabControl1.TabPages.Add(newTab);
 

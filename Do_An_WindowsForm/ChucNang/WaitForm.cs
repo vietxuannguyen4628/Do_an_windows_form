@@ -9,23 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Do_An_WindowsForm.chuc_nang
+namespace Do_An_WindowsForm.ChucNang
 {
-    public partial class backgound : DevExpress.XtraEditors.XtraUserControl
+    public partial class WaitForm : DevExpress.XtraEditors.XtraUserControl
     {
-        public backgound()
+        public WaitForm()
         {
             InitializeComponent();
-        }
-
-        private void backgound_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

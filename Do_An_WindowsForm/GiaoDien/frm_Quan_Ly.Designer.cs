@@ -61,6 +61,8 @@
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDoanh_Thu = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +70,7 @@
             // ribbon
             // 
             this.ribbon.BackColor = System.Drawing.Color.Silver;
+            this.ribbon.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(35, 37, 35, 37);
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
@@ -89,10 +92,14 @@
             this.btnSendMessage,
             this.barButtonItem1,
             this.barButtonItem2,
-            this.barButtonItem3});
+            this.barButtonItem3,
+            this.barButtonItem4,
+            this.btnDoanh_Thu});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 21;
+            this.ribbon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ribbon.MaxItemId = 23;
             this.ribbon.Name = "ribbon";
+            this.ribbon.OptionsMenuMinWidth = 385;
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage4,
@@ -100,7 +107,7 @@
             this.ribbonPage3,
             this.ribbonPage2});
             this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbon.Size = new System.Drawing.Size(1372, 158);
+            this.ribbon.Size = new System.Drawing.Size(1601, 193);
             this.ribbon.Click += new System.EventHandler(this.ribbon_Click);
             // 
             // btnTrangThaiPhong
@@ -321,6 +328,7 @@
             // rbThongKe
             // 
             this.rbThongKe.ItemLinks.Add(this.btnThongKe);
+            this.rbThongKe.ItemLinks.Add(this.btnDoanh_Thu);
             this.rbThongKe.Name = "rbThongKe";
             this.rbThongKe.Text = "Thống Kê";
             // 
@@ -340,22 +348,39 @@
             // 
             this.xtraTabControl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraTabControl1.Location = new System.Drawing.Point(0, 158);
+            this.xtraTabControl1.Location = new System.Drawing.Point(0, 193);
+            this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.Size = new System.Drawing.Size(1372, 625);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1601, 771);
             this.xtraTabControl1.TabIndex = 15;
             this.xtraTabControl1.Click += new System.EventHandler(this.xtraTabControl1_Click);
+            // 
+            // barButtonItem4
+            // 
+            this.barButtonItem4.Caption = "Doanh Thu";
+            this.barButtonItem4.Id = 21;
+            this.barButtonItem4.Name = "barButtonItem4";
+            // 
+            // btnDoanh_Thu
+            // 
+            this.btnDoanh_Thu.Caption = "Doanh Thu";
+            this.btnDoanh_Thu.Id = 22;
+            this.btnDoanh_Thu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.Image")));
+            this.btnDoanh_Thu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.LargeImage")));
+            this.btnDoanh_Thu.Name = "btnDoanh_Thu";
+            this.btnDoanh_Thu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDoanh_Thu_ItemClick);
             // 
             // frm_Quan_Ly
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1372, 783);
+            this.ClientSize = new System.Drawing.Size(1601, 964);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.ribbon);
             this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frm_Quan_Ly.IconOptions.Image")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_Quan_Ly";
             this.Ribbon = this.ribbon;
             this.Text = "Quản Lý Phòng Trọ - Designed By Dev Lor";
@@ -401,5 +426,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraBars.BarButtonItem btnDoanh_Thu;
     }
 }

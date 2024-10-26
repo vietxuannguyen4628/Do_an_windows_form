@@ -16,13 +16,13 @@ namespace Do_An_WindowsForm.chuc_nang
 {
     public partial class DangKy : DevExpress.XtraEditors.XtraUserControl
     {
+        QuanLyPhongTroDB context = new QuanLyPhongTroDB();
         public DangKy()
         {
             InitializeComponent();
             dgv_PhongTro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(dgv_PhongTro_CellContentClick_1);
         }
 
-        QuanLyPhongTroDB context = new QuanLyPhongTroDB();
         private void DangKy_Load(object sender, EventArgs e)
         {
             List<PhieuThuePhong> phieuThuePhongs = context.PhieuThuePhongs.ToList();
