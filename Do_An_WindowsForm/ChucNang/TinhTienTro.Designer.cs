@@ -88,6 +88,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox3.Controls.Add(this.btnSend);
             this.groupBox3.Controls.Add(this.txtSoNuocMoi);
             this.groupBox3.Controls.Add(this.txtSoDienMoi);
@@ -159,7 +160,8 @@
             this.txtSoDienMoi.Size = new System.Drawing.Size(57, 24);
             this.txtSoDienMoi.TabIndex = 40;
             this.txtSoDienMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtSoDienMoi.TextChanged += new System.EventHandler(this.txtSoDienMoi_TextChanged);
+            this.txtSoDienMoi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSoDienMoi_KeyDown);
+            this.txtSoDienMoi.Leave += new System.EventHandler(this.txtSoDienMoi_Leave);
             // 
             // txtSoNuocCu
             // 
@@ -431,6 +433,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.Controls.Add(this.dateThue);
             this.groupBox2.Controls.Add(this.btnTinhTien);
             this.groupBox2.Controls.Add(this.txtID_Phong);
@@ -500,15 +503,18 @@
             // 
             // dateThu
             // 
+            this.dateThu.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateThu.CustomFormat = "dd/MM/yyyy";
             this.dateThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateThu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateThu.Location = new System.Drawing.Point(1153, 85);
+            this.dateThu.Location = new System.Drawing.Point(1151, 85);
             this.dateThu.Name = "dateThu";
             this.dateThu.Size = new System.Drawing.Size(190, 26);
             this.dateThu.TabIndex = 61;
             // 
             // cmbChonPhong
             // 
+            this.cmbChonPhong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbChonPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbChonPhong.FormattingEnabled = true;
             this.cmbChonPhong.Location = new System.Drawing.Point(166, 85);
@@ -519,6 +525,7 @@
             // 
             // label25
             // 
+            this.label25.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.Location = new System.Drawing.Point(1070, 88);
@@ -529,6 +536,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(63, 88);
@@ -539,6 +547,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtNgheNghiep);
             this.groupBox1.Controls.Add(this.txtSDT);
@@ -650,6 +659,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label1.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -664,7 +674,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1368, 492);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dateThu);
@@ -674,6 +683,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "TinhTienTro";
+            this.Size = new System.Drawing.Size(1368, 492);
             this.Load += new System.EventHandler(this.TinhTienTro_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
