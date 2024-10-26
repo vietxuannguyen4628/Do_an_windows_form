@@ -52,7 +52,11 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[PhieuThuePhong](
+<<<<<<< HEAD
 	[MaPTP] [int] NOT NULL,
+=======
+	[MaPTP] [bigint] NOT NULL,
+>>>>>>> master
 	[MaPhong] [int] NOT NULL,
 	[MaKH] [int]NOT NULL,
 	[TienDacCoc] [int],
@@ -86,8 +90,13 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[PhieuTraPhong](
+<<<<<<< HEAD
 	[MaPTrP] [int] NOT NULL,
 	[MaPTP] [int] NOT NULL,
+=======
+	[MaPTrP] [bigint] NOT NULL,
+	[MaPTP] [bigint] NOT NULL,
+>>>>>>> master
 	[NgayTra] [datetime],
  CONSTRAINT [PK_PhieuTraPhong] PRIMARY KEY CLUSTERED 
 (
@@ -126,7 +135,11 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[CT_SuDungDV](
+<<<<<<< HEAD
 	[MaPTP] [int] NOT NULL,
+=======
+	[MaPTP] [bigint] NOT NULL,
+>>>>>>> master
 	[MaDV] [int] NOT NULL,
 	[ChiSoCu] [int],
 	[ChiSoMoi] [int],
@@ -157,8 +170,13 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[PhieuThutien](
+<<<<<<< HEAD
 	[MaPTT] [int] NOT NULL,
 	[MaPTP] [int] NOT NULL,
+=======
+	[MaPTT] [bigint] NOT NULL,
+	[MaPTP] [bigint] NOT NULL,
+>>>>>>> master
 	[MaDV] [int] NOT NULL,
 	[NgayThanhToan] [datetime],
 	[ThanhTien] [int],

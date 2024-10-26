@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "Do_An_WindowsForm\\App.config",
               "ToolTip": "D:\\C#\\DoAn\\Do_an_windows_form\\Do_An_WindowsForm\\App.config",
               "RelativeToolTip": "Do_An_WindowsForm\\App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
               "WhenOpened": "2024-10-26T15:31:47.581Z",
               "EditorCaption": ""
@@ -49,9 +49,8 @@
               "RelativeDocumentMoniker": "Do_An_WindowsForm\\GiaoDien\\frm_Quan_Ly.cs",
               "ToolTip": "D:\\C#\\DoAn\\Do_an_windows_form\\Do_An_WindowsForm\\GiaoDien\\frm_Quan_Ly.cs [Design]",
               "RelativeToolTip": "Do_An_WindowsForm\\GiaoDien\\frm_Quan_Ly.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T02:34:01.599Z",
-              "EditorCaption": " [Design]"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-10-26T02:34:01.599Z"
             },
             {
               "$type": "Document",
@@ -62,9 +61,8 @@
               "ToolTip": "D:\\C#\\DoAn\\Do_an_windows_form\\Do_An_WindowsForm\\ChucNang\\TinhTienTro.cs",
               "RelativeToolTip": "Do_An_WindowsForm\\ChucNang\\TinhTienTro.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAAADUAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T01:47:20.586Z",
-              "EditorCaption": ""
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2024-10-26T01:47:20.586Z"
             },
             {
               "$type": "Document",
@@ -74,9 +72,8 @@
               "RelativeDocumentMoniker": "Do_An_WindowsForm\\ChucNang\\TinhTienTro.cs",
               "ToolTip": "D:\\C#\\DoAn\\Do_an_windows_form\\Do_An_WindowsForm\\ChucNang\\TinhTienTro.cs [Design]",
               "RelativeToolTip": "Do_An_WindowsForm\\ChucNang\\TinhTienTro.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T01:47:14.828Z",
-              "EditorCaption": " [Design]"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2024-10-26T01:47:14.828Z"
             }
           ]
         }

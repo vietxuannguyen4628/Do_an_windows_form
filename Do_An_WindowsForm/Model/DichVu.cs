@@ -6,36 +6,25 @@ namespace Do_An_WindowsForm.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("PhieuThuePhong")]
-    public partial class PhieuThuePhong
+    [Table("DichVu")]
+    public partial class DichVu
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public PhieuThuePhong()
+        public DichVu()
         {
             CT_SuDungDV = new HashSet<CT_SuDungDV>();
-            PhieuTraPhongs = new HashSet<PhieuTraPhong>();
         }
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public long MaPTP { get; set; }
+        public int MaDV { get; set; }
 
-        public int MaPhong { get; set; }
+        [StringLength(50)]
+        public string TenDV { get; set; }
 
-        public int MaKH { get; set; }
-
-        public int? TienDacCoc { get; set; }
-
-        public DateTime? NgayThue { get; set; }
+        public int? DonGia { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CT_SuDungDV> CT_SuDungDV { get; set; }
-
-        public virtual KhachHang KhachHang { get; set; }
-
-        public virtual Phong Phong { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PhieuTraPhong> PhieuTraPhongs { get; set; }
     }
 }
