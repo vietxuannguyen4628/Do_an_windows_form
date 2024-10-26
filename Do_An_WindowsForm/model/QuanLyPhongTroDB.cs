@@ -8,7 +8,7 @@ namespace Do_An_WindowsForm.Model
     public partial class QuanLyPhongTroDB : DbContext
     {
         public QuanLyPhongTroDB()
-            : base("name=QuanLyPhongTroDB1")
+            : base("name=QuanLyPhongTroDB_Quang")
         {
         }
 

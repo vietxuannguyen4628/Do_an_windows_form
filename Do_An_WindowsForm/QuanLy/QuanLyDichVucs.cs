@@ -158,6 +158,24 @@ namespace Do_An_WindowsForm.QuanLy
                 txtDonGia.Text = dgvDichVu.Rows[index].Cells[2].Value.ToString();
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int item = int.Parse(txtID_DichVu.Text);
+            var dv = context.DichVus.FirstOrDefault(p=>p.MaDV == item);
+            if (dv != null)
+            {
+                DialogResult dlg = MessageBox.Show("Bạn có chắc chắn muốn xoá" , "Xác Nhận", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+                if (dlg == DialogResult.Yes)
+                {
+                    context.DichVus.Remove(dv);
+                    context.SaveChanges();
+                    MessageBox.Show("Đã xoá dịch vụ thành công !!", "Thông Báo", MessageBoxButtons.OK);
+                }
+            }
+            else
+                MessageBox.Show("Không tìm thấy dịch vụ cần xoá !!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
     }
     
 }

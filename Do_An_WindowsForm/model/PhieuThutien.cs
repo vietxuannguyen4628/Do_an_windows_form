@@ -11,9 +11,9 @@ namespace Do_An_WindowsForm.Model
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public long MaPTT { get; set; }
+        public int MaPTT { get; set; }
 
-        public long MaPTP { get; set; }
+        public int MaPTP { get; set; }
 
         public int MaDV { get; set; }
 

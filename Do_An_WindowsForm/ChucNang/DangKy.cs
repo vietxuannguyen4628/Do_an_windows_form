@@ -195,22 +195,15 @@ namespace Do_An_WindowsForm.chuc_nang
 
                 int item = int.Parse(txtID_Khach.Text);
                 int idP = int.Parse(cmbID_Phong.Text);
-<<<<<<< HEAD
                 int idPhieu = item + idP;
                 var phieu = context.PhieuThuePhongs.FirstOrDefault(p => p.MaPTP == idPhieu);
-=======
-                var phieu = context.PhieuThuePhongs.FirstOrDefault(p => p.MaKH == item && p.MaPhong == idP);
->>>>>>> master
+
                 if (phieu != null)
                 {
                     throw new Exception("Phiếu đã tồn tại");
                 }
                 else
                 {
-<<<<<<< HEAD
-=======
-
->>>>>>> master
                     var k = context.KhachHangs.FirstOrDefault(p => p.MaKH == item);
                     if (k == null)
                     {
@@ -230,11 +223,8 @@ namespace Do_An_WindowsForm.chuc_nang
                         context.SaveChanges();
 
                         PhieuThuePhong ph = new PhieuThuePhong();
-<<<<<<< HEAD
                         ph.MaPTP = idPhieu;
-=======
-                        ph.MaPTP = idP + item;
->>>>>>> master
+
                         ph.MaPhong = idP;
                         ph.MaKH = item;
                         ph.TienDacCoc = int.Parse(txtTienCoc.Text);
@@ -262,12 +252,8 @@ namespace Do_An_WindowsForm.chuc_nang
                 MessageBox.Show(ex.Message);
             }
         }
-
-<<<<<<< HEAD
         private void AddCTDV(int MaPTP)
-=======
-        private void AddCTDV(long MaPTP)
->>>>>>> master
+
         {
             List<DichVu> list = context.DichVus.ToList();
             foreach (var dv in list)
@@ -276,13 +262,10 @@ namespace Do_An_WindowsForm.chuc_nang
                 c.MaPTP = MaPTP;
                 c.MaDV = dv.MaDV;
                 c.ChiSoCu = 0;
-<<<<<<< HEAD
                 c.ChiSoMoi = 0;
                 context.CT_SuDungDV.Add(c);
                 context.SaveChanges();
-=======
-                c.ChiSoMoi = 0; 
->>>>>>> master
+
             }
         }
 

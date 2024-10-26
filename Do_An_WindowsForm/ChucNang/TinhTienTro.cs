@@ -1,10 +1,7 @@
 ﻿using DevExpress.XtraEditors;
 using Do_An_WindowsForm.Model;
 using System;
-<<<<<<< HEAD
 using System.CodeDom;
-=======
->>>>>>> master
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -49,15 +46,12 @@ namespace Do_An_WindowsForm
             txtTongTien.Text = "0";
             txtID_Phong.Text = "0";
             dateThue.EditValue = "";
-<<<<<<< HEAD
             cbDien.Checked = false;
             cbNuoc.Checked = false;
             cbInternet.Checked = false;
             cbRac.Checked = false;
             cbGiuXe.Checked = false;
             cmbChonPhong.SelectedText = "";
-=======
->>>>>>> master
         }
         private void load()
         {
@@ -78,8 +72,6 @@ namespace Do_An_WindowsForm
             }
         }
 
-<<<<<<< HEAD
-        
         private void btnSend_Click(object sender, EventArgs e)
         {
             try
@@ -239,140 +231,6 @@ namespace Do_An_WindowsForm
             {
                 MessageBox.Show(ex.Message);
             }
-=======
-        private void btnSend_Click(object sender, EventArgs e)
-        {
-            int item = int.Parse(txtID_Phong.Text);
-            var ptp = context.PhieuThuePhongs.FirstOrDefault(p => p.MaPhong == item);
-            if (ptp != null) 
-            { 
-                if (cbDien.Checked)
-                {
-                    var dien = context.DichVus.FirstOrDefault(p => p.TenDV == "Điện");
-                    var ct = context.CT_SuDungDV.FirstOrDefault(p => p.MaPTP == ptp.MaPTP && p.MaDV == dien.MaDV);
-                    if (ct != null)
-                    {
-                        long id = dien.MaDV + ptp.MaPTP + dateThu.Value.Month + dateThu.Value.Year;
-                        var ptt = context.PhieuThutiens.FirstOrDefault(p => p.MaPTT == id);
-                        if (ptt == null)
-                        {  
-                            PhieuThutien pThu = new PhieuThutien();
-                            pThu.MaPTT = dien.MaDV + ptp.MaPTP + dateThu.Value.Month + dateThu.Value.Year ;
-                            pThu.MaPTP = ptp.MaPTP;
-                            pThu.MaDV = dien.MaDV;
-                            pThu.NgayThanhToan = dateThu.Value;
-                            pThu.ThanhTien = int.Parse(txtTienDien.Text);
-                            context.PhieuThutiens.Add(pThu);       
-                            context.SaveChanges();
-                            MessageBox.Show("Tiền điện tháng này đã thu thành công", "Thông Báo", MessageBoxButtons.OK);
-
-                            ct.ChiSoCu = ct.ChiSoMoi;
-                            ct.ChiSoMoi = int.Parse(txtSoDienMoi.Text);
-                            context.CT_SuDungDV.AddOrUpdate(ct);
-                            context.SaveChanges();             
-                        }
-                        else
-                        {
-                            MessageBox.Show("Tiền điện tháng này đã được thu", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-
-                    }
-                }
-            }
-            if (cbNuoc.Checked)
-            {
-                var dv = context.DichVus.FirstOrDefault(p => p.TenDV == "Nước");
-                var ct = context.CT_SuDungDV.FirstOrDefault(p => p.MaPTP == ptp.MaPTP && p.MaDV == dv.MaDV);
-                if (ct != null)
-                {
-                    long id = dv.MaDV + ptp.MaPTP + dateThu.Value.Month + dateThu.Value.Year;
-                    var ptt = context.PhieuThutiens.FirstOrDefault(p => p.MaPTT == id);
-                    if (ptt == null)
-                    {
-                        PhieuThutien pThu = new PhieuThutien();
-                        pThu.MaPTT = id;
-                        pThu.MaPTP = ptp.MaPTP;
-                        pThu.MaDV = dv.MaDV;
-                        pThu.NgayThanhToan = dateThu.Value;
-                        pThu.ThanhTien = int.Parse(txtTienNuoc.Text);
-                        context.PhieuThutiens.Add(pThu);
-                        context.SaveChanges();
-                        MessageBox.Show("Tiền nước tháng này đã thu thành công", "Thông Báo", MessageBoxButtons.OK);
-
-                        ct.ChiSoCu = ct.ChiSoMoi;
-                        ct.ChiSoMoi = int.Parse(txtSoNuocMoi.Text);
-                        context.CT_SuDungDV.AddOrUpdate(ct);
-                        context.SaveChanges();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Tiền nước tháng này đã được thu", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
-            }
-            if (cbInternet.Checked)
-            {
-                var dv = context.DichVus.FirstOrDefault(p => p.TenDV == "Internet");
-                long id = dv.MaDV + ptp.MaPTP + dateThu.Value.Month + dateThu.Value.Year;
-                var ptt = context.PhieuThutiens.FirstOrDefault(p => p.MaPTT == id);
-                if (ptt == null)
-                {
-                    PhieuThutien pThu = new PhieuThutien();
-                    pThu.MaPTT = id;
-                    pThu.MaPTP = ptp.MaPTP;
-                    pThu.MaDV = dv.MaDV;
-                    pThu.NgayThanhToan = dateThu.Value;
-                    pThu.ThanhTien = int.Parse(txtTienInternet.Text);
-                    context.PhieuThutiens.Add(pThu);
-                    context.SaveChanges();
-                    MessageBox.Show("Tiền internet tháng này đã thu thành công", "Thông Báo", MessageBoxButtons.OK);
-                }
-                else      
-                    MessageBox.Show("Tiền internet tháng này đã được thu", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                
-            }
-            if (cbRac.Checked)
-            {
-                var dv = context.DichVus.FirstOrDefault(p => p.TenDV == "Rác");
-                long id = dv.MaDV + ptp.MaPTP + dateThu.Value.Month + dateThu.Value.Year;
-                var ptt = context.PhieuThutiens.FirstOrDefault(p => p.MaPTT == id);
-                if (ptt == null)
-                {
-                    PhieuThutien pThu = new PhieuThutien();              
-                    pThu.MaPTT = dv.MaDV + ptp.MaPTP + dateThu.Value.Month + dateThu.Value.Year;
-                    pThu.MaPTP = ptp.MaPTP;
-                    pThu.MaDV = dv.MaDV;
-                    pThu.NgayThanhToan = dateThu.Value;
-                    pThu.ThanhTien = int.Parse(txtTienRac.Text);
-                    context.PhieuThutiens.Add(pThu);
-                    context.SaveChanges();
-                    MessageBox.Show("Tiền rác tháng này đã thu thành công", "Thông Báo", MessageBoxButtons.OK);
-                }
-                else
-                    MessageBox.Show("Tiền rác tháng này đã được thu", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            if (cbGiuXe.Checked)
-            {
-                var dv = context.DichVus.FirstOrDefault(p => p.TenDV == "Giữ Xe");
-                long id = dv.MaDV + ptp.MaPTP + dateThu.Value.Month + dateThu.Value.Year;
-                var ptt = context.PhieuThutiens.FirstOrDefault(p => p.MaPTT == id);
-                if (ptt == null)
-                {
-                    PhieuThutien pThu = new PhieuThutien();
-                    pThu.MaPTT = dv.MaDV + ptp.MaPTP + dateThu.Value.Month + dateThu.Value.Year;
-                    pThu.MaPTP = ptp.MaPTP;
-                    pThu.MaDV = dv.MaDV;
-                    pThu.NgayThanhToan = dateThu.Value;
-                    pThu.ThanhTien = int.Parse(txtTienGiuXe.Text);
-                    context.PhieuThutiens.Add(pThu);
-                    context.SaveChanges();
-                    MessageBox.Show("Tiền giữ xe tháng này đã thu thành công", "Thông Báo", MessageBoxButtons.OK);
-                }
-                else
-                    MessageBox.Show("Tiền giữ xe tháng này đã được thu", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
->>>>>>> master
         }
 
         private void TinhTienTro_Load(object sender, EventArgs e)

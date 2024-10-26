@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyDichVucs));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnThoat = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -43,11 +42,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cmbID_DichVu = new System.Windows.Forms.ComboBox();
             this.dgvDichVu = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDichVu)).BeginInit();
@@ -55,7 +54,6 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.btnThoat);
             this.groupBox3.Controls.Add(this.btnThem);
             this.groupBox3.Controls.Add(this.btnCapNhat);
             this.groupBox3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -66,25 +64,11 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chức năng";
             // 
-            // btnThoat
-            // 
-            this.btnThoat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
-            this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThoat.Location = new System.Drawing.Point(315, 26);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(109, 47);
-            this.btnThoat.TabIndex = 11;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnThoat.UseVisualStyleBackColor = true;
-            // 
             // btnThem
             // 
             this.btnThem.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.Location = new System.Drawing.Point(41, 26);
+            this.btnThem.Location = new System.Drawing.Point(107, 26);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(103, 47);
             this.btnThem.TabIndex = 9;
@@ -97,7 +81,7 @@
             // 
             this.btnCapNhat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhat.Image = ((System.Drawing.Image)(resources.GetObject("btnCapNhat.Image")));
-            this.btnCapNhat.Location = new System.Drawing.Point(165, 26);
+            this.btnCapNhat.Location = new System.Drawing.Point(231, 26);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(120, 47);
             this.btnCapNhat.TabIndex = 10;
@@ -203,11 +187,29 @@
             this.Column1,
             this.Column2,
             this.Column4});
-            this.dgvDichVu.Location = new System.Drawing.Point(240, 377);
+            this.dgvDichVu.Location = new System.Drawing.Point(248, 377);
             this.dgvDichVu.Name = "dgvDichVu";
             this.dgvDichVu.Size = new System.Drawing.Size(492, 205);
             this.dgvDichVu.TabIndex = 15;
             this.dgvDichVu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhong_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Mã dịch vụ";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 150;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Tên dịch vụ";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 150;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Đơn Giá";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 150;
             // 
             // label2
             // 
@@ -228,24 +230,6 @@
             this.label1.Size = new System.Drawing.Size(293, 45);
             this.label1.TabIndex = 14;
             this.label1.Text = "Quản Lý Dịch Vụ";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Mã dịch vụ";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 150;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Tên dịch vụ";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 150;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Đơn Giá";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 150;
             // 
             // QuanLyDichVucs
             // 
@@ -273,7 +257,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.GroupBox groupBox2;
