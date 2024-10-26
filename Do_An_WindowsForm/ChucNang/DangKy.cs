@@ -62,13 +62,8 @@ namespace Do_An_WindowsForm.chuc_nang
             txtQueQuan.Text = "";
             txtSDT.Text = "";
         }
-      
 
-
-  
-
-
-        private void cmbID_Phong_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void cmbID_Phong_SelectedIndexChanged(object sender, EventArgs e)
         {
             int item = int.Parse(cmbID_Phong.Text);
             var p = context.Phongs.FirstOrDefault(pc => pc.MaPhong == item);
@@ -95,7 +90,7 @@ namespace Do_An_WindowsForm.chuc_nang
             }
         }
 
-        private void txtSearch_TextChanged_1(object sender, EventArgs e)
+        private void txtSearch_TextChanged_(object sender, EventArgs e)
         {
             Clear();
             try
