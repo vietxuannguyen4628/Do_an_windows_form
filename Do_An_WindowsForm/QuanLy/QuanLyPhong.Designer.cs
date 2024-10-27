@@ -1,4 +1,4 @@
-﻿namespace Do_An_WindowsForm.QuanLy
+namespace Do_An_WindowsForm.QuanLy
 {
     partial class QuanLyPhong
     {
@@ -76,12 +76,8 @@
             this.Column2,
             this.Column3,
             this.Column4});
-<<<<<<< HEAD
             this.dgvPhong.Location = new System.Drawing.Point(637, 165);
             this.dgvPhong.Margin = new System.Windows.Forms.Padding(4);
-=======
-            this.dgvPhong.Location = new System.Drawing.Point(518, 134);
->>>>>>> feceeba78973ef1dfa91df68780f2d2205e2aaf2
             this.dgvPhong.Name = "dgvPhong";
             this.dgvPhong.RowHeadersWidth = 51;
             this.dgvPhong.Size = new System.Drawing.Size(556, 295);
@@ -218,8 +214,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin phòng";
             // 
-<<<<<<< HEAD
-=======
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -230,7 +224,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
             // 
->>>>>>> feceeba78973ef1dfa91df68780f2d2205e2aaf2
             // btnDangKy
             // 
             this.btnDangKy.BackColor = System.Drawing.Color.LightGreen;
