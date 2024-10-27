@@ -214,16 +214,6 @@ namespace Do_An_WindowsForm.QuanLy
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin phòng";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox2.Location = new System.Drawing.Point(768, 136);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(8, 8);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
-            // 
             // btnDangKy
             // 
             this.btnDangKy.BackColor = System.Drawing.Color.LightGreen;
