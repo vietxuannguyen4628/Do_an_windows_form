@@ -1,4 +1,4 @@
-﻿using DevExpress.XtraEditors;
+using DevExpress.XtraEditors;
 using Do_An_WindowsForm.ChucNang;
 using Do_An_WindowsForm.Model;
 using System;
@@ -22,11 +22,7 @@ namespace Do_An_WindowsForm.ChucNang
         }
         private bool tienDV(DateTime nam)
         {
-<<<<<<< HEAD
-            PhieuThutien list = context.PhieuThutiens.FirstOrDefault(p => p.DenNgay.Value.Year == nam.Year);
-=======
             PhieuThutien list = context.PhieuThutiens.FirstOrDefault(p => p.NgayThanhToan.Value.Year == nam.Year);
->>>>>>> feceeba78973ef1dfa91df68780f2d2205e2aaf2
             if (list == null)
                 return false;
             return true;
