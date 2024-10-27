@@ -1,4 +1,4 @@
-﻿using DevExpress.XtraEditors;
+using DevExpress.XtraEditors;
 using Do_An_WindowsForm.Model;
 using System;
 using System.Collections.Generic;
@@ -28,9 +28,7 @@ namespace Do_An_WindowsForm.ChucNang
         }
         private void DoanhThu_Load(object sender, EventArgs e)
         {
-            dtptungay.Format = DateTimePickerFormat.Custom;
             dtpdenngay.Format = DateTimePickerFormat.Custom;
-            dtptungay.CustomFormat = " ";
             dtpdenngay.CustomFormat = " ";
             List<PhieuThuePhong> list = context.PhieuThuePhongs.ToList();
             BinDaTa(list);
@@ -47,7 +45,6 @@ namespace Do_An_WindowsForm.ChucNang
         {
             string ng = "";
             var checkdata = context.PhieuThutiens.FirstOrDefault(p => p.MaPTP == check);
-
             if (checkdata != null) //&& checkdata.p != null)
                 ng = checkdata.NgayThanhToan.ToString();
             return ng;
@@ -80,17 +77,13 @@ namespace Do_An_WindowsForm.ChucNang
                 int money = int.Parse(dl) + int.Parse(list_thutien[i].Phong.GiaTien.ToString());
                 dgvDoanhThu.Rows[index].Cells[6].Value = money.ToString();
             }
-            tongtien();
+            tongtien();    
         }
         private void dtpdenngay_ValueChanged(object sender, EventArgs e)
         {
             try
             {
-                if (dtptungay.Value > dtpdenngay.Value)
-                    dtpdenngay.Value = dtptungay.Value;
-                dtptungay.CustomFormat = "dd/MM/yyyy";
-                dtpdenngay.CustomFormat = "dd/MM/yyyy";
-                DateTime tn = dtptungay.Value;
+                dtpdenngay.CustomFormat = "MM/yyyy";
                 DateTime dn = dtpdenngay.Value;
                 for (int i = 0; i < dgvDoanhThu.Rows.Count; i++)
                 {
@@ -98,7 +91,7 @@ namespace Do_An_WindowsForm.ChucNang
                     {
                         DateTime data = Convert.ToDateTime(dgvDoanhThu.Rows[i].Cells[3].Value);
 
-                        if (tn <= data && dn >= data)
+                        if (dn.Month == data.Month && data.Year == dn.Year)
                         {
                             dgvDoanhThu.Rows[i].Visible = true;
                             tongtien();
@@ -111,37 +104,6 @@ namespace Do_An_WindowsForm.ChucNang
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
-
-        private void dtptungay_ValueChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                if (dtptungay.Value > dtpdenngay.Value)
-                    dtpdenngay.Value = dtptungay.Value;
-                dtptungay.CustomFormat = "dd/MM/yyyy";
-                dtpdenngay.CustomFormat = "dd/MM/yyyy";
-                DateTime tn = dtptungay.Value;
-                DateTime dn = dtpdenngay.Value;
-                for (int i = 0; i < dgvDoanhThu.Rows.Count; i++)
-                {
-                    if (dgvDoanhThu.Rows[i] != null && !dgvDoanhThu.Rows[i].IsNewRow)
-                    {
-                        DateTime data = Convert.ToDateTime(dgvDoanhThu.Rows[i].Cells[3].Value);
-
-                        if (tn <= data && dn >= data)
-                        {
-                            dgvDoanhThu.Rows[i].Visible = true;
-                            tongtien();
-                        }
-                        else
-                            dgvDoanhThu.Rows[i].Visible = false;
-                    }
-
-                }
-            }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
-        }
-
         private void label2_Click(object sender, EventArgs e)
         {
 
