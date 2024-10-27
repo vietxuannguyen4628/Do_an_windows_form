@@ -8,11 +8,8 @@ namespace Do_An_WindowsForm.Model
     public partial class QuanLyPhongTroDB : DbContext
     {
         public QuanLyPhongTroDB()
-<<<<<<< HEAD
-            : base("name=QuanLyPhongTroDB3")
-=======
+
             : base("name=QuanLyPhongTroDB_Viet")
->>>>>>> feceeba78973ef1dfa91df68780f2d2205e2aaf2
         {
         }
 
