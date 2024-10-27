@@ -404,3 +404,18 @@ FROM PhieuThuePhong PTP JOIN CT_SuDungDV CT ON PTP.MaPTP = CT.MaPTP
 						JOIN PhieuThutien PTT ON CT.MaPTP = PTT.MaPTP
 						JOIN Phong P ON P.MaPhong = PTP.MaPhong
 GROUP BY PTP.MaPhong, P.GiaTien
+
+CREATE PROC PHIEUTHUTIENKH
+	@PHIEUTHUE INT , @THANG INT ,@NAM INT
+	AS
+		SELECT PTP.MaPTP,P.MaPhong,DV.TenDV, K.HoTen, PTT.NgayThanhToan,  PTT.ThanhTien
+		FROM PhieuThuePhong PTP JOIN CT_SuDungDV CT ON PTP.MaPTP = CT.MaPTP
+								JOIN DichVu DV ON CT.MaDV = DV.MaDV
+								JOIN PhieuThutien PTT ON CT.MaPTP = PTT.MaPTP AND CT.MaDV = PTT.MaDV
+								JOIN Phong P ON P.MaPhong = PTP.MaPhong
+								JOIN KhachHang K ON PTP.MaKH = K.MaKH
+		WHERE PTP.MaPTP = @PHIEUTHUE AND MONTH(PTT.NgayThanhToan) = @THANG AND YEAR(PTT.NgayThanhToan) = @NAM
+		GROUP BY PTP.MaPTP,P.MaPhong,DV.TenDV,K.HoTen, PTT.NgayThanhToan, PTT.ThanhTien
+GO
+EXEC PHIEUTHUTIENKH 2,4,2024
+GO
