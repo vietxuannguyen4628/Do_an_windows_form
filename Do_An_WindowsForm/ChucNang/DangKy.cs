@@ -281,14 +281,5 @@ namespace Do_An_WindowsForm.chuc_nang
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            DialogResult dlg = MessageBox.Show("Bạn có chắc chắn muốn thoát??", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dlg == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
     }
 }
