@@ -33,7 +33,6 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btnDangKy = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
-            this.btnInPhieu = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -100,7 +99,6 @@
             this.groupBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox5.Controls.Add(this.btnDangKy);
             this.groupBox5.Controls.Add(this.btnCapNhat);
-            this.groupBox5.Controls.Add(this.btnInPhieu);
             this.groupBox5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(654, 356);
             this.groupBox5.Name = "groupBox5";
@@ -115,7 +113,7 @@
             this.btnDangKy.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnDangKy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangKy.Image = ((System.Drawing.Image)(resources.GetObject("btnDangKy.Image")));
-            this.btnDangKy.Location = new System.Drawing.Point(99, 27);
+            this.btnDangKy.Location = new System.Drawing.Point(161, 25);
             this.btnDangKy.Name = "btnDangKy";
             this.btnDangKy.Size = new System.Drawing.Size(115, 42);
             this.btnDangKy.TabIndex = 8;
@@ -129,7 +127,7 @@
             this.btnCapNhat.BackColor = System.Drawing.Color.LightBlue;
             this.btnCapNhat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhat.Image = ((System.Drawing.Image)(resources.GetObject("btnCapNhat.Image")));
-            this.btnCapNhat.Location = new System.Drawing.Point(243, 27);
+            this.btnCapNhat.Location = new System.Drawing.Point(305, 25);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(115, 42);
             this.btnCapNhat.TabIndex = 8;
@@ -137,19 +135,6 @@
             this.btnCapNhat.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnCapNhat.UseVisualStyleBackColor = false;
             this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
-            // 
-            // btnInPhieu
-            // 
-            this.btnInPhieu.BackColor = System.Drawing.Color.Cornsilk;
-            this.btnInPhieu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInPhieu.Image = ((System.Drawing.Image)(resources.GetObject("btnInPhieu.Image")));
-            this.btnInPhieu.Location = new System.Drawing.Point(394, 27);
-            this.btnInPhieu.Name = "btnInPhieu";
-            this.btnInPhieu.Size = new System.Drawing.Size(115, 42);
-            this.btnInPhieu.TabIndex = 8;
-            this.btnInPhieu.Text = "In Phiếu ";
-            this.btnInPhieu.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnInPhieu.UseVisualStyleBackColor = false;
             // 
             // groupBox4
             // 
@@ -725,7 +710,6 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button btnDangKy;
         private System.Windows.Forms.Button btnCapNhat;
-        private System.Windows.Forms.Button btnInPhieu;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label14;

@@ -19,6 +19,8 @@ namespace Do_An_WindowsForm.Model
         public virtual DbSet<PhieuThutien> PhieuThutiens { get; set; }
         public virtual DbSet<PhieuTraPhong> PhieuTraPhongs { get; set; }
         public virtual DbSet<Phong> Phongs { get; set; }
+        public virtual DbSet<DOANHTHUTHEOPHONG> DOANHTHUTHEOPHONGs { get; set; }
+        public virtual DbSet<TKDANGKY> TKDANGKies { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -60,6 +62,10 @@ namespace Do_An_WindowsForm.Model
                 .HasMany(e => e.PhieuThuePhongs)
                 .WithRequired(e => e.Phong)
                 .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<TKDANGKY>()
+                .Property(e => e.SDT)
+                .IsUnicode(false);
         }
     }
 }

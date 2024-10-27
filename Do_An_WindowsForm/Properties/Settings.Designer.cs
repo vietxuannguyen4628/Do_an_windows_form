@@ -22,5 +22,16 @@ namespace Do_An_WindowsForm.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-0MEO1CU\\SQLEXPRESS;Initial Catalog=QuanLyPhongTro;Integrated " +
+            "Security=True;Encrypt=True;TrustServerCertificate=True")]
+        public string QuanLyPhongTroConnectionString {
+            get {
+                return ((string)(this["QuanLyPhongTroConnectionString"]));
+            }
+        }
     }
 }

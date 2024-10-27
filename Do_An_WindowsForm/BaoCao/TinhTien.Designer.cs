@@ -1,6 +1,6 @@
 ﻿namespace Do_An_WindowsForm.BaoCao
 {
-    partial class BaoCaoDoanhThu
+    partial class TinhTien
     {
         /// <summary>
         /// Required designer variable.
@@ -28,35 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.reportDoanhThu = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
-            // reportDoanhThu
+            // reportViewer1
             // 
-            this.reportDoanhThu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportDoanhThu.LocalReport.ReportEmbeddedResource = "Do_An_WindowsForm.BaoCao.DoanhThu.rdlc";
-            this.reportDoanhThu.Location = new System.Drawing.Point(0, 0);
-            this.reportDoanhThu.Name = "reportDoanhThu";
-            this.reportDoanhThu.ServerReport.BearerToken = null;
-            this.reportDoanhThu.Size = new System.Drawing.Size(1367, 601);
-            this.reportDoanhThu.TabIndex = 0;
-            this.reportDoanhThu.Load += new System.EventHandler(this.reportViewer1_Load);
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Do_An_WindowsForm.BaoCao.TinhTien.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(1333, 699);
+            this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
-            // BaoCaoDoanhThu
+            // TinhTien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.Controls.Add(this.reportDoanhThu);
-            this.Name = "BaoCaoDoanhThu";
-            this.Size = new System.Drawing.Size(1367, 601);
-            this.Load += new System.EventHandler(this.BaoCaoDoanhThu_Load);
+            this.Controls.Add(this.reportViewer1);
+            this.Name = "TinhTien";
+            this.Size = new System.Drawing.Size(1333, 699);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer reportDoanhThu;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

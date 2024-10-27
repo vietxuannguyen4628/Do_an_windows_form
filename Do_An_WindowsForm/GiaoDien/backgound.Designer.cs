@@ -48,10 +48,9 @@
             label1.BackColor = System.Drawing.Color.MediumSlateBlue;
             label1.Font = new System.Drawing.Font("Times New Roman", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            label1.Location = new System.Drawing.Point(572, 52);
-            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Location = new System.Drawing.Point(489, 42);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(502, 49);
+            label1.Size = new System.Drawing.Size(408, 41);
             label1.TabIndex = 2;
             label1.Text = "Phần mềm quản lý nhà trọ";
             // 
@@ -59,10 +58,10 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1500, 745);
+            this.pictureBox1.Size = new System.Drawing.Size(1503, 748);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -71,10 +70,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 77);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(12, 63);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(206, 26);
+            this.label4.Size = new System.Drawing.Size(164, 21);
             this.label4.TabIndex = 3;
             this.label4.Text = "1. Nguyễn Xuân Việt";
             // 
@@ -82,10 +80,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(14, 217);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(12, 176);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(250, 26);
+            this.label6.Size = new System.Drawing.Size(202, 21);
             this.label6.TabIndex = 4;
             this.label6.Text = "4. Bạch Huỳnh Như Thuỷ";
             // 
@@ -93,10 +90,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(14, 171);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(12, 139);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(221, 26);
+            this.label5.Size = new System.Drawing.Size(176, 21);
             this.label5.TabIndex = 5;
             this.label5.Text = "3. Nguyễn Kim Quang";
             // 
@@ -104,10 +100,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(14, 124);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(12, 101);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(220, 26);
+            this.label3.Size = new System.Drawing.Size(175, 21);
             this.label3.TabIndex = 6;
             this.label3.Text = "2. Huỳnh Minh Quyền";
             // 
@@ -116,16 +111,16 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 20);
+            this.label2.Location = new System.Drawing.Point(11, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(230, 34);
+            this.label2.Size = new System.Drawing.Size(182, 28);
             this.label2.TabIndex = 7;
             this.label2.Text = "TEAM DEVLOR";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // backgound
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.Controls.Add(this.label2);
@@ -135,9 +130,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(label1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "backgound";
-            this.Size = new System.Drawing.Size(1504, 749);
+            this.Size = new System.Drawing.Size(1503, 748);
             this.Load += new System.EventHandler(this.backgound_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

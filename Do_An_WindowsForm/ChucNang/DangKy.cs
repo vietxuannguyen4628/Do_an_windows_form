@@ -1,4 +1,6 @@
-﻿using DevExpress.XtraEditors;
+﻿using DevExpress.Utils.IoC;
+using DevExpress.XtraEditors;
+using Do_An_WindowsForm.BaoCao;
 using Do_An_WindowsForm.Model;
 using System;
 using System.Collections.Generic;

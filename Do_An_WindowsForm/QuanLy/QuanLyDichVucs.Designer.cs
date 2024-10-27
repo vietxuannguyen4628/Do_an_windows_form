@@ -58,9 +58,9 @@
             this.groupBox3.Controls.Add(this.btnThem);
             this.groupBox3.Controls.Add(this.btnCapNhat);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(143, 383);
+            this.groupBox3.Location = new System.Drawing.Point(182, 349);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(439, 94);
+            this.groupBox3.Size = new System.Drawing.Size(436, 93);
             this.groupBox3.TabIndex = 19;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chức năng";
@@ -94,9 +94,9 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox2.Location = new System.Drawing.Point(842, 149);
+            this.groupBox2.Location = new System.Drawing.Point(955, 129);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(8, 8);
+            this.groupBox2.Size = new System.Drawing.Size(10, 10);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
@@ -111,9 +111,9 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(143, 157);
+            this.groupBox1.Location = new System.Drawing.Point(193, 99);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(439, 193);
+            this.groupBox1.Size = new System.Drawing.Size(447, 216);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin dịch vụ";
@@ -178,9 +178,9 @@
             this.cmbID_DichVu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbID_DichVu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbID_DichVu.FormattingEnabled = true;
-            this.cmbID_DichVu.Location = new System.Drawing.Point(749, 119);
+            this.cmbID_DichVu.Location = new System.Drawing.Point(862, 99);
             this.cmbID_DichVu.Name = "cmbID_DichVu";
-            this.cmbID_DichVu.Size = new System.Drawing.Size(290, 27);
+            this.cmbID_DichVu.Size = new System.Drawing.Size(267, 27);
             this.cmbID_DichVu.TabIndex = 16;
             this.cmbID_DichVu.SelectedIndexChanged += new System.EventHandler(this.cmbID_DichVu_SelectedIndexChanged);
             // 
@@ -193,10 +193,10 @@
             this.Column1,
             this.Column2,
             this.Column4});
-            this.dgvDichVu.Location = new System.Drawing.Point(604, 163);
+            this.dgvDichVu.Location = new System.Drawing.Point(663, 143);
             this.dgvDichVu.Name = "dgvDichVu";
             this.dgvDichVu.RowHeadersWidth = 51;
-            this.dgvDichVu.Size = new System.Drawing.Size(471, 284);
+            this.dgvDichVu.Size = new System.Drawing.Size(684, 308);
             this.dgvDichVu.TabIndex = 15;
             this.dgvDichVu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhong_CellContentClick);
             // 
@@ -226,7 +226,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(601, 127);
+            this.label2.Location = new System.Drawing.Point(714, 107);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 19);
@@ -240,7 +240,7 @@
             this.label1.BackColor = System.Drawing.Color.SeaShell;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(418, 47);
+            this.label1.Location = new System.Drawing.Point(531, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(281, 40);
@@ -263,7 +263,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "QuanLyDichVucs";
-            this.Size = new System.Drawing.Size(1164, 626);
+            this.Size = new System.Drawing.Size(1388, 634);
             this.Load += new System.EventHandler(this.QuanLyDichVucs_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);

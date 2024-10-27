@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Http;
 using static DevExpress.XtraPrinting.Native.ExportOptionsPropertiesNames;
+using Do_An_WindowsForm.BaoCao;
 
 namespace Do_An_WindowsForm
 {
@@ -65,31 +66,11 @@ namespace Do_An_WindowsForm
         }
         private async void btnSend_Click(object sender, EventArgs e)
         {
-            try
-            {
-                var smsService = new SpeedSMSService(
-                    "gtuSZ1YVxRw64dOnGdT3QpODcgFVAeST",
-                    "Quản Lý Nhà Trọ"
-                );
-                string noidung = "Thông báo từ phần mềm quản lý nhà trọ:\nÔng/ Bà: " + txtHoTen.Text + "\tMã phòng: " + txtID_Phong + "\tSDT: " + txtSDT.Text 
-                    + "\nTiền Nhà: " + txtTienNha + "\tTiền Điện: "+ txtTienDien + "\tTiền Nước: " + txtTienNuoc + "\tInternet: " + txtTienInternet + "\t Tiền Rác: " + txtTienRac + "\t Tiền Giữ Xe: " + txtTienGiuXe 
-                    + "\n Tổng Tiền: " + txtTongTien;
-                //var (success, message) = await smsService.SendSMS(txtSDT.Text,"Thông báo từ phần mềm quản lý nhà trọ:");
-                var (success, message) = await smsService.SendSMS(txtSDT.Text, noidung);
+            int registrationId = 1; // ID của người đăng ký cần in, có thể lấy từ input của form chính
 
-                if (success)
-                {
-                    MessageBox.Show("Gửi SMS thành công!", "Thông báo");
-                }
-                else
-                {
-                    MessageBox.Show($"Lỗi gửi SMS: {message}", "Lỗi");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi");
-            }
+            TinhTien reportForm = new TinhTien();
+            reportForm.LoadData(registrationId,1,1);
+            reportForm.Show();
         }
 
         private void TinhTienTro_Load(object sender, EventArgs e)

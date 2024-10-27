@@ -18,6 +18,10 @@ using Do_An_WindowsForm.QuanLy;
 using Do_An_WindowsForm.BaoCao;
 using Do_An_WindowsForm.ChucNang;
 using System.Threading;
+using System.Data.SqlClient;
+using DevExpress.DocumentServices.ServiceModel.DataContracts;
+using System.IO;
+using System.Xml.Linq;
 
 
 namespace Do_An_WindowsForm
@@ -281,13 +285,13 @@ namespace Do_An_WindowsForm
                 newTab.Text = e.Item.Caption;
 
                 // Tạo một instance của UserControl
-                BaoCaoDoanhThu phieuDangKy = new BaoCaoDoanhThu();
+                BaoCaoDoanhThu doanhThu = new BaoCaoDoanhThu();
 
                 // Đặt DockStyle cho UserControl
-                phieuDangKy.Dock = DockStyle.Fill;
+                doanhThu.Dock = DockStyle.Fill;
 
                 // Thêm UserControl vào XtraTabPage
-                newTab.Controls.Add(phieuDangKy);
+                newTab.Controls.Add(doanhThu);
 
                 // Thêm XtraTabPage vào XtraTabControl
                 xtraTabControl1.TabPages.Add(newTab);
@@ -484,9 +488,15 @@ namespace Do_An_WindowsForm
             }
         }
 
-        //private void btnSendMessage_ItemClick(object sender, ItemClickEventArgs e)
-        //{
-        //    
-        //}
+        private void btnBackup_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            
+        }
+
+        private void btnRestore_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
     }
 }

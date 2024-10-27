@@ -25,23 +25,25 @@ namespace Do_An_WindowsForm.BaoCao
 
         private void BaoCaoDoanhThu_Load(object sender, EventArgs e)
         {
+            
             try
             {
-                this.reportViewer1.RefreshReport();
-                reportViewer1.Visible = true;
-                List<KhachHang> kh = context.KhachHangs.ToList();
+                this.reportDoanhThu.RefreshReport();
+                reportDoanhThu.Visible = true;
+
+                List<DOANHTHUTHEOPHONG> doanhThu = context.DOANHTHUTHEOPHONGs.ToList();
                 string folderPath = Path.Combine(Application.StartupPath, @"..\..\BaoCao\DoanhThu.rdlc");
-                reportViewer1.LocalReport.ReportPath = folderPath;
-                ReportDataSource report = new ReportDataSource("DataSet1", kh);
-                reportViewer1.LocalReport.DataSources.Clear();
-                reportViewer1.LocalReport.DataSources.Add(report);
-                reportViewer1.RefreshReport();
+                reportDoanhThu.LocalReport.ReportPath = folderPath;
+
+                ReportDataSource report = new ReportDataSource("DoanhThuTheoTungPhong", doanhThu);
+                reportDoanhThu.LocalReport.DataSources.Clear();
+                reportDoanhThu.LocalReport.DataSources.Add(report);
+                reportDoanhThu.RefreshReport();
             }
-            catch
+            catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
             }
-
-
         }
 
         private void reportViewer1_Load(object sender, EventArgs e)

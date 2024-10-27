@@ -94,6 +94,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -114,17 +115,11 @@
     <Compile Include="BaoCao\BaoCaoDoanhThu.Designer.cs">
       <DependentUpon>BaoCaoDoanhThu.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaoCao\PhieuDangKy.cs">
+    <Compile Include="BaoCao\TinhTien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaoCao\PhieuDangKy.Designer.cs">
-      <DependentUpon>PhieuDangKy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BaoCao\PhieuTinhTien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\PhieuTinhTien.Designer.cs">
-      <DependentUpon>PhieuTinhTien.cs</DependentUpon>
+    <Compile Include="BaoCao\TinhTien.Designer.cs">
+      <DependentUpon>TinhTien.cs</DependentUpon>
     </Compile>
     <Compile Include="ChucNang\BieuDoThongKe.cs">
       <SubType>Form</SubType>
@@ -165,12 +160,19 @@
     </Compile>
     <Compile Include="Model\CT_SuDungDV.cs" />
     <Compile Include="Model\DichVu.cs" />
+    <Compile Include="Model\DOANHTHUTHEOPHONG.cs" />
     <Compile Include="Model\KhachHang.cs" />
     <Compile Include="Model\PhieuThuePhong.cs" />
     <Compile Include="Model\PhieuThutien.cs" />
     <Compile Include="Model\PhieuTraPhong.cs" />
     <Compile Include="Model\Phong.cs" />
     <Compile Include="Model\QuanLyPhongTroDB.cs" />
+    <Compile Include="Model\TKDANGKY.cs" />
+    <Compile Include="QuanLyPhongTroDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyPhongTroDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QuanLy\danh_sach_khach_thue.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -234,15 +236,9 @@
     <EmbeddedResource Include="BaoCao\DoanhThu.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\PhieuDangKy.rdlc">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\PhieuDangKy.resx">
-      <DependentUpon>PhieuDangKy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\PhieuTinhTien.rdlc" />
-    <EmbeddedResource Include="BaoCao\PhieuTinhTien.resx">
-      <DependentUpon>PhieuTinhTien.cs</DependentUpon>
+    <EmbeddedResource Include="BaoCao\TinhTien.rdlc" />
+    <EmbeddedResource Include="BaoCao\TinhTien.resx">
+      <DependentUpon>TinhTien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChucNang\BieuDoThongKe.resx">
       <DependentUpon>BieuDoThongKe.cs</DependentUpon>
@@ -301,6 +297,7 @@
       <DependentUpon>QuanLyPhong.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Do_An_WindowsForm.Model.DOANHTHUTHEOPHONG.datasource" />
     <None Include="Properties\DataSources\Do_An_WindowsForm.Model.KhachHang.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -311,6 +308,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QuanLyPhongTroDataSet.xsc">
+      <DependentUpon>QuanLyPhongTroDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyPhongTroDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyPhongTroDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyPhongTroDataSet.xss">
+      <DependentUpon>QuanLyPhongTroDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
