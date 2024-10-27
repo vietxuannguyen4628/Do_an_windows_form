@@ -21,7 +21,7 @@ namespace Do_An_WindowsForm.ChucNang
         }
         private bool tienDV(DateTime nam)
         {
-            CT_SuDungDV list = context.CT_SuDungDV.FirstOrDefault(p => p.PhieuThutien.DenNgay.Value.Year == nam.Year);
+            PhieuThutien list = context.PhieuThutiens.FirstOrDefault(p => p.DenNgay.Value.Year == nam.Year);
             if (list == null)
                 return false;
             return true;
@@ -48,7 +48,7 @@ namespace Do_An_WindowsForm.ChucNang
             Form parentForm = this;
             if (!tienDV(dateTime) && !tienphong(dateTime))
             {
-                MessageBox.Show("Chưa có dữ liệu của năm bạn chọn");
+                MessageBox.Show("Chưa có dữ liệu của năm " + dateTime.Year);
                 return;
             }
             using (BieuDoThongKe bieuDoThongKe = new BieuDoThongKe(parentForm))

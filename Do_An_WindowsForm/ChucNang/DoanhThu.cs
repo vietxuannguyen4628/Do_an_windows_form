@@ -38,17 +38,17 @@ namespace Do_An_WindowsForm.ChucNang
         private string tinhtien(int check)
         {   
             int money = 0;
-            List<CT_SuDungDV> list = context.CT_SuDungDV.Where(p => p.MaPTP == check).ToList();
+            List<PhieuThutien> list = context.PhieuThutiens.Where(p => p.MaPTP == check).ToList();
             for (int i = 0; i < list.Count; i++)
-                money = money + ((int.Parse(list[i].ChiSoMoi.ToString()) - int.Parse(list[i].ChiSoCu.ToString())) * int.Parse(list[i].DichVu.DonGia.ToString()));
+                money = money + int.Parse(list[i].ThanhTien.ToString());
             return money.ToString();
         }
         private string ngay(int check)
         {
             string ng = "";
-            var checkdata = context.CT_SuDungDV.FirstOrDefault(p => p.MaPTP == check);
-            if (checkdata != null && checkdata.PhieuThutien != null)
-                ng = checkdata.PhieuThutien.DenNgay.ToString();
+            var checkdata = context.PhieuThutiens.FirstOrDefault(p => p.MaPTP == check);
+            if (checkdata != null)
+                ng = checkdata.DenNgay.ToString();
             return ng;
 
         }

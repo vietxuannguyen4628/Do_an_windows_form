@@ -36,9 +36,9 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.btnCancel.Location = new System.Drawing.Point(151, 81);
+            this.btnCancel.Location = new System.Drawing.Point(142, 41);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(94, 31);
+            this.btnCancel.Size = new System.Drawing.Size(83, 31);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -47,9 +47,9 @@
             // btnOk
             // 
             this.btnOk.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.btnOk.Location = new System.Drawing.Point(26, 81);
+            this.btnOk.Location = new System.Drawing.Point(25, 41);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(89, 31);
+            this.btnOk.Size = new System.Drawing.Size(82, 31);
             this.btnOk.TabIndex = 3;
             this.btnOk.Text = "OK";
             this.btnOk.UseVisualStyleBackColor = true;
@@ -57,7 +57,7 @@
             // 
             // dtpChonNam
             // 
-            this.dtpChonNam.Location = new System.Drawing.Point(26, 41);
+            this.dtpChonNam.Location = new System.Drawing.Point(25, 12);
             this.dtpChonNam.Name = "dtpChonNam";
             this.dtpChonNam.Size = new System.Drawing.Size(200, 23);
             this.dtpChonNam.TabIndex = 2;
@@ -67,7 +67,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(257, 168);
+            this.ClientSize = new System.Drawing.Size(257, 97);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.dtpChonNam);

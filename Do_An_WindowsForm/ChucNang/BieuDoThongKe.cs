@@ -54,9 +54,9 @@ namespace Do_An_WindowsForm.ChucNang
         {
             int money = 0;
             DateTime tgxet = new DateTime(nam, thang, 1);
-            List<CT_SuDungDV> list = context.CT_SuDungDV.Where(p => p.PhieuThutien.DenNgay.Value.Month == tgxet.Month && p.PhieuThutien.DenNgay.Value.Year == tgxet.Year).ToList();
+            List<PhieuThutien> list = context.PhieuThutiens.Where(p => p.DenNgay.Value.Month == tgxet.Month && p.DenNgay.Value.Year == tgxet.Year).ToList();
             for (int i = 0; i < list.Count; i++)
-                money = money + ((int.Parse(list[i].ChiSoMoi.ToString()) - int.Parse(list[i].ChiSoCu.ToString())) * int.Parse(list[i].DichVu.DonGia.ToString()));
+                money = money + int.Parse(list[i].ThanhTien.ToString());
             return money;
         }
         private int tienphong(int thang, int nam)
@@ -64,7 +64,26 @@ namespace Do_An_WindowsForm.ChucNang
 
             DateTime tgxet = new DateTime(nam, thang, 1);
 
-            if (tgxet.Year <= DateTime.Now.Year)
+            if (tgxet.Year == DateTime.Now.Year && tgxet.Month <= DateTime.Now.Month)
+            {
+                List<PhieuThuePhong> phong = context.PhieuThuePhongs.Where(p => p.NgayThue.Value.Year == tgxet.Year && p.NgayThue.Value.Month <= tgxet.Month && p.Phong.TrangThai == 1).ToList();
+                int money = 0;
+                if (phong != null)
+                {
+                    for (int i = 0; i < phong.Count; i++)
+                    {
+                        money = money + int.Parse(phong[i].Phong.GiaTien.ToString());
+                    }
+                }
+                List<PhieuTraPhong> phieutra = context.PhieuTraPhongs.Where(p => p.PhieuThuePhong.NgayThue.Value.Year == tgxet.Year && p.PhieuThuePhong.NgayThue.Value.Month <= tgxet.Month && p.NgayTra.Value.Year == tgxet.Year && p.NgayTra.Value.Month >= tgxet.Month && p.PhieuThuePhong.Phong.TrangThai == 0).ToList();
+                if (phieutra != null)
+                {
+                    for (int i = 0; i < phieutra.Count; i++)
+                        money = money + int.Parse(phieutra[i].PhieuThuePhong.Phong.GiaTien.ToString());
+                }
+                return money;
+            }
+            else if(tgxet.Year < DateTime.Now.Year)
             {
                 List<PhieuThuePhong> phong = context.PhieuThuePhongs.Where(p => p.NgayThue.Value.Year == tgxet.Year && p.NgayThue.Value.Month <= tgxet.Month && p.Phong.TrangThai == 1).ToList();
                 int money = 0;

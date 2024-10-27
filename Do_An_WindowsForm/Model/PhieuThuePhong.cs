@@ -28,8 +28,6 @@ namespace Do_An_WindowsForm.Model
 
         public DateTime? NgayThue { get; set; }
 
-        public byte? DaThanhToan { get; set; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CT_SuDungDV> CT_SuDungDV { get; set; }
 
