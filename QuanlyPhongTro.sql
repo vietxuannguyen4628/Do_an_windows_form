@@ -90,13 +90,8 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[PhieuTraPhong](
-<<<<<<< HEAD
 	[MaPTrP] [int] NOT NULL,
 	[MaPTP] [int] NOT NULL,
-=======
-	[MaPTrP] [bigint] NOT NULL,
-	[MaPTP] [bigint] NOT NULL,
->>>>>>> master
 	[NgayTra] [datetime],
  CONSTRAINT [PK_PhieuTraPhong] PRIMARY KEY CLUSTERED 
 (
@@ -135,11 +130,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[CT_SuDungDV](
-<<<<<<< HEAD
 	[MaPTP] [int] NOT NULL,
-=======
-	[MaPTP] [bigint] NOT NULL,
->>>>>>> master
 	[MaDV] [int] NOT NULL,
 	[ChiSoCu] [int],
 	[ChiSoMoi] [int],
@@ -170,13 +161,8 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[PhieuThutien](
-<<<<<<< HEAD
 	[MaPTT] [int] NOT NULL,
 	[MaPTP] [int] NOT NULL,
-=======
-	[MaPTT] [bigint] NOT NULL,
-	[MaPTP] [bigint] NOT NULL,
->>>>>>> master
 	[MaDV] [int] NOT NULL,
 	[NgayThanhToan] [datetime],
 	[ThanhTien] [int],
@@ -192,10 +178,6 @@ REFERENCES [dbo].[CT_SuDungDV] ([MaPTP],[MaDV])
 GO
 ALTER TABLE [dbo].[PhieuThutien] CHECK CONSTRAINT [FK_PhieuThuTien_CT_SuDungDV]
 GO
-
-
-
-
 
 -- Thêm dữ liệu cho bảng Phong
 INSERT INTO [dbo].[Phong] (MaPhong, TrangThai, DienTich, GiaTien) VALUES
@@ -216,10 +198,6 @@ INSERT INTO [dbo].[Phong] (MaPhong, TrangThai, DienTich, GiaTien) VALUES
 (115, 0, 29.0, 5700000);
 --phòng đã cho thuê 101, 103, 104, 106, 107, 109, 110, 112, 113
 
-
-
-
-
 -- Thêm dữ liệu cho bảng DichVu
 INSERT INTO [dbo].[DichVu] (MaDV, TenDV, DonGia) VALUES
 (1, N'Internet', 100000),
@@ -227,8 +205,6 @@ INSERT INTO [dbo].[DichVu] (MaDV, TenDV, DonGia) VALUES
 (3, N'Giữ Xe', 20000),
 (4, N'Nước', 10000),
 (5, N'Điện', 3300);
-
-
 
 
 --INSERT INTO [dbo].[Phong] (MaPhong, TrangThai, DienTich)
