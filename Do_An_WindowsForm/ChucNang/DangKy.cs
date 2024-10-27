@@ -20,6 +20,7 @@ namespace Do_An_WindowsForm.chuc_nang
         {
             InitializeComponent();
             dgv_PhongTro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(dgv_PhongTro_CellContentClick_1);
+            
         }
 
         QuanLyPhongTroDB context = new QuanLyPhongTroDB();
