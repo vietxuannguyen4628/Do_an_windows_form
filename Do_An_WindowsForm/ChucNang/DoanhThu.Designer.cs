@@ -50,7 +50,7 @@
             // 
             this.btnChart.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnChart.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.btnChart.Location = new System.Drawing.Point(794, 36);
+            this.btnChart.Location = new System.Drawing.Point(792, 51);
             this.btnChart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnChart.Name = "btnChart";
             this.btnChart.Size = new System.Drawing.Size(168, 31);
@@ -64,7 +64,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.label3.Location = new System.Drawing.Point(456, 40);
+            this.label3.Location = new System.Drawing.Point(454, 55);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(21, 19);
             this.label3.TabIndex = 14;
@@ -75,7 +75,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.label2.Location = new System.Drawing.Point(165, 40);
+            this.label2.Location = new System.Drawing.Point(163, 55);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 19);
             this.label2.TabIndex = 13;
@@ -87,7 +87,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.label1.Location = new System.Drawing.Point(701, 477);
+            this.label1.Location = new System.Drawing.Point(699, 492);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 19);
             this.label1.TabIndex = 12;
@@ -96,7 +96,7 @@
             // txttongtien
             // 
             this.txttongtien.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txttongtien.Location = new System.Drawing.Point(784, 477);
+            this.txttongtien.Location = new System.Drawing.Point(782, 492);
             this.txttongtien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txttongtien.Name = "txttongtien";
             this.txttongtien.Size = new System.Drawing.Size(168, 21);
@@ -108,7 +108,7 @@
             this.dtpdenngay.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpdenngay.CustomFormat = "dd/MM/yyyy";
             this.dtpdenngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpdenngay.Location = new System.Drawing.Point(521, 41);
+            this.dtpdenngay.Location = new System.Drawing.Point(519, 56);
             this.dtpdenngay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpdenngay.Name = "dtpdenngay";
             this.dtpdenngay.Size = new System.Drawing.Size(156, 21);
@@ -120,7 +120,7 @@
             this.dtptungay.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtptungay.CustomFormat = "dd/MM/yyyy";
             this.dtptungay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtptungay.Location = new System.Drawing.Point(250, 41);
+            this.dtptungay.Location = new System.Drawing.Point(248, 56);
             this.dtptungay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtptungay.Name = "dtptungay";
             this.dtptungay.Size = new System.Drawing.Size(165, 21);
@@ -139,7 +139,7 @@
             this.TONGTIENDV,
             this.TIENPHONG,
             this.THANHTIEN});
-            this.dgvDoanhThu.Location = new System.Drawing.Point(103, 74);
+            this.dgvDoanhThu.Location = new System.Drawing.Point(101, 89);
             this.dgvDoanhThu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDoanhThu.Name = "dgvDoanhThu";
             this.dgvDoanhThu.RowHeadersWidth = 51;
@@ -211,7 +211,7 @@
             this.Controls.Add(this.dgvDoanhThu);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DoanhThu";
-            this.Size = new System.Drawing.Size(1083, 623);
+            this.Size = new System.Drawing.Size(1078, 653);
             this.Load += new System.EventHandler(this.DoanhThu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoanhThu)).EndInit();
             this.ResumeLayout(false);

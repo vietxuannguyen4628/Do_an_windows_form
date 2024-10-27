@@ -197,7 +197,7 @@ namespace Do_An_WindowsForm.chuc_nang
                         ph.MaKH = item;
                         ph.TienDacCoc = int.Parse(txtTienCoc.Text);
                         ph.NgayThue = dtNgayThue.Value;
-                        ph.DaThanhToan = 0;
+                        //ph.DaThanhToan = 0;
                         context.PhieuThuePhongs.Add(ph);
                         context.SaveChanges();
                         MessageBox.Show("Đã đăng ký thuê phòng thành công!", "Thông báo", MessageBoxButtons.OK);

@@ -46,11 +46,10 @@ namespace Do_An_WindowsForm.ChucNang
         private string ngay(int check)
         {
             string ng = "";
-            var checkdata = context.CT_SuDungDV.FirstOrDefault(p => p.MaPTP == check);
-            if (checkdata != null && checkdata.PhieuThutien != null)
-                ng = checkdata.PhieuThutien.DenNgay.ToString();
+            var checkdata = context.PhieuThutiens.FirstOrDefault(p => p.MaPTP == check);
+            if (checkdata != null) //&& checkdata.p != null)
+                ng = checkdata.NgayThanhToan.ToString();
             return ng;
-
         }
         private void tongtien()
         {

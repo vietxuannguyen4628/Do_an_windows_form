@@ -26,7 +26,7 @@ namespace Do_An_WindowsForm.ChucNang
 
         private void BieuDoThongKe_Load(object sender, EventArgs e)
         {
-            
+
             int nam = 0;
             nam = int.Parse(checkTime.ToString("yyyy"));
             ChartTitle chartTitle = new ChartTitle();
@@ -54,14 +54,29 @@ namespace Do_An_WindowsForm.ChucNang
         {
             int money = 0;
             DateTime tgxet = new DateTime(nam, thang, 1);
-            List<CT_SuDungDV> list = context.CT_SuDungDV.Where(p => p.PhieuThutien.DenNgay.Value.Month == tgxet.Month && p.PhieuThutien.DenNgay.Value.Year == tgxet.Year).ToList();
-            for (int i = 0; i < list.Count; i++)
-                money = money + ((int.Parse(list[i].ChiSoMoi.ToString()) - int.Parse(list[i].ChiSoCu.ToString())) * int.Parse(list[i].DichVu.DonGia.ToString()));
+            List<PhieuThutien> phieuthu = context.PhieuThutiens
+                .Where(p => p.NgayThanhToan.HasValue && p.NgayThanhToan.Value.Month == tgxet.Month && p.NgayThanhToan.Value.Year == tgxet.Year)
+                .ToList();
+
+            if (phieuthu != null && phieuthu.Count > 0)
+            {
+                List<CT_SuDungDV> list = context.CT_SuDungDV
+                    .Where(dv => phieuthu.Select(p => p.MaDV).Contains(dv.MaDV))
+                    .ToList();
+
+                for (int i = 0; i < list.Count; i++)
+                {
+                    int chiSoMoi = int.Parse(list[i].ChiSoMoi.ToString());
+                    int chiSoCu = int.Parse(list[i].ChiSoCu.ToString());
+                    int donGia = int.Parse(list[i].DichVu.DonGia.ToString());
+                    money += (chiSoMoi - chiSoCu) * donGia;
+                }
+            }
+
             return money;
         }
         private int tienphong(int thang, int nam)
         {
-
             DateTime tgxet = new DateTime(nam, thang, 1);
 
             if (tgxet.Year <= DateTime.Now.Year)

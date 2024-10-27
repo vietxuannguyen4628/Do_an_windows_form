@@ -22,16 +22,16 @@ namespace Do_An_WindowsForm.Model
         [StringLength(70)]
         public string HoTen { get; set; }
 
-        [StringLength(10)]
+        [StringLength(20)]
         public string CMND_CanCuoc { get; set; }
 
-        [StringLength(10)]
+        [StringLength(20)]
         public string SDT { get; set; }
 
         [StringLength(150)]
         public string QueQuan { get; set; }
 
-        [StringLength(5)]
+        [StringLength(20)]
         public string GioiTinh { get; set; }
 
         [StringLength(30)]
