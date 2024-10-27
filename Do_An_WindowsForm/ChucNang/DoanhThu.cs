@@ -47,13 +47,9 @@ namespace Do_An_WindowsForm.ChucNang
         {
             string ng = "";
             var checkdata = context.PhieuThutiens.FirstOrDefault(p => p.MaPTP == check);
-<<<<<<< HEAD
-            if (checkdata != null)
-                ng = checkdata.DenNgay.ToString();
-=======
+
             if (checkdata != null) //&& checkdata.p != null)
                 ng = checkdata.NgayThanhToan.ToString();
->>>>>>> feceeba78973ef1dfa91df68780f2d2205e2aaf2
             return ng;
         }
         private void tongtien()
