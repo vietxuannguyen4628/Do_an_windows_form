@@ -52,11 +52,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[PhieuThuePhong](
-<<<<<<< HEAD
 	[MaPTP] [int] NOT NULL,
-=======
-	[MaPTP] [bigint] NOT NULL,
->>>>>>> master
 	[MaPhong] [int] NOT NULL,
 	[MaKH] [int]NOT NULL,
 	[TienDacCoc] [int],
