@@ -24,7 +24,7 @@ CREATE TABLE [dbo].[Phong](
 ) ON [PRIMARY]
 GO
 
-
+---------
 
 SET ANSI_NULLS ON
 GO
