@@ -1,4 +1,4 @@
-﻿using DevExpress.XtraEditors;
+using DevExpress.XtraEditors;
 using Do_An_WindowsForm.Model;
 using System;
 using System.Collections.Generic;
@@ -197,10 +197,7 @@ namespace Do_An_WindowsForm.chuc_nang
                         ph.MaKH = item;
                         ph.TienDacCoc = int.Parse(txtTienCoc.Text);
                         ph.NgayThue = dtNgayThue.Value;
-<<<<<<< HEAD
-=======
                         //ph.DaThanhToan = 0;
->>>>>>> feceeba78973ef1dfa91df68780f2d2205e2aaf2
                         context.PhieuThuePhongs.Add(ph);
                         context.SaveChanges();
                         MessageBox.Show("Đã đăng ký thuê phòng thành công!", "Thông báo", MessageBoxButtons.OK);
