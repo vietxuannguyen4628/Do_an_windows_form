@@ -50,9 +50,10 @@
             // 
             this.btnChart.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnChart.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.btnChart.Location = new System.Drawing.Point(806, 25);
+            this.btnChart.Location = new System.Drawing.Point(792, 51);
+            this.btnChart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnChart.Name = "btnChart";
-            this.btnChart.Size = new System.Drawing.Size(196, 38);
+            this.btnChart.Size = new System.Drawing.Size(168, 31);
             this.btnChart.TabIndex = 15;
             this.btnChart.Text = "Biểu đồ thống kê";
             this.btnChart.UseVisualStyleBackColor = true;
@@ -63,9 +64,9 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.label3.Location = new System.Drawing.Point(412, 29);
+            this.label3.Location = new System.Drawing.Point(454, 55);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(25, 24);
+            this.label3.Size = new System.Drawing.Size(21, 19);
             this.label3.TabIndex = 14;
             this.label3.Text = "~";
             // 
@@ -74,9 +75,9 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.label2.Location = new System.Drawing.Point(72, 29);
+            this.label2.Location = new System.Drawing.Point(163, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 24);
+            this.label2.Size = new System.Drawing.Size(76, 19);
             this.label2.TabIndex = 13;
             this.label2.Text = "Thời gian";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -86,18 +87,19 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.label1.Location = new System.Drawing.Point(698, 567);
+            this.label1.Location = new System.Drawing.Point(699, 492);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 24);
+            this.label1.Size = new System.Drawing.Size(77, 19);
             this.label1.TabIndex = 12;
             this.label1.Text = "Tổng tiền";
             // 
             // txttongtien
             // 
             this.txttongtien.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txttongtien.Location = new System.Drawing.Point(782, 567);
+            this.txttongtien.Location = new System.Drawing.Point(782, 492);
+            this.txttongtien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txttongtien.Name = "txttongtien";
-            this.txttongtien.Size = new System.Drawing.Size(195, 23);
+            this.txttongtien.Size = new System.Drawing.Size(168, 21);
             this.txttongtien.TabIndex = 11;
             this.txttongtien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -106,9 +108,10 @@
             this.dtpdenngay.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpdenngay.CustomFormat = "dd/MM/yyyy";
             this.dtpdenngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpdenngay.Location = new System.Drawing.Point(488, 31);
+            this.dtpdenngay.Location = new System.Drawing.Point(519, 56);
+            this.dtpdenngay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpdenngay.Name = "dtpdenngay";
-            this.dtpdenngay.Size = new System.Drawing.Size(181, 23);
+            this.dtpdenngay.Size = new System.Drawing.Size(156, 21);
             this.dtpdenngay.TabIndex = 10;
             this.dtpdenngay.ValueChanged += new System.EventHandler(this.dtpdenngay_ValueChanged);
             // 
@@ -117,9 +120,10 @@
             this.dtptungay.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtptungay.CustomFormat = "dd/MM/yyyy";
             this.dtptungay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtptungay.Location = new System.Drawing.Point(171, 31);
+            this.dtptungay.Location = new System.Drawing.Point(248, 56);
+            this.dtptungay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtptungay.Name = "dtptungay";
-            this.dtptungay.Size = new System.Drawing.Size(192, 23);
+            this.dtptungay.Size = new System.Drawing.Size(165, 21);
             this.dtptungay.TabIndex = 9;
             this.dtptungay.ValueChanged += new System.EventHandler(this.dtptungay_ValueChanged);
             // 
@@ -135,11 +139,12 @@
             this.TONGTIENDV,
             this.TIENPHONG,
             this.THANHTIEN});
-            this.dgvDoanhThu.Location = new System.Drawing.Point(0, 71);
+            this.dgvDoanhThu.Location = new System.Drawing.Point(101, 89);
+            this.dgvDoanhThu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDoanhThu.Name = "dgvDoanhThu";
             this.dgvDoanhThu.RowHeadersWidth = 51;
             this.dgvDoanhThu.RowTemplate.Height = 24;
-            this.dgvDoanhThu.Size = new System.Drawing.Size(1023, 486);
+            this.dgvDoanhThu.Size = new System.Drawing.Size(877, 395);
             this.dgvDoanhThu.TabIndex = 8;
             // 
             // MAPHONG
@@ -193,7 +198,7 @@
             // 
             // DoanhThu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.Controls.Add(this.btnChart);
@@ -204,8 +209,9 @@
             this.Controls.Add(this.dtpdenngay);
             this.Controls.Add(this.dtptungay);
             this.Controls.Add(this.dgvDoanhThu);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DoanhThu";
-            this.Size = new System.Drawing.Size(1022, 602);
+            this.Size = new System.Drawing.Size(1078, 653);
             this.Load += new System.EventHandler(this.DoanhThu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoanhThu)).EndInit();
             this.ResumeLayout(false);

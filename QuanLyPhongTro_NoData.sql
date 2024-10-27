@@ -1,4 +1,9 @@
+<<<<<<< HEAD:QuanlyPhongTro.sql
 ﻿IF EXISTS (SELECT name FROM sys.databases WHERE name = 'QuanLyPhongTro')
+=======
+
+IF EXISTS (SELECT name FROM sys.databases WHERE name = 'QuanLyPhongTro')
+>>>>>>> feceeba78973ef1dfa91df68780f2d2205e2aaf2:QuanLyPhongTro_NoData.sql
     DROP DATABASE QuanLyPhongTro;
 GO
 --Drop table Faculty
@@ -53,7 +58,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[PhieuThuePhong](
-	[MaPTP] [bigint] NOT NULL,
+	[MaPTP] [int] NOT NULL,
 	[MaPhong] [int] NOT NULL,
 	[MaKH] [int]NOT NULL,
 	[TienDacCoc] [int],
@@ -87,8 +92,8 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[PhieuTraPhong](
-	[MaPTrP] [bigint] NOT NULL,
-	[MaPTP] [bigint] NOT NULL,
+	[MaPTrP] [int] NOT NULL,
+	[MaPTP] [int] NOT NULL,
 	[NgayTra] [datetime],
  CONSTRAINT [PK_PhieuTraPhong] PRIMARY KEY CLUSTERED 
 (
@@ -127,7 +132,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[CT_SuDungDV](
-	[MaPTP] [bigint] NOT NULL,
+	[MaPTP] [int] NOT NULL,
 	[MaDV] [int] NOT NULL,
 	[ChiSoCu] [int],
 	[ChiSoMoi] [int],
@@ -158,11 +163,15 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[PhieuThutien](
+<<<<<<< HEAD:QuanlyPhongTro.sql
 	[MaPTT] [bigint] NOT NULL,
 	[MaPTP] [bigint] NOT NULL,
+=======
+	[MaPTT] [int] NOT NULL,
+	[MaPTP] [int] NOT NULL,
+>>>>>>> feceeba78973ef1dfa91df68780f2d2205e2aaf2:QuanLyPhongTro_NoData.sql
 	[MaDV] [int] NOT NULL,
-	[TuNgay] [datetime],
-	[DenNgay] [datetime],
+	[NgayThanhToan] [datetime],
 	[ThanhTien] [int],
  CONSTRAINT [PK_PhieuThutien] PRIMARY KEY CLUSTERED 
 (
@@ -176,10 +185,6 @@ REFERENCES [dbo].[CT_SuDungDV] ([MaPTP],[MaDV])
 GO
 ALTER TABLE [dbo].[PhieuThutien] CHECK CONSTRAINT [FK_PhieuThuTien_CT_SuDungDV]
 GO
-
-
-
-
 
 -- Thêm dữ liệu cho bảng Phong
 INSERT INTO [dbo].[Phong] (MaPhong, TrangThai, DienTich, GiaTien) VALUES
@@ -199,7 +204,10 @@ INSERT INTO [dbo].[Phong] (MaPhong, TrangThai, DienTich, GiaTien) VALUES
 (114, 0, 22.5, 4900000),
 (115, 0, 29.0, 5700000);
 
+<<<<<<< HEAD:QuanlyPhongTro.sql
 
+=======
+>>>>>>> feceeba78973ef1dfa91df68780f2d2205e2aaf2:QuanLyPhongTro_NoData.sql
 -- Thêm dữ liệu cho bảng DichVu
 INSERT INTO [dbo].[DichVu] (MaDV, TenDV, DonGia) VALUES
 (1, N'Internet', 100000),
@@ -209,6 +217,7 @@ INSERT INTO [dbo].[DichVu] (MaDV, TenDV, DonGia) VALUES
 (5, N'Điện', 3300);
 
 
+<<<<<<< HEAD:QuanlyPhongTro.sql
 
 INSERT INTO [dbo].[KhachHang] (MaKH, HoTen, CMND_CanCuoc, SDT, QueQuan, GioiTinh, NgheNghiep)
 VALUES 
@@ -358,6 +367,13 @@ VALUES
 INSERT INTO [dbo].[PhieuTraPhong] (MaPTrP, MaPTP, NgayTra)
 VALUES 
 (1, 1, '2024-07-10');
+=======
+--INSERT INTO [dbo].[Phong] (MaPhong, TrangThai, DienTich)
+--VALUES 
+--(1, 1, 20.5),  -- Phòng 1 đang có khách
+--(2, 0, 18.3),  -- Phòng 2 trống
+--(3, 1, 25.0);  -- Phòng 3 đang có khách
+>>>>>>> feceeba78973ef1dfa91df68780f2d2205e2aaf2:QuanLyPhongTro_NoData.sql
 --go
 
 

@@ -17,6 +17,7 @@ using System.Diagnostics;
 using Do_An_WindowsForm.QuanLy;
 using Do_An_WindowsForm.BaoCao;
 using Do_An_WindowsForm.ChucNang;
+using System.Threading;
 
 
 namespace Do_An_WindowsForm
@@ -35,7 +36,10 @@ namespace Do_An_WindowsForm
 
         private async Task LoadUserControlDataAsync(Control userControl)
         {
-            await Task.Delay(1500);
+            await Task.Run(() =>
+            {
+                Thread.Sleep(1000);
+            });
         }
 
         private async Task ShowWithDelayAsync(XtraTabPage tabPage, Control waitForm, Control mainForm, int delay)

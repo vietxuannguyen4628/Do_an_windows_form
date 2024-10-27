@@ -17,7 +17,7 @@ namespace Do_An_WindowsForm.Model
         [Key]
         [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public long MaPTP { get; set; }
+        public int MaPTP { get; set; }
 
         [Key]
         [Column(Order = 1)]

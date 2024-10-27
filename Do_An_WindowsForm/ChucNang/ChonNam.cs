@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using Do_An_WindowsForm.ChucNang;
 using Do_An_WindowsForm.Model;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,11 @@ namespace Do_An_WindowsForm.ChucNang
         }
         private bool tienDV(DateTime nam)
         {
+<<<<<<< HEAD
             PhieuThutien list = context.PhieuThutiens.FirstOrDefault(p => p.DenNgay.Value.Year == nam.Year);
+=======
+            PhieuThutien list = context.PhieuThutiens.FirstOrDefault(p => p.NgayThanhToan.Value.Year == nam.Year);
+>>>>>>> feceeba78973ef1dfa91df68780f2d2205e2aaf2
             if (list == null)
                 return false;
             return true;
@@ -30,7 +35,7 @@ namespace Do_An_WindowsForm.ChucNang
         {
             this.Close();
         }
-            
+
         private bool tienphong(DateTime nam)
         {
 
@@ -40,6 +45,18 @@ namespace Do_An_WindowsForm.ChucNang
                 return false;
             return true;
 
+        }
+
+        private void dtpChonNam_ValueChanged(object sender, EventArgs e)
+        {
+            dtpChonNam.CustomFormat = "yyyy";
+        }
+
+        private void ChonNam_Load(object sender, EventArgs e)
+        {
+            dtpChonNam.Format = DateTimePickerFormat.Custom;
+            dtpChonNam.CustomFormat = "yyyy";
+            dtpChonNam.ShowUpDown = true;
         }
 
         private void btnOk_Click(object sender, EventArgs e)
@@ -58,18 +75,6 @@ namespace Do_An_WindowsForm.ChucNang
                 bieuDoThongKe.ShowDialog();
             }
             this.Hide();
-        }
-
-        private void dtpChonNam_ValueChanged(object sender, EventArgs e)
-        {
-            dtpChonNam.CustomFormat = "yyyy";
-        }
-
-        private void ChonNam_Load(object sender, EventArgs e)
-        {
-            dtpChonNam.Format = DateTimePickerFormat.Custom;
-            dtpChonNam.CustomFormat = "yyyy";
-            dtpChonNam.ShowUpDown = true;
         }
     }
 }
